@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[TaskType]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [Title] VARBINARY(50) NOT NULL
+)
