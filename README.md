@@ -19,6 +19,7 @@ Targets:
 
 Blogs [Wordpress] | [Geeks]
 
+ Github pages: http://juanluelguerre.github.io/Taskin/ 
 
 Version
 ----
