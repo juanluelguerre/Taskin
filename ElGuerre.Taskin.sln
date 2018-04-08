@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.IntegrationTests", "test\Taskin.Api.IntegrationTests\ElGuerre.Taskin.Api.IntegrationTests.csproj", "{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{BF6F36DC-B9A4-4F55-8D95-0AB2F510A21A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{67658D2B-713F-439F-8ABB-DC23A80DD7B2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Blazor", "src\ElGuerre.Taskin.Blazor\ElGuerre.Taskin.Blazor.csproj", "{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "src\ElGuerre.Taskin.Api\ElGuerre.Taskin.Api.csproj", "{11671393-BECB-4088-A126-25F90F864256}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Models", "src\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{FB315873-7213-4389-B3E9-9034C4D08F49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11671393-BECB-4088-A126-25F90F864256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11671393-BECB-4088-A126-25F90F864256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11671393-BECB-4088-A126-25F90F864256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11671393-BECB-4088-A126-25F90F864256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB315873-7213-4389-B3E9-9034C4D08F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB315873-7213-4389-B3E9-9034C4D08F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB315873-7213-4389-B3E9-9034C4D08F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB315873-7213-4389-B3E9-9034C4D08F49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
+		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3} = {67658D2B-713F-439F-8ABB-DC23A80DD7B2}
+		{11671393-BECB-4088-A126-25F90F864256} = {BF6F36DC-B9A4-4F55-8D95-0AB2F510A21A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {892CB51C-209D-4A44-9CA0-5477EE802176}
+	EndGlobalSection
+EndGlobal
