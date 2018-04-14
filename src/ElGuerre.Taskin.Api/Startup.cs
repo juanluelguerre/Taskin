@@ -3,12 +3,12 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-using ElGuerre.OneRest.Taskin.Api.Core.Mvc.Filters;
-using ElGuerre.OneRest.Taskin.Api.Core.Mvc.Middlewares;
-using ElGuerre.OneRest.Taskin.Api.Data;
-using ElGuerre.OneRest.Taskin.Api.Data.Repository;
-using ElGuerre.OneRest.Taskin.Api.Models;
-using ElGuerre.OneRest.Taskin.Api.Services;
+using ElGuerre.Taskin.Api.Core.Mvc.Filters;
+using ElGuerre.Taskin.Api.Core.Mvc.Middlewares;
+using ElGuerre.Taskin.Api.Data;
+using ElGuerre.Taskin.Api.Data.Repository;
+using ElGuerre.Taskin.Api.Models;
+using ElGuerre.Taskin.Api.Services;
 using Microsoft.AspNetCore.Blazor.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,7 +24,7 @@ using Swashbuckle.AspNetCore.Swagger;
 using System.Linq;
 using System.Net.Mime;
 
-namespace ElGuerre.OneRest.Taskin.Api
+namespace ElGuerre.Taskin.Api
 {
     public class Startup
     {
@@ -131,7 +131,7 @@ namespace ElGuerre.OneRest.Taskin.Api
             app.UseSwagger()
                .UseSwaggerUI(c =>
                {
-                   c.SwaggerEndpoint("/swagger/v1/swagger.json", "OneRest V1");
+                   c.SwaggerEndpoint("/swagger/v1/swagger.json", "Taskin V1");
                });
 
             if (Configuration.GetValue<bool>("UseTest"))

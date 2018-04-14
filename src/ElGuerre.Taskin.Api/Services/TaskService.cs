@@ -3,15 +3,15 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-using ElGuerre.OneRest.Taskin.Api.Data;
-using ElGuerre.OneRest.Taskin.Api.Data.Entity;
-using ElGuerre.OneRest.Taskin.Api.Data.Repository;
+using ElGuerre.Taskin.Api.Data;
+using ElGuerre.Taskin.Api.Data.Entity;
+using ElGuerre.Taskin.Api.Data.Repository;
 using ElGuerre.Taskin.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ElGuerre.OneRest.Taskin.Api.Services
+namespace ElGuerre.Taskin.Api.Services
 {
     public class TaskService : BaseService<TaskModel, TaskEntity, int>, ITaskService
     {

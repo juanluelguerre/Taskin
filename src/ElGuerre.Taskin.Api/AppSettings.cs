@@ -4,7 +4,7 @@
 // </copyright>
 // ---------------------------------------------------------------------------------
 
-namespace ElGuerre.OneRest.Taskin.Api
+namespace ElGuerre.Taskin.Api
 {
     public class AppSettings
     {

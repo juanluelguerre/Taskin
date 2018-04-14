@@ -11,7 +11,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace ElGuerre.OneRest.Taskin.Api.Core.Mvc.Middlewares
+namespace ElGuerre.Taskin.Api.Core.Mvc.Middlewares
 {
     class ByPassAuthMiddleware
     {

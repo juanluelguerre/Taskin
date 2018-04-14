@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using NLog.Web;
 using System.IO;
 
-namespace ElGuerre.OneRest.Taskin.Api
+namespace ElGuerre.Taskin.Api
 {
     public static class Program
     {

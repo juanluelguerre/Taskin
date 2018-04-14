@@ -6,7 +6,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace ElGuerre.OneRest.Taskin.Api
+namespace ElGuerre.Taskin.Api
 {
     [Serializable]
     public class BaseException : Exception, IBaseException

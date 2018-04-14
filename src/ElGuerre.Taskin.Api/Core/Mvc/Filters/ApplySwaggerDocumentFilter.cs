@@ -8,7 +8,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ElGuerre.OneRest.Taskin.Api.Core.Mvc.Filters
+namespace ElGuerre.Taskin.Api.Core.Mvc.Filters
 {
     /// <summary>
     /// Post-modify the entire Swagger document by wiring up one or more Document filters.

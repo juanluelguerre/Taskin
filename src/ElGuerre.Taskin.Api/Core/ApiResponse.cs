@@ -5,7 +5,7 @@
 // ---------------------------------------------------------------------------------
 using Newtonsoft.Json;
 
-namespace ElGuerre.OneRest.Taskin.Api
+namespace ElGuerre.Taskin.Api
 {
     public class ApiResponse<T>
     {

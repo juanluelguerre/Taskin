@@ -36,7 +36,7 @@ else
                     <td>@proj.Detail</td>
                     <td>@proj.ProjectType</td>
                     <td>
-                        <button class="btn btn-info" @onclick(() => UriHelper.NavigateTo($"/tasks/{proj.Id}"))>View</button>
+                        <button class="btn btn-info" onclick=@(() => UriHelper.NavigateTo($"/tasks/{proj.Id}"))>View</button>
 
                         @*<NavLink href="/tasks">
                                 <span class='glyphicon glyphicon-th-list'></span> @proj.Tasks?.Count
@@ -49,13 +49,14 @@ else
 }
 
 @functions {
-ProjectModel[] projects;
+    ProjectModel[] projects;
 
-protected override async Task OnInitAsync()
-{
+    protected override async Task OnInitAsync()
+    {
 
-    // Inclcuide this statement in Startup to get JSon correctly:
-    //      options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-    projects = await Http.GetJsonAsync<ProjectModel[]>("/api/projects");
-}
+        // Inclcuide this statement in Startup to get JSon correctly:
+        //      options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+        projects = await Http.GetJsonAsync<ProjectModel[]>("/api/projects");
+    }
+
 }

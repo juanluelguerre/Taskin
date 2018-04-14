@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 
-namespace ElGuerre.OneRest.Taskin.Api.Data
+namespace ElGuerre.Taskin.Api.Data
 {
     public class UnitOfWork : IUnitOfWork
     {

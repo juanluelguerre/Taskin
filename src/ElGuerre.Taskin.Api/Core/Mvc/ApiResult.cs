@@ -3,7 +3,7 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-namespace ElGuerre.OneRest.Taskin.Api.Core.Mvc
+namespace ElGuerre.Taskin.Api.Core.Mvc
 {
     public class ApiResult<T>
     {

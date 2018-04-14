@@ -9,7 +9,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ElGuerre.OneRest.Taskin.Api.Core.Mvc.Filters
+namespace ElGuerre.Taskin.Api.Core.Mvc.Filters
 {
     public class AuthorizeCheckOperationFilter : IOperationFilter
     {

@@ -3,7 +3,7 @@
 //using System.Linq;
 //using System.Threading.Tasks;
 
-//namespace ElGuerre.OneRest.Taskin.Api.Data
+//namespace ElGuerre.Taskin.Api.Data
 //{
 //    public interface IDbContextSeed
 //    {

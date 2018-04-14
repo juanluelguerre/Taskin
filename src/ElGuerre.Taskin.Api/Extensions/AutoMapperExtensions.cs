@@ -7,7 +7,7 @@ using AutoMapper;
 using System;
 using System.Linq.Expressions;
 
-namespace ElGuerre.OneRest.Taskin.Api.Extensions
+namespace ElGuerre.Taskin.Api.Extensions
 {
     public static class AutoMapperExtensions
     {

@@ -11,7 +11,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace ElGuerre.OneRest.Taskin.Api.Core.Mvc.Middlewares
+namespace ElGuerre.Taskin.Api.Core.Mvc.Middlewares
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class ExceptionMiddleware

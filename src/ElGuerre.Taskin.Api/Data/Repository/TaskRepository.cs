@@ -3,9 +3,9 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-using ElGuerre.OneRest.Taskin.Api.Data.Entity;
+using ElGuerre.Taskin.Api.Data.Entity;
 
-namespace ElGuerre.OneRest.Taskin.Api.Data.Repository
+namespace ElGuerre.Taskin.Api.Data.Repository
 {
     public class TaskRepository : BaseRepository<TaskEntity, int>, ITaskRepository
     {

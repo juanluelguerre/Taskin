@@ -3,7 +3,7 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-namespace ElGuerre.OneRest.Taskin.Api.Data
+namespace ElGuerre.Taskin.Api.Data
 {
     public interface IUnitOfWork
     {

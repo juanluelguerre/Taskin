@@ -5,7 +5,7 @@
 // ---------------------------------------------------------------------------------
 using ElGuerre.Taskin.Models;
 
-namespace ElGuerre.OneRest.Taskin.Api.Services
+namespace ElGuerre.Taskin.Api.Services
 {
     public interface ITaskService : IBaseService<TaskModel, int>
     {

@@ -3,11 +3,11 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-using ElGuerre.OneRest.Taskin.Api.Data.Entity;
+using ElGuerre.Taskin.Api.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace ElGuerre.OneRest.Taskin.Api.Data
+namespace ElGuerre.Taskin.Api.Data
 {
     public class DataContext : DbContext
     {

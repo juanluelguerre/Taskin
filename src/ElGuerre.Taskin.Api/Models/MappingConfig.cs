@@ -3,10 +3,10 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-using ElGuerre.OneRest.Taskin.Api.Data.Entity;
+using ElGuerre.Taskin.Api.Data.Entity;
 using ElGuerre.Taskin.Models;
 
-namespace ElGuerre.OneRest.Taskin.Api.Models
+namespace ElGuerre.Taskin.Api.Models
 {
     public static class MappingConfig
     {

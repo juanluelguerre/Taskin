@@ -5,7 +5,7 @@
 // ---------------------------------------------------------------------------------
 // https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 //
-using ElGuerre.OneRest.Taskin.Api.Data.Entity;
+using ElGuerre.Taskin.Api.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace ElGuerre.OneRest.Taskin.Api.Data.Repository
+namespace ElGuerre.Taskin.Api.Data.Repository
 {
     public abstract class BaseRepository<TEntity, Tkey> : IEntityRepository<TEntity, Tkey>
             where TEntity : class, IEntity<Tkey>, new()

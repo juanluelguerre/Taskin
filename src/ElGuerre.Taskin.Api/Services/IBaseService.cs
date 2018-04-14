@@ -7,7 +7,7 @@ using ElGuerre.Taskin.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ElGuerre.OneRest.Taskin.Api.Services
+namespace ElGuerre.Taskin.Api.Services
 {
     public interface IBaseService<TModel, Tkey> where TModel : class, IModel<Tkey>
     {            

@@ -3,14 +3,14 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-using ElGuerre.OneRest.Taskin.Api.Data.Entity;
+using ElGuerre.Taskin.Api.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace ElGuerre.OneRest.Taskin.Api.Data.Repository
+namespace ElGuerre.Taskin.Api.Data.Repository
 {
     public interface IEntityRepository<TEntity, TKey> where TEntity : class, IEntity<TKey>
     {

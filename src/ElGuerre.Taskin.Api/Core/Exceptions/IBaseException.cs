@@ -3,7 +3,7 @@
 //     Copyright (c) WLMS-IDB. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
-namespace ElGuerre.OneRest.Taskin.Api
+namespace ElGuerre.Taskin.Api
 {
     public interface IBaseException
     {        
