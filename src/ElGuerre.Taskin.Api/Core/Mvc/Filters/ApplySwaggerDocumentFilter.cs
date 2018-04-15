@@ -55,9 +55,9 @@ namespace ElGuerre.Taskin.Api.Core.Mvc.Filters
             }
 
             swaggerDoc.Tags = new List<Tag>();
-            foreach (var tag in tags)
+            foreach (var tag in tags.Distinct())
             {
-                swaggerDoc.Tags.Add(new Tag() { Name = tag, Description = "This is a group of methods for " + tag });
+                swaggerDoc.Tags.Add(new Tag() { Name = tag, Description = $"Set of {tag} operations." });
             }
 
         }

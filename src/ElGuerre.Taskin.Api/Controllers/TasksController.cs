@@ -11,7 +11,8 @@ namespace Taskin.Api.Controllers
     [Produces("application/json")]
     //[Route("api/Tasks")]
     [Route("api/[controller]")]
-    public class TasksController : Controller
+    [ApiController]
+    public class TasksController : ControllerBase
     {
         private const string SERVICE_NAME = "Tasks";
         private readonly ITaskService _service;
@@ -24,8 +25,8 @@ namespace Taskin.Api.Controllers
         [HttpGet]
         [SwaggerOperation("GetAll" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(IEnumerable<TaskModel>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Get()
+        //[ProducesResponseType(typeof(IEnumerable<TaskModel>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<TaskModel>>> Get()
         {
             var response = await _service.GetAsync();
             return Ok(response);
@@ -34,8 +35,8 @@ namespace Taskin.Api.Controllers
         [HttpGet("{id}")]
         [SwaggerOperation("Get" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(TaskModel), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Get([FromRoute] int id)
+        //[ProducesResponseType(typeof(TaskModel), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<TaskModel>> Get([FromRoute] int id)
         {   
             if (!ModelState.IsValid)
             {

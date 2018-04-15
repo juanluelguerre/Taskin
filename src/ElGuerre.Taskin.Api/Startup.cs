@@ -12,6 +12,7 @@ using ElGuerre.Taskin.Api.Services;
 using Microsoft.AspNetCore.Blazor.Server;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
@@ -45,10 +46,15 @@ namespace ElGuerre.Taskin.Api
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddMvc();
-            services.AddMvc().AddJsonOptions(options =>
-            {
-                options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-            });
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddJsonOptions(options =>
+                {
+                    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                });
+
+            // Add bellow statement to use HTTPS o a better option, set environment varibble ASPNETCORE_HTTPS_PORT 
+            //  services.AddHttpsRedirection(options => options.HttpsPort = 5003);
 
             services.AddResponseCompression(options =>
             {
@@ -95,7 +101,7 @@ namespace ElGuerre.Taskin.Api
                         Version = "v1",
                         Title = "Taskin API",
                         Description = "API to expose Taskin logic",
-                        TermsOfService = "Copyright (c) elGuerre.com. All rights reserved."
+                        TermsOfService = "https://github.com/juanluelguerre/Taskin/blob/master/LICENSE"
                     }
                 );
                 // Generate Tags document sections in Swagger .json
@@ -113,13 +119,15 @@ namespace ElGuerre.Taskin.Api
             }
             else
             {
-                app.UseExceptionMiddleware();
+                app.UseHsts();
                 app.UseExceptionHandler();
             }
+
 
             loggerFactory.AddNLog();
             // app.AddNLogWeb();
 
+            app.UseHttpsRedirection();
             app.UseMvc();
             //app.UseMvc(routes =>
             //{

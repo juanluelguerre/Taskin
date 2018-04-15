@@ -16,7 +16,8 @@ namespace Taskin.Api.Controllers
     [Produces("application/json")]
     //[Route("api/Projects")]
     [Route("api/[controller]")]
-    public class ProjectsController : Controller
+    [ApiController]
+    public class ProjectsController : ControllerBase
     {
         private const string SERVICE_NAME = "Project";
         private readonly IProjectService _service;
@@ -29,8 +30,8 @@ namespace Taskin.Api.Controllers
         [HttpGet]
         [SwaggerOperation("GetAll" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(IEnumerable<ProjectModel>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetAll()
+        // [ProducesResponseType(typeof(IEnumerable<ProjectModel>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<IEnumerable<ProjectModel>>> GetAll()
         {
             var response = await _service.GetAsync();
             return Ok(response);
@@ -40,8 +41,8 @@ namespace Taskin.Api.Controllers
         [HttpGet("{id}")]
         [SwaggerOperation("Get" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(ProjectModel), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Get([FromRoute] int id)
+        // [ProducesResponseType(typeof(ProjectModel), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<ProjectModel>> Get([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
@@ -61,8 +62,8 @@ namespace Taskin.Api.Controllers
         [HttpGet("{id}/tasks")]
         [SwaggerOperation("GetTasksByProjectId", Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(IEnumerable<TaskModel>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetTasksByProjectId([FromRoute] int id)
+        // [ProducesResponseType(typeof(IEnumerable<TaskModel>), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<ProjectModel>> GetTasksByProjectId([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
@@ -84,8 +85,8 @@ namespace Taskin.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
-        [ProducesResponseType(typeof(ProjectModel), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Put([FromRoute] int id, [FromBody] ProjectModel projectModel)
+        // [ProducesResponseType(typeof(ProjectModel), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<ProjectModel>> Put([FromRoute] int id, [FromBody] ProjectModel projectModel)
         {
             if (!ModelState.IsValid)
             {
@@ -109,8 +110,8 @@ namespace Taskin.Api.Controllers
         [HttpPost]
         [SwaggerOperation("Post" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> Post([FromBody] ProjectModel projectModel)
+        // [ProducesResponseType(typeof(int), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<ProjectModel>> Post([FromBody] ProjectModel projectModel)
         {
             if (!ModelState.IsValid)
             {
@@ -128,7 +129,7 @@ namespace Taskin.Api.Controllers
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> DeleteProjectEntity([FromRoute] int id)
+        public async Task<ActionResult> DeleteProjectEntity([FromRoute] int id)
         {
             if (!ModelState.IsValid)
             {
