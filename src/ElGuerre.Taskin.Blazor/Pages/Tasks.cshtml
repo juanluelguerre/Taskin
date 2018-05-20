@@ -4,40 +4,41 @@
 @page "/tasks/{ProjectId}"
 @inject HttpClient Http
 
-    <div class="page-header">
-        <h1>Tasks @(!string.IsNullOrWhiteSpace(ProjectId) ? $"for project {ProjectId}" : "")</h1>
-    </div>
+<div class="page-header">
+    <h1>Tasks @(!string.IsNullOrWhiteSpace(ProjectId) ? $"for project {ProjectId}" : "")</h1>
+</div>
 
-    @if (tasks == null)
-    {
-        <p><em>Loading...</em></p>
-    }
-    else
-    {
-        <table class='table table-hover'>
-            <thead>
+@if (tasks == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table table-hover'>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Priority</th>
+                <th>Detail</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in tasks)
+            {
                 <tr>
-                    <th>Id</th>
-                    <th>Priority</th>
-                    <th>Detail</th>
-                    <th>Type</th>
+                    <td>@task.Id</td>
+                    <td>@task.Priority</td>
+                    <td>@task.Detail</td>
+                    <td>@task.TaskType</td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var task in tasks)
-                {
-                    <tr>
-                        <td>@task.Id</td>
-                        <td>@task.Priority</td>
-                        <td>@task.Detail</td>
-                        <td>@task.TaskType</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
+            }
+        </tbody>
+    </table>
+}
 
-    @functions {
+@functions {
+    [Parameter]
     public string ProjectId { get; set; }
 
     TaskModel[] tasks;
@@ -51,4 +52,4 @@
     //{
     //    tasks = await Http.GetJsonAsync<TaskModel[]>("/api/projects/{id}/tasks");
     //}
-    }
+}

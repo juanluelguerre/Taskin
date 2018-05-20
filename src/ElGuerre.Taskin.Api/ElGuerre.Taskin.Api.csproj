@@ -6,6 +6,10 @@
     <AssemblyName>ElGuerre.Taskin.Api</AssemblyName>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
   <ItemGroup>
     <Folder Include="Core\Logging\" />
     <Folder Include="Core\Cache\" />
@@ -18,9 +22,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.0-preview2-final" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.0-preview2-final" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0-preview1-final" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="4.5.2" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.5.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="0.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="0.4.0-preview1-10286" />
   </ItemGroup>
 
   <ItemGroup>
