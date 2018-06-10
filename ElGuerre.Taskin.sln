@@ -17,9 +17,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Models", "src\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{FB315873-7213-4389-B3E9-9034C4D08F49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Api.Services.Tests", "test\ElGuerre.Taskin.Api.Services.Tests\ElGuerre.Taskin.Api.Services.Tests.csproj", "{044AEA6B-AA6E-43D1-A948-008DE347AA0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.Services.Tests", "test\ElGuerre.Taskin.Api.Services.Tests\ElGuerre.Taskin.Api.Services.Tests.csproj", "{044AEA6B-AA6E-43D1-A948-008DE347AA0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Api.Repository.Tests", "test\ElGuerre.Taskin.Api.Repository.Tests\ElGuerre.Taskin.Api.Repository.Tests.csproj", "{7C5F416A-07F3-40F1-94F7-626BF24E027E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.Repository.Tests", "test\ElGuerre.Taskin.Api.Repository.Tests\ElGuerre.Taskin.Api.Repository.Tests.csproj", "{7C5F416A-07F3-40F1-94F7-626BF24E027E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5420E91F-2EEB-482D-BA9C-44CDB59FCA82}"
+	ProjectSection(SolutionItems) = preProject
+		test\CodeCoverage.testsettings = test\CodeCoverage.testsettings
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
