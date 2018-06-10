@@ -1,9 +1,9 @@
 using System;
 using Xunit;
 
-namespace Taskin.Api.UnitTests
+namespace ElGuerre.Taskin.Api.Repository.Tests
 {
-    public class UnitTest1
+    public class BaseRepositoryTest
     {
         [Fact]
         public void Test1()

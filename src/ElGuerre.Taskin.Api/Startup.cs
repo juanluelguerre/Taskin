@@ -120,11 +120,11 @@ namespace ElGuerre.Taskin.Api
             else
             {
                 app.UseHsts();
-                app.UseExceptionHandler();
+                // app.UseExceptionHandler();
             }
 
 
-            loggerFactory.AddNLog();
+            // loggerFactory.AddNLog();
             // app.AddNLogWeb();
 
             app.UseHttpsRedirection();
