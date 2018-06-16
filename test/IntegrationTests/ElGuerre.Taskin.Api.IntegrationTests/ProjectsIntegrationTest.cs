@@ -72,16 +72,15 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
         [InlineData(1)]
         public async Task GetTasksByProjectIdTest(int projId)
         {
-            var response = await Fixture.Client.GetAsync($"api/projects/{projId}");
+            var response = await Fixture.Client.GetAsync($"api/projects/{projId}/Tasks");
             response.EnsureSuccessStatusCode();
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             var content = await response.Content.ReadAsStringAsync();
 
-            var proj = JsonConvert.DeserializeObject<ProjectModel>(content);
-            Assert.NotNull(proj);
-            Assert.NotNull(proj.Tasks);
-            Assert.True(proj.Tasks.Any());
+            var tasks = JsonConvert.DeserializeObject<IEnumerable<TaskModel>>(content);
+            Assert.NotNull(tasks);
+            Assert.True(tasks.Any());
         }
 
         [Fact]
@@ -95,14 +94,6 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
 
         [Theory]
         [InlineData(15)]
-        public async Task DeleteTest(int projId)
-        {
-            var response = await Fixture.Client.DeleteAsync($"api/projects/{projId}");
-            Assert.Throws<HttpRequestException>(() => response.EnsureSuccessStatusCode());
-        }
-
-        [Theory]
-        [InlineData(15)]
         public async Task PutTest(int projId)
         {
             var content = GetSampleProject(projId);
@@ -110,6 +101,15 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
             var response = await Fixture.Client.PostAsync($"api/projects/{projId}", content);
             response.EnsureSuccessStatusCode();
         }
+
+        [Theory]
+        [InlineData(15)]
+        public async Task DeleteTest(int projId)
+        {
+            var response = await Fixture.Client.DeleteAsync($"api/projects/{projId}");
+            Assert.Throws<HttpRequestException>(() => response.EnsureSuccessStatusCode());
+        }
+
 
         private static StringContent GetSampleProject(int projId)
         {

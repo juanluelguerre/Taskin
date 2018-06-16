@@ -5,14 +5,13 @@
 // ---------------------------------------------------------------------------------------------------
 // Reference: https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-2.1
 // ---------------------------------------------------------------------------------------------------
-using ElGuerre.Taskin.Api;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ElGuerre.OneRest.Taskin.Api.IntegrationTests
+namespace ElGuerre.Taskin.Api.IntegrationTests
 {
-    class WebAppFactoryTest : WebApplicationFactory<Startup>
+    public class WebAppFactory<TStartup> : WebApplicationFactory<Startup> 
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
@@ -23,6 +22,7 @@ namespace ElGuerre.OneRest.Taskin.Api.IntegrationTests
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
+                // https://github.com/dotnet-architecture/eShopOnWeb/blob/master/tests/FunctionalTests/Web/Controllers/CustomWebApplicationFactory.cs
 
                 // TODO: Add more services customization
 

@@ -1,7 +1,8 @@
 language: csharp
 mono: none
-dotnet: 2.1.4
+dotnet: 2.1
 script:
- - dotnet restore .\OneRest\src\ElGuerre.Taskin.OneRest.Api.sln
+ - dotnet --version
+ - dotnet restore .\ElGuerre.Taskin.sln
  # - nuget install xunit.runners -Version 2.3.1 -OutputDirectory testrunner
 

@@ -39,7 +39,7 @@ else
 
 @functions {
     [Parameter]
-    public string ProjectId { get; set; }
+    string ProjectId { get; set; }
 
     TaskModel[] tasks;
 
@@ -47,9 +47,4 @@ else
     {
         tasks = await Http.GetJsonAsync<TaskModel[]>($"/api/projects/{ProjectId}/tasks");
     }
-
-    //public async Task OnGetAsync(int id)
-    //{
-    //    tasks = await Http.GetJsonAsync<TaskModel[]>("/api/projects/{id}/tasks");
-    //}
 }
