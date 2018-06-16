@@ -1,7 +1,17 @@
 language: csharp
 mono: none
 dotnet: 2.1
+
+addons:
+  sonarcloud:
+    organization: "Taskin" # the key of the org you chose at step #3
+    token:
+      secure: 83a3e3b0945ffc9274669d7b21d2218ecf7e64b1 # encrypted value of your token
+
 script:
+ - SonarQube.Scanner.MSBuild.exe begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
  - dotnet build ElGuerre.Taskin.sln
+ # - MsBuild.exe /t:Rebuild
+ - SonarQube.Scanner.MSBuild.exe end /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
  # - nuget install xunit.runners -Version 2.3.1 -OutputDirectory testrunner
 
