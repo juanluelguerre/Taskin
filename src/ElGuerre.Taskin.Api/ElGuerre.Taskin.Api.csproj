@@ -4,27 +4,37 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>ElGuerre.Taskin.Api</RootNamespace>
     <AssemblyName>ElGuerre.Taskin.Api</AssemblyName>
+    <UserSecretsId>49ebb1a6-71b8-4aab-a7d2-3d3a91d754d9</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <LangVersion>latest</LangVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Core\Logging\" />
     <Folder Include="Core\Cache\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="7.0.0-alpha-0001" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0-preview2-final" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.0-preview2-final" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.0-preview2-final" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0-preview1-final" />
+    <PackageReference Include="AutoMapper" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="0.5.0-preview1-10320" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.5.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="0.4.0-preview1-10286" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.5.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +44,15 @@
   <ItemGroup>
     <ProjectReference Include="..\ElGuerre.Taskin.Blazor\ElGuerre.Taskin.Blazor.csproj" />
     <ProjectReference Include="..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -54,18 +54,21 @@ namespace Taskin.Api.Controllers
         
         // POST: api/Tasks
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public void Post([FromBody]string value)
         {
         }
         
         // PUT: api/Tasks/5
         [HttpPut("{id}")]
+        [ValidateAntiForgeryToken]
         public void Put(int id, [FromBody]string value)
         {
         }
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
+        [ValidateAntiForgeryToken]
         public void Delete(int id)
         {
         }

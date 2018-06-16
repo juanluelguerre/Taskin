@@ -5,7 +5,6 @@
 // ---------------------------------------------------------------------------------
 using ElGuerre.Taskin.Api.Data.Entity;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
 namespace ElGuerre.Taskin.Api.Data
 {
@@ -16,7 +15,7 @@ namespace ElGuerre.Taskin.Api.Data
         {
         }
 
-        // public DbSet<ProjectEntity> ProjectEntity { get; set; }
+        // public DbSet<ProjectEntity> Projects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

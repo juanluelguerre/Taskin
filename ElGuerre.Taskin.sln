@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.IntegrationTests", "test\Taskin.Api.IntegrationTests\ElGuerre.Taskin.Api.IntegrationTests.csproj", "{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{BF6F36DC-B9A4-4F55-8D95-0AB2F510A21A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{67658D2B-713F-439F-8ABB-DC23A80DD7B2}"
@@ -17,16 +15,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Models", "src\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{FB315873-7213-4389-B3E9-9034C4D08F49}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5420E91F-2EEB-482D-BA9C-44CDB59FCA82}"
+	ProjectSection(SolutionItems) = preProject
+		test\CodeCoverage.testsettings = test\CodeCoverage.testsettings
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.Repository.Tests", "test\UnitTets\ElGuerre.Taskin.Api.Repository.Tests\ElGuerre.Taskin.Api.Repository.Tests.csproj", "{4FB87A94-1E59-4DD8-B759-18B596BA3FA5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.Services.Tests", "test\UnitTets\ElGuerre.Taskin.Api.Services.Tests\ElGuerre.Taskin.Api.Services.Tests.csproj", "{7D029FA1-3591-4CA4-AD26-B50F3AAD107A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.IntegrationTests", "test\IntegrationTests\ElGuerre.Taskin.Api.IntegrationTests\ElGuerre.Taskin.Api.IntegrationTests.csproj", "{22041B79-3416-414F-AB8F-4F7891572B7E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.BlazorTests", "test\FunctionalTests\ElGuerre.Taskin.BlazorTests\ElGuerre.Taskin.BlazorTests.csproj", "{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,14 +46,33 @@ Global
 		{FB315873-7213-4389-B3E9-9034C4D08F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB315873-7213-4389-B3E9-9034C4D08F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB315873-7213-4389-B3E9-9034C4D08F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB87A94-1E59-4DD8-B759-18B596BA3FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB87A94-1E59-4DD8-B759-18B596BA3FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB87A94-1E59-4DD8-B759-18B596BA3FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB87A94-1E59-4DD8-B759-18B596BA3FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D029FA1-3591-4CA4-AD26-B50F3AAD107A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D029FA1-3591-4CA4-AD26-B50F3AAD107A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D029FA1-3591-4CA4-AD26-B50F3AAD107A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D029FA1-3591-4CA4-AD26-B50F3AAD107A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22041B79-3416-414F-AB8F-4F7891572B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22041B79-3416-414F-AB8F-4F7891572B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22041B79-3416-414F-AB8F-4F7891572B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22041B79-3416-414F-AB8F-4F7891572B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{CCF64DFB-2576-4F51-A0A9-4FFBA3D1E2CA} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
 		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3} = {67658D2B-713F-439F-8ABB-DC23A80DD7B2}
 		{11671393-BECB-4088-A126-25F90F864256} = {BF6F36DC-B9A4-4F55-8D95-0AB2F510A21A}
+		{4FB87A94-1E59-4DD8-B759-18B596BA3FA5} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
+		{7D029FA1-3591-4CA4-AD26-B50F3AAD107A} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
+		{22041B79-3416-414F-AB8F-4F7891572B7E} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
+		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {892CB51C-209D-4A44-9CA0-5477EE802176}

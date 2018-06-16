@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Taskin.Api.UnitTests
+namespace ElGuerre.Taskin.Web.FunctionalTests
 {
     public class UnitTest1
     {
