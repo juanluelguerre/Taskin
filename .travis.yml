@@ -9,15 +9,15 @@ addons:
      secure: 83a3e3b0945ffc9274669d7b21d2218ecf7e64b1 # encrypted value of your token
 
 install:
- - choco install "msbuild-sonarqube-runner" -y
+ # - choco install "msbuild-sonarqube-runner" -y
 
 
 script:
  # - dotnet restore ElGuerre.Taskin.sln
- - SonarQube.Scanner.MSBuild.exe begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
+ # - SonarQube.Scanner.MSBuild.exe begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
  - dotnet build ElGuerre.Taskin.sln
  # - MsBuild ElGuerre.Taskin.sln /t:Rebuild
- - SonarQube.Scanner.MSBuild.exe end /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
+ # - SonarQube.Scanner.MSBuild.exe end /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
 
  - nuget install xunit.runners -Version 2.3.1 -OutputDirectory testrunner
 
