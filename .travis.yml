@@ -3,6 +3,6 @@ mono: none
 dotnet: 2.1
 script:
  - dotnet --version
- - dotnet restore .\ElGuerre.Taskin.sln
+ - dotnet restore ElGuerre.Taskin.sln
  # - nuget install xunit.runners -Version 2.3.1 -OutputDirectory testrunner
 
