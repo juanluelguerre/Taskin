@@ -5,8 +5,6 @@ Develop | Master
 ------- | ------
 ![Develop](https://travis-ci.org/juanluelguerre/Taskin.svg?branch=develop) | ![Master](https://travis-ci.org/juanluelguerre/Taskin.svg?branch=master)
 
-
-
 Task[In] is a simple applilcation to manage projects and task and also use Pomodoro Technic work on them. ¡Just that you need to be a little more productive!.
 
 Task[in] is a project to show how we can develop applications (mainly in Microsoft .NET using C#). Task[in] include, samples, startup guides, best practices and others recomendations. All of them from my point of view and according to my professional experience. It's a step by step, about how we can develop real applications and not just thinking in samples or PoCs.
