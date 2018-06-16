@@ -4,7 +4,7 @@ dotnet: 2.1
 
 addons:
   sonarcloud:
-    organization: "Taskin" # the key of the org you chose at step #3
+    organization: "juanluelguerre-github" # the key of the org you chose at step #3
     token:
       secure: 83a3e3b0945ffc9274669d7b21d2218ecf7e64b1 # encrypted value of your token
 
