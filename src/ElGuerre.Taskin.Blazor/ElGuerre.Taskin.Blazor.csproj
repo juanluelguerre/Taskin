@@ -29,4 +29,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="0.5.0-preview1-10321" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Pages\TaskDetail.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
 </Project>

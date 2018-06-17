@@ -3,6 +3,7 @@
 
 @page "/tasks/{ProjectId}"
 @inject HttpClient Http
+@inject Microsoft.AspNetCore.Blazor.Services.IUriHelper UriHelper
 
 <div class="page-header">
     <h1>Tasks @(!string.IsNullOrWhiteSpace(ProjectId) ? $"for project {ProjectId}" : "")</h1>
@@ -31,6 +32,9 @@ else
                     <td>@task.Priority</td>
                     <td>@task.Detail</td>
                     <td>@task.TaskType</td>
+                    <td>
+                        <button class="btn btn-info" onclick=@(() => UriHelper.NavigateTo($"/taskdetail/{task.Id}"))>View</button>
+                    </td>
                 </tr>
             }
         </tbody>
@@ -38,13 +42,13 @@ else
 }
 
 @functions {
-    [Parameter]
-    string ProjectId { get; set; }
+[Parameter]
+string ProjectId { get; set; }
 
-    TaskModel[] tasks;
+TaskModel[] tasks;
 
-    protected override async Task OnInitAsync()
-    {
-        tasks = await Http.GetJsonAsync<TaskModel[]>($"/api/projects/{ProjectId}/tasks");
-    }
+protected override async Task OnInitAsync()
+{
+    tasks = await Http.GetJsonAsync<TaskModel[]>($"/api/projects/{ProjectId}/tasks");
+}
 }

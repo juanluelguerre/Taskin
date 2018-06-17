@@ -1,6 +1,5 @@
 ﻿@using ElGuerre.Taskin.Models
-@using System.Web
-
+@using ElGuerre.Taskin.Blazor.Shared
 
 @page "/projects"
 
@@ -16,7 +15,7 @@
     <p><em>Loading...</em></p>
 }
 else
-{
+{    
     <table class='table table-hover'>
         <thead>
             <tr>
@@ -37,10 +36,6 @@ else
                     <td>@proj.ProjectType</td>
                     <td>
                         <button class="btn btn-info" onclick=@(() => UriHelper.NavigateTo($"/tasks/{proj.Id}"))>View</button>
-
-                        @*<NavLink href="/tasks">
-                                <span class='glyphicon glyphicon-th-list'></span> @proj.Tasks?.Count
-                        </NavLink>*@
                     </td>
                 </tr>
             }
@@ -58,5 +53,4 @@ else
         //      options.SerializerSettings.ContractResolver = new DefaultContractResolver();
         projects = await Http.GetJsonAsync<ProjectModel[]>("/api/projects");
     }
-
 }
