@@ -54,21 +54,51 @@ namespace Taskin.Api.Controllers
         
         // POST: api/Tasks
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public void Post([FromBody]string value)
+        // [ValidateAntiForgeryToken]
+        [SwaggerOperation("Post" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<ActionResult<TaskModel>> Post([FromBody] TaskModel taskModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var model = await _service.AddAsync(taskModel);
+            return Ok(new { id = model.Id });
         }
-        
+
         // PUT: api/Tasks/5
         [HttpPut("{id}")]
-        [ValidateAntiForgeryToken]
-        public void Put(int id, [FromBody]string value)
+        // [ValidateAntiForgeryToken]
+        [SwaggerOperation("Put" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        public async Task<ActionResult<TaskModel>> Put([FromRoute] int id, [FromBody] TaskModel taskModel)
+
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != taskModel.Id)
+            {
+                return BadRequest();
+            }
+
+            var model = await _service.GetAsync(id);
+            if (model == null)
+                return NotFound();
+
+            model = await _service.UpdateAsync(taskModel);
+            return Ok(model);
         }
         
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public void Delete(int id)
         {
         }

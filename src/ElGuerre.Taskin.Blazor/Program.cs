@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Blazor.Browser.Rendering;
+﻿using ElGuerre.Taskin.Blazor.Utils;
+using ElGuerre.Taskin.Models;
+using Microsoft.AspNetCore.Blazor.Browser.Rendering;
 using Microsoft.AspNetCore.Blazor.Browser.Services;
 
 namespace ElGuerre.Taskin.Blazor
@@ -10,8 +12,9 @@ namespace ElGuerre.Taskin.Blazor
             var serviceProvider = new BrowserServiceProvider(services =>
             {
                 // Add any custom services here
+                // sample: services.Add(ServiceDescriptor.Singleton<IDataAccess, DataAccess>());
             });
-
+            
             new BrowserRenderer(serviceProvider).AddComponent<App>("app");
         }
     }

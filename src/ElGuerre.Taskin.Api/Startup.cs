@@ -149,7 +149,7 @@ namespace ElGuerre.Taskin.Api
             }
 
             MappingConfig.RegisterMaps();
-
+            
             app.UseBlazor<ElGuerre.Taskin.Blazor.Program>();
         }
     }

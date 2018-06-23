@@ -1,0 +1,53 @@
+﻿@using ElGuerre.Taskin.Models
+@using System.Threading.Tasks
+@using ElGuerre.Taskin.Blazor.Extensions
+
+@page "/learning"
+@inject HttpClient Http
+
+<div class="page-header">
+    <h1>DEMOS</h1>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-3">
+            <div class="card" >
+                <img class="card-img-top" src="/assets/JavaScript.png" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Call JavaScript</h5>
+                    <p class="card-text">This demo show how Blazor call Java Scripts funcionts</p>
+                    <InteropJS></InteropJS>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="/assets/CSharp.jpg" style="max-width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Call Blazor from JS</h5>
+                    <p class="card-text">This demo show how Java Scripts call Blazor methods</p>
+                    <button class="btn btn-primary" onclick="callTimeOut()">Time Out</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card border-info mb-3">
+                <div class="card-header">Life Cycle</div>
+                <div class="card-body">
+                    <h5 class="card-title">Override Methods</h5>
+                    <p class="card-text">
+                        This demo show how Blazor Component execute its methods when load
+                        <LifeCycle Name="World"></LifeCycle>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@functions {
+
+}

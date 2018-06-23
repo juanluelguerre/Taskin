@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace ElGuerre.Taskin.Models
 {
     public class ProjectModel : BaseModel<int>
-    {
+    {        
         public string Title { get; set; }
         public string Detail { get; set; }
         public string ImageUrl { get; set; }

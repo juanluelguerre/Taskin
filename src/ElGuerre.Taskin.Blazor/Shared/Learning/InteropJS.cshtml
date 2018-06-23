@@ -1,0 +1,24 @@
+﻿@inject HttpClient Http
+@using Microsoft.AspNetCore.Blazor.Browser.Interop
+
+@*
+    // TODO: Review !!!
+    https://learn-blazor.com/architecture/interop/
+*@
+
+<button class="btn btn-primary" onclick=@CallJS>Call JavaScript</button>
+
+@functions {
+    private async void CallJS()
+    {
+        // Get some demo data from a web service and pass it to our function.
+        // Again, it will be turned to JSON and back during the function call.
+        var projects = await Http.GetJsonAsync<List<ProjectModel>>("/api/projects");
+        if (RegisteredFunction.Invoke<bool>("printProjects", projects))
+        {
+            // This line will be reached as our `say` function returns true,
+            // We can find this message inside the Browser Console !!!
+            Console.WriteLine("Returned true. Hi from 'Console.WriteLine'.");
+        }
+    }
+}

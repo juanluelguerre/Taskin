@@ -11,6 +11,28 @@
 <body>
     <app>Loading...</app>
 
-    <script type="blazor-boot"></script>
+    <script type="blazor-boot">
+    </script>
+
+    <script>
+        Blazor.registerFunction('printProjects', (data) => {
+            alert('Hi Blazor for JavaScript !');
+            console.dir(data);
+            return true;
+        });
+
+        function callTimeOut(){
+            Blazor.invokeDotNetMethod({
+                type: {
+                    assembly: 'ElGuerre.Taskin.Blazor',
+                    name: 'ElGuerre.Taskin.Blazor.Learning.Timeout'
+                },
+                method: {
+                    name: 'TimeoutCallback'
+                }
+            });
+        };
+    </script>
+
 </body>
 </html>

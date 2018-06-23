@@ -1,6 +1,8 @@
 ﻿@using ElGuerre.Taskin.Models
 @using System.Threading.Tasks
+
 @using ElGuerre.Taskin.Blazor.Extensions
+@using ElGuerre.Taskin.Blazor.Utils
 
 @page "/taskdetail/{TaskId}"
 @inject HttpClient Http
@@ -9,7 +11,7 @@
     <h1>  </h1>
 </div>
 
-@if (Task == null)
+@if (CurrentTask == null)
 {
     <p><em>No task found</em></p>
 }
@@ -18,7 +20,7 @@ else
     <div class="form-group row">
         <label for="task-detail" class="col-2 col-form-label">Detail</label>
         <div class="col-10">
-            <input class="form-control" type="text" value="@Task.Detail" id="detail">
+            <input class="form-control" type="text" bind="@CurrentTask.Detail" id="detail" />
         </div>
     </div>
     <div class="form-group row">
@@ -36,31 +38,59 @@ else
     <div class="form-group row">
         <label for="task-detail" class="col-2 col-form-label">Priority</label>
         <div class="col-10">
-            <input class="form-control" type="text" value="@Task.Priority" id="priority">
+            <input class="form-control" type="number" bind="@CurrentTask.Priority" id="priority" />
         </div>
     </div>
     <div class="form-group row">
         <label for="task-detail" class="col-2 col-form-label">Effort</label>
         <div class="col-10">
-            <input class="form-control" type="text" value="@Task.Effort" id="effort">
+            <input class="form-control" type="number" bind="@CurrentTask.Effort" id="effort" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <button class="btn btn-info" onclick="@(() => Update())">Save</button>
         </div>
     </div>
 }
 
+<ManualRefreshChild NumberOfElements=@CurrentTask></ManualRefreshChild>
+
 @functions {
-[Parameter]
-string TaskId { get; set; }
+    [Parameter]
+    string TaskId { get; set; }
 
-TaskModel Task { get; set; }
+    TaskModel CurrentTask { get; set; }
 
-private IList<KeyValuePair<int, string>> GetAllTaskTypes()
-{
-    // return Enum.GetValues(typeof(TaskType)) as IEnumerable<int>;
-    return typeof(TaskType).ToValueList<int>();
-}
+    private IList<KeyValuePair<int, string>> GetAllTaskTypes()
+    {
+        // return Enum.GetValues(typeof(TaskType)) as IEnumerable<int>;
+        return typeof(TaskType).ToValueList<int>();
+    }
 
-protected override async Task OnInitAsync()
-{
-    Task = await Http.GetJsonAsync<TaskModel>($"/api/tasks/{TaskId}");
-}
+    protected override async Task OnInitAsync()
+    {
+        CurrentTask = await Http.GetJsonAsync<TaskModel>($"/api/tasks/{TaskId}");
+    }
+
+    private async Task Update()
+    {
+        Console.WriteLine("Saving...");
+
+        Console.WriteLine($"{CurrentTask.Detail}");
+
+        // Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(CurrentTask));
+        //Console.WriteLine(JsonUtil.Serialize(CurrentTask));
+
+
+        var content = new JsonContent(CurrentTask);
+
+        // Console.WriteLine(content);
+
+        //await Task.CompletedTask;
+
+        await Http.PutAsync($"api/tasks/{TaskId}", content);
+    }
+
 }
