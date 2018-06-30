@@ -3,6 +3,8 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
+using ElGuerre.ApplicationBlocks.Logging;
+using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Data;
 using ElGuerre.Taskin.Api.Data.Entity;
 using ElGuerre.Taskin.Api.Data.Repository;
@@ -19,20 +21,22 @@ namespace ElGuerre.Taskin.Api.Services
     {       
         private readonly IEntityRepository<TEntity, Tkey> _repository;
         private readonly IUnitOfWork _unitOfWork;
+        protected readonly ILogger _logger;
 
         protected IUnitOfWork UnityOfWork { get => _unitOfWork; }
         protected IEntityRepository<TEntity, Tkey> Repository { get => _repository; }
 
-        protected BaseService(IEntityRepository<TEntity, Tkey> repository, IUnitOfWork unityOfWork)
+        protected BaseService(IEntityRepository<TEntity, Tkey> repository, IUnitOfWork unityOfWork, ILogProvider logProvider)
         {
             _repository = repository;
             _unitOfWork = unityOfWork;
+            _logger = new Logger(logProvider);
         }
 
         public virtual async Task<IEnumerable<TModel>> GetAsync()
         {
             var entities = await _repository.Get();
-            var model = entities.Select(x => AutoMapper.Mapper.Map<TEntity, TModel>(x));
+            var model = entities.Select(AutoMapper.Mapper.Map<TEntity, TModel>);
             return model.ToList();
         }
 

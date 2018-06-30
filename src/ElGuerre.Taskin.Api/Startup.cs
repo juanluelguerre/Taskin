@@ -3,6 +3,7 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
+using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Core.Mvc.Filters;
 using ElGuerre.Taskin.Api.Core.Mvc.Middlewares;
 using ElGuerre.Taskin.Api.Data;
@@ -22,6 +23,7 @@ using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using NLog.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
+using System.IO;
 using System.Linq;
 using System.Net.Mime;
 
@@ -85,6 +87,10 @@ namespace ElGuerre.Taskin.Api
 
             // services.AddScoped<IDbContextSeed, DataContext>();
             services.AddScoped<DataContext>();
+
+
+            services.AddScoped<ILogProvider>(s => new FileProvider(Path.Combine(Directory.GetCurrentDirectory(), "trace.log")));
+            services.AddScoped<ApplicationBlocks.Logging.ILogger, ApplicationBlocks.Logging.Logger>();
 
             // Add custom Services, repositories and so on
             services.AddScoped<IProjectRepository, ProjectRepository>();

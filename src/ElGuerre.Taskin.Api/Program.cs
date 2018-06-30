@@ -5,7 +5,7 @@
 // ---------------------------------------------------------------------------------
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
-using NLog.Web;
+using Serilog;
 using System.IO;
 
 namespace ElGuerre.Taskin.Api
@@ -30,8 +30,9 @@ namespace ElGuerre.Taskin.Api
                     // 2) Use NLog
                     // logging.ConfigureNLog("nlog.config");
                 })
-                .UseNLog()  // NLog: setup NLog for Dependency injection                
-                .UseApplicationInsights()
+                // .UseNLog()  // NLog: setup NLog for Dependency injection                
+                //.UseApplicationInsights()
+                .UseSerilog()
                 .Build();
 
             host.Run();

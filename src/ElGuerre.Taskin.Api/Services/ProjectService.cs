@@ -3,6 +3,7 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
+using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Data;
 using ElGuerre.Taskin.Api.Data.Entity;
 using ElGuerre.Taskin.Api.Data.Repository;
@@ -15,15 +16,17 @@ namespace ElGuerre.Taskin.Api.Services
 {
     public class ProjectService : BaseService<ProjectModel, ProjectEntity, int>, IProjectService
     {
-        public ProjectService(IProjectRepository repository, IUnitOfWork unitOfWork) 
-            : base(repository, unitOfWork)
+        public ProjectService(IProjectRepository repository, IUnitOfWork unitOfWork, ILogProvider logProvider) 
+            : base(repository, unitOfWork, logProvider)
         {
         }
 
         public override async Task<IEnumerable<ProjectModel>> GetAsync()
         {
+            _logger.Trace("GetAsync");
+
             var entities = await Repository.Get(null, null, "Tasks");
-            var model = entities.Select(x => AutoMapper.Mapper.Map<ProjectEntity, ProjectModel>(x));
+            var model = entities.Select(AutoMapper.Mapper.Map<ProjectEntity, ProjectModel>);
             return model;
         }
 

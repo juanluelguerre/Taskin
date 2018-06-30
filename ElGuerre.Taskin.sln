@@ -9,24 +9,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{BF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{67658D2B-713F-439F-8ABB-DC23A80DD7B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Blazor", "src\ElGuerre.Taskin.Blazor\ElGuerre.Taskin.Blazor.csproj", "{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Api", "src\ElGuerre.Taskin.Api\ElGuerre.Taskin.Api.csproj", "{11671393-BECB-4088-A126-25F90F864256}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "src\ElGuerre.Taskin.Api\ElGuerre.Taskin.Api.csproj", "{11671393-BECB-4088-A126-25F90F864256}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Models", "src\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{FB315873-7213-4389-B3E9-9034C4D08F49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Models", "src\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{FB315873-7213-4389-B3E9-9034C4D08F49}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5420E91F-2EEB-482D-BA9C-44CDB59FCA82}"
 	ProjectSection(SolutionItems) = preProject
 		test\CodeCoverage.testsettings = test\CodeCoverage.testsettings
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.Repository.Tests", "test\UnitTets\ElGuerre.Taskin.Api.Repository.Tests\ElGuerre.Taskin.Api.Repository.Tests.csproj", "{4FB87A94-1E59-4DD8-B759-18B596BA3FA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Api.Repository.Tests", "test\UnitTets\ElGuerre.Taskin.Api.Repository.Tests\ElGuerre.Taskin.Api.Repository.Tests.csproj", "{4FB87A94-1E59-4DD8-B759-18B596BA3FA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.Services.Tests", "test\UnitTets\ElGuerre.Taskin.Api.Services.Tests\ElGuerre.Taskin.Api.Services.Tests.csproj", "{7D029FA1-3591-4CA4-AD26-B50F3AAD107A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Api.Services.Tests", "test\UnitTets\ElGuerre.Taskin.Api.Services.Tests\ElGuerre.Taskin.Api.Services.Tests.csproj", "{7D029FA1-3591-4CA4-AD26-B50F3AAD107A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.IntegrationTests", "test\IntegrationTests\ElGuerre.Taskin.Api.IntegrationTests\ElGuerre.Taskin.Api.IntegrationTests.csproj", "{22041B79-3416-414F-AB8F-4F7891572B7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Api.IntegrationTests", "test\IntegrationTests\ElGuerre.Taskin.Api.IntegrationTests\ElGuerre.Taskin.Api.IntegrationTests.csproj", "{22041B79-3416-414F-AB8F-4F7891572B7E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.BlazorTests", "test\FunctionalTests\ElGuerre.Taskin.BlazorTests\ElGuerre.Taskin.BlazorTests.csproj", "{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.BlazorTests", "test\FunctionalTests\ElGuerre.Taskin.BlazorTests\ElGuerre.Taskin.BlazorTests.csproj", "{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.RazorPages", "src\UI\ElGuerre.Taskin.RazorPages\ElGuerre.Taskin.RazorPages.csproj", "{1038F022-03D0-448B-9B37-47BA141B223D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Blazor", "src\UI\ElGuerre.Taskin.Blazor\ElGuerre.Taskin.Blazor.csproj", "{D84D3702-9CE4-454E-B665-C6CAB9BCA0EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationBlocks", "ApplicationBlocks", "{D60A3A39-1141-4E9A-836E-B4DCB8F00DD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.ApplicationBlocks.Logging", "src\ApplicationBlocks\ElGuerre.ApplicationBlocks.Logging\ElGuerre.ApplicationBlocks.Logging.csproj", "{E13B3D45-121D-476C-91FB-253D982FA100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.ApplicationBlocks.Core", "src\ApplicationBlocks\ElGuerre.ApplicationBlocks.Core\ElGuerre.ApplicationBlocks.Core.csproj", "{215B2AAC-7D28-46B1-96BE-4E4936AE19FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +42,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11671393-BECB-4088-A126-25F90F864256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11671393-BECB-4088-A126-25F90F864256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11671393-BECB-4088-A126-25F90F864256}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,17 +66,36 @@ Global
 		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1038F022-03D0-448B-9B37-47BA141B223D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1038F022-03D0-448B-9B37-47BA141B223D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1038F022-03D0-448B-9B37-47BA141B223D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1038F022-03D0-448B-9B37-47BA141B223D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D84D3702-9CE4-454E-B665-C6CAB9BCA0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D84D3702-9CE4-454E-B665-C6CAB9BCA0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D84D3702-9CE4-454E-B665-C6CAB9BCA0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D84D3702-9CE4-454E-B665-C6CAB9BCA0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E13B3D45-121D-476C-91FB-253D982FA100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13B3D45-121D-476C-91FB-253D982FA100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13B3D45-121D-476C-91FB-253D982FA100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13B3D45-121D-476C-91FB-253D982FA100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215B2AAC-7D28-46B1-96BE-4E4936AE19FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215B2AAC-7D28-46B1-96BE-4E4936AE19FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215B2AAC-7D28-46B1-96BE-4E4936AE19FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215B2AAC-7D28-46B1-96BE-4E4936AE19FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9074DEF4-FA4A-4CC5-9B29-76DA8B97D9E3} = {67658D2B-713F-439F-8ABB-DC23A80DD7B2}
 		{11671393-BECB-4088-A126-25F90F864256} = {BF6F36DC-B9A4-4F55-8D95-0AB2F510A21A}
 		{4FB87A94-1E59-4DD8-B759-18B596BA3FA5} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
 		{7D029FA1-3591-4CA4-AD26-B50F3AAD107A} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
 		{22041B79-3416-414F-AB8F-4F7891572B7E} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
 		{C2D7E19C-CB1F-4B3E-AED7-6EC9AD2ABDCE} = {3BAC77CE-AAF1-44D6-B345-3A1CA2C0E83F}
+		{1038F022-03D0-448B-9B37-47BA141B223D} = {67658D2B-713F-439F-8ABB-DC23A80DD7B2}
+		{D84D3702-9CE4-454E-B665-C6CAB9BCA0EA} = {67658D2B-713F-439F-8ABB-DC23A80DD7B2}
+		{E13B3D45-121D-476C-91FB-253D982FA100} = {D60A3A39-1141-4E9A-836E-B4DCB8F00DD1}
+		{215B2AAC-7D28-46B1-96BE-4E4936AE19FE} = {D60A3A39-1141-4E9A-836E-B4DCB8F00DD1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {892CB51C-209D-4A44-9CA0-5477EE802176}
