@@ -5,6 +5,7 @@
 // ---------------------------------------------------------------------------------
 // Currently code coverage need Full pdb for .NETCore
 // ---------------------------------------------------------------------------------
+using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Data;
 using ElGuerre.Taskin.Api.Data.Entity;
 using ElGuerre.Taskin.Api.Data.Repository;
@@ -32,8 +33,10 @@ namespace ElGuerre.Taskin.Api.Services.Tests
             repository.Setup(x => x.FindAsync(projId)).ReturnsAsync(GetProjectEntityMock(1, 1));
             repository.Setup(x => x.Get(null, null, "Tasks")).ReturnsAsync(new[] { GetProjectEntityMock(2, 1), GetProjectEntityMock(2, 2) });
             var unitOfWork = new Mock<IUnitOfWork>();
+            var logProvider = new Mock<ILogProvider>();
 
-            var service = new ProjectService(repository.Object, unitOfWork.Object);
+
+            var service = new ProjectService(repository.Object, unitOfWork.Object, logProvider.Object);
 
             var projs = await service.GetAsync();
             Assert.NotNull(projs);

@@ -1,7 +1,12 @@
-using System;
+// ---------------------------------------------------------------------------------
+// <copyright file="Startup.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+//     Copyright (c) elGuerre.com. All rights reserved.
+// </copyright>
+// ---------------------------------------------------------------------------------using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ElGuerre.ApplicationBlocks.Core.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -33,6 +38,15 @@ namespace ElGuerre.Taskin.RazorPages
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSession();
+            services.Configure<AppSettings>(Configuration);
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpClient, StandardHttpClient>();
+
+            // services.AddTransient<ProjectService>
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

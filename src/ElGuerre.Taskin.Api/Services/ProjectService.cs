@@ -23,7 +23,7 @@ namespace ElGuerre.Taskin.Api.Services
 
         public override async Task<IEnumerable<ProjectModel>> GetAsync()
         {
-            _logger.Trace("GetAsync");
+            Log();
 
             var entities = await Repository.Get(null, null, "Tasks");
             var model = entities.Select(AutoMapper.Mapper.Map<ProjectEntity, ProjectModel>);
@@ -32,12 +32,15 @@ namespace ElGuerre.Taskin.Api.Services
 
         public override async Task<ProjectModel> GetAsync(int id)
         {
+            Log(args: id);
+
             var query = await Repository.Get(t => t.Id == id, null, "Tasks");
             if (query != null)
             {
-                var model = AutoMapper.Mapper.Map<ProjectEntity, ProjectModel>(query.FirstOrDefault());
+                var model = AutoMapper.Mapper.Map<ProjectEntity, ProjectModel>(query.FirstOrDefault());                               
                 return model;
             }
+            _logger.Warning($"{nameof(GetAsync)}({id}) return null. Project not found");
             return null;
         }
 

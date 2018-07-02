@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ElGuerre.Taskin.RazorPages.Pages
 {
-    public class ErrorModel : PageModel
+    public class ErrorPageModel : PageModel
     {
         public string RequestId { get; set; }
 

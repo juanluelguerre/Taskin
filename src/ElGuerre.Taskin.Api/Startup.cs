@@ -21,7 +21,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
-using NLog.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
 using System.IO;
 using System.Linq;
@@ -89,7 +88,8 @@ namespace ElGuerre.Taskin.Api
             services.AddScoped<DataContext>();
 
 
-            services.AddScoped<ILogProvider>(s => new FileProvider(Path.Combine(Directory.GetCurrentDirectory(), "trace.log")));
+            // services.AddScoped<ILogProvider>(s => new FileProvider(Path.Combine(Directory.GetCurrentDirectory(), "trace.log")));
+            services.AddScoped<ILogProvider>(s => new LogProvider(Configuration));
             services.AddScoped<ApplicationBlocks.Logging.ILogger, ApplicationBlocks.Logging.Logger>();
 
             // Add custom Services, repositories and so on
@@ -129,7 +129,6 @@ namespace ElGuerre.Taskin.Api
                 // app.UseExceptionHandler();
             }
 
-
             // loggerFactory.AddNLog();
             // app.AddNLogWeb();
 
@@ -156,7 +155,7 @@ namespace ElGuerre.Taskin.Api
 
             MappingConfig.RegisterMaps();
             
-            app.UseBlazor<ElGuerre.Taskin.Blazor.Program>();
+            // app.UseBlazor<ElGuerre.Taskin.Blazor.Program>();
         }
     }
 }

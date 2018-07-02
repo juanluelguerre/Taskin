@@ -15,7 +15,7 @@ namespace ElGuerre.Taskin.Blazor
                 // sample: services.Add(ServiceDescriptor.Singleton<IDataAccess, DataAccess>());
             });
             
-            new BrowserRenderer(serviceProvider).AddComponent<App>("app");
+            // new BrowserRenderer(serviceProvider).AddComponent<App>("app");
         }
     }
 }

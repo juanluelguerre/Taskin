@@ -16,8 +16,11 @@ namespace ElGuerre.Taskin.Api.Core.Mvc.Filters
         public void Apply(Operation operation, OperationFilterContext context)
         {
             // Check for authorize attribute
-            var hasAuthorize = context.ApiDescription.ControllerAttributes().OfType<AuthorizeAttribute>().Any() ||
-                               context.ApiDescription.ActionAttributes().OfType<AuthorizeAttribute>().Any();
+            // var hasAuthorize = context.ApiDescription.ControllerAttributes().OfType<AuthorizeAttribute>().Any() ||
+            //                    context.ApiDescription.ActionAttributes().OfType<AuthorizeAttribute>().Any();
+
+            var hasAuthorize = context.ControllerActionDescriptor.GetControllerAndActionAttributes(false).OfType<AuthorizeAttribute>().Any() ||
+                   context.ControllerActionDescriptor.GetControllerAndActionAttributes(false).OfType<AuthorizeAttribute>().Any();
 
             if (hasAuthorize)
             {

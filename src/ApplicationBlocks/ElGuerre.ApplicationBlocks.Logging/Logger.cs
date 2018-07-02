@@ -35,6 +35,5 @@ namespace ElGuerre.ApplicationBlocks.Logging
         {
             _logProvider.Trace(msg);
         }
-
     }
 }

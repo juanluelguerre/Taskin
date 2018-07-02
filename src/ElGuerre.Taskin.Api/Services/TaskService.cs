@@ -23,6 +23,8 @@ namespace ElGuerre.Taskin.Api.Services
 
         public override async Task<IEnumerable<TaskModel>> GetAsync()
         {
+            Log();
+
             var entities = await Repository.Get(/* null, null, "Pomodoros" */);
             var model = entities.Select(AutoMapper.Mapper.Map<TaskEntity, TaskModel>);
             return model;

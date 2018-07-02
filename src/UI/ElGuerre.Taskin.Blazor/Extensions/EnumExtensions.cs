@@ -1,4 +1,9 @@
-﻿using System;
+﻿// ---------------------------------------------------------------------------------
+// <copyright file="EnumExtensions.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+//     Copyright (c) elGuerre.com. All rights reserved.
+// </copyright>
+// ---------------------------------------------------------------------------------
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,7 +11,7 @@ namespace ElGuerre.Taskin.Blazor.Extensions
 {
     public static class EnumExtensions
     {
-        // <summary>
+        /// <summary>
         /// If an enum MyEnum is { a = 3, b = 5, c = 12 } then
         /// typeof(MyEnum).ToValueList<<int>>() will return [3, 5, 12]
         /// </summary>
