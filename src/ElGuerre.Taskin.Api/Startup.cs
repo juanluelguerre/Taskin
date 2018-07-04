@@ -22,7 +22,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using Swashbuckle.AspNetCore.Swagger;
-using System.IO;
 using System.Linq;
 using System.Net.Mime;
 
@@ -155,7 +154,7 @@ namespace ElGuerre.Taskin.Api
 
             MappingConfig.RegisterMaps();
             
-            // app.UseBlazor<ElGuerre.Taskin.Blazor.Program>();
+            app.UseBlazor<Blazor.Program>();
         }
     }
 }

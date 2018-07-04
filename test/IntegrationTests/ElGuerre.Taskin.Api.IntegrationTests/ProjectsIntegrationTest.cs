@@ -8,6 +8,7 @@
 // for Environement variables en "Debug" tabs for project properties.
 //
 // ---------------------------------------------------------------------------------
+using ElGuerre.Taskin.Api.Models;
 using ElGuerre.Taskin.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
     {
         public ProjectsIntegrationTest(CompositionRootFixture fixture) : base(fixture)
         {
+            AutoMapper.Mapper.AssertConfigurationIsValid();
         }
 
         [Fact]

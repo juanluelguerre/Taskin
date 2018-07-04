@@ -23,6 +23,7 @@ namespace ElGuerre.Taskin.Api.Services.Tests
         public ProjectServiceTest()
         {
             MappingConfig.RegisterMaps();
+            AutoMapper.Mapper.AssertConfigurationIsValid();
         }
 
         [Fact]

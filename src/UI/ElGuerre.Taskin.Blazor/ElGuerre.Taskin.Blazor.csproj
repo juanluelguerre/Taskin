@@ -16,10 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <BlazorGenerate Remove="Pages\Tasks.cshtml" />
   </ItemGroup>
 
@@ -33,6 +29,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Browser" Version="0.5.0-preview1-10321" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="0.5.0-preview1-10321" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>

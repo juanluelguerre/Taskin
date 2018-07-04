@@ -15,6 +15,10 @@ namespace ElGuerre.Taskin.Api.Models
             AutoMapper.Mapper.Initialize(config =>
             {
                 //config.AddProfile<MapProfile>();
+
+                config.CreateMap<TaskModel, TaskEntity>();
+                config.CreateMap<TaskEntity, TaskModel>();
+
                 config.CreateMap<ProjectModel, ProjectEntity>();
                 config.CreateMap<ProjectEntity, ProjectModel>();
             });

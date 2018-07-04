@@ -7,8 +7,8 @@ using Xunit;
 
 namespace ElGuerre.Taskin.Api.IntegrationTests
 {
-    // public class BaseTest : IClassFixture<CompositionRootFixture>
-    public class BaseTest : IClassFixture<WebAppFactory<Startup>>
+    public class BaseTest : IClassFixture<CompositionRootFixture>
+    //public class BaseTest : IClassFixture<WebAppFactory<Startup>>
     {
         protected readonly CompositionRootFixture Fixture;
 
