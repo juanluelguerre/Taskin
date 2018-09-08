@@ -3,6 +3,7 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
+using ElGuerre.Taskin.Api.Models;
 using Xunit;
 
 namespace ElGuerre.Taskin.Api.IntegrationTests

@@ -292,6 +292,9 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
+# Sonar file to save locally Sonar Token for the current user.
+sonar.txt
+
 ### VisualStudio Patch ###
 # By default, sensitive information, such as encrypted password
 # should be stored in the .pubxml.user file.

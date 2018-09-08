@@ -10,7 +10,7 @@ namespace ElGuerre.ApplicationBlocks.Logging.Providers
 
         public FileProvider(string filePath)
         {
-            if (String.IsNullOrWhiteSpace(filePath))
+            if (string.IsNullOrWhiteSpace(filePath))
                 _filePath = "Trace.log";
             else
             {

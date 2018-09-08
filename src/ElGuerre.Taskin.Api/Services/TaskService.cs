@@ -3,6 +3,7 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
+using AutoMapper;
 using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Data;
 using ElGuerre.Taskin.Api.Data.Entity;
@@ -16,17 +17,21 @@ namespace ElGuerre.Taskin.Api.Services
 {
     public class TaskService : BaseService<TaskModel, TaskEntity, int>, ITaskService
     {
-        public TaskService(ITaskRepository repository, IUnitOfWork unitOfWork, ILogProvider logProvider) 
-            : base(repository, unitOfWork, logProvider)
+        private readonly IMapper _mapper;
+
+        public TaskService(IMapper mapper, ITaskRepository repository, IUnitOfWork unitOfWork, ILogProvider logProvider) 
+            : base(mapper, repository, unitOfWork, logProvider)
         {
+            _mapper = mapper;
         }
+        
 
         public override async Task<IEnumerable<TaskModel>> GetAsync()
         {
             Log();
 
             var entities = await Repository.Get(/* null, null, "Pomodoros" */);
-            var model = entities.Select(AutoMapper.Mapper.Map<TaskEntity, TaskModel>);
+            var model = entities.Select(_mapper.Map<TaskEntity, TaskModel>);
             return model;
         }
 

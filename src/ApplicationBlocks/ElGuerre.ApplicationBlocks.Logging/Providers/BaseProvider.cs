@@ -3,10 +3,10 @@ using Serilog.Events;
 
 namespace ElGuerre.ApplicationBlocks.Logging.Providers
 {
-    public class BaseProvider : ILogProvider
+    public abstract class BaseProvider : ILogProvider
     {
-        readonly LoggerConfiguration _logConfiguration;
-        Serilog.ILogger _logger;
+        private readonly LoggerConfiguration _logConfiguration;
+        private Serilog.ILogger _logger;
 
         public BaseProvider()
         {

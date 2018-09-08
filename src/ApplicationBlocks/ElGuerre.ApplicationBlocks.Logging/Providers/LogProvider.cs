@@ -5,7 +5,7 @@ namespace ElGuerre.ApplicationBlocks.Logging.Providers
 {
     public class LogProvider : BaseProvider
     {
-        IConfiguration _config;
+        readonly IConfiguration _config;
 
         public LogProvider(IConfiguration config)
         {

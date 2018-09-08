@@ -6,13 +6,21 @@ addons:
  sonarcloud:
    organization: "juanluelguerre-github" # the key of the org you chose at step #3
    token:
-     secure: 83a3e3b0945ffc9274669d7b21d2218ecf7e64b1 # encrypted value of your token
+     secure: 6d289283f4d88a7d4267a47caa9e919c14348f6e # encrypted value of your token
 
 install:
  # - choco install "msbuild-sonarqube-runner" -y
 
 
 script:
+  dotnet tool install --global dotnet-sonarscanner
+  dotnet sonarScanner begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%token%" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.coverage.exclusions="test/**" /d:sonar.cs.opencover.reportsPaths="%cd%\lcov.opencover.xml"
+  dotnet restore %sln%
+  dotnet build %sln%
+  dotnet test test/UnitTets/ElGuerre.Taskin.Api.Services.Tests/ElGuerre.Taskin.Api.Services.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover,lcov\" /p:CoverletOutput=../../lcov
+  dotnet sonarscanner end /d:sonar.login="%token%"
+
+
  # - dotnet restore ElGuerre.Taskin.sln
  # - SonarQube.Scanner.MSBuild.exe begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
  - dotnet build ElGuerre.Taskin.sln

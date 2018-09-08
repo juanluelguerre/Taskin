@@ -9,8 +9,8 @@ namespace ElGuerre.Taskin.Blazor
         {
             var serviceProvider = new BrowserServiceProvider(services =>
             {
-                // Add any custom services here
-                // sample: services.Add(ServiceDescriptor.Singleton<IDataAccess, DataAccess>());
+                // TODO: Add any custom services here. 
+                // Sample: services.Add(ServiceDescriptor.Singleton<IDataAccess, DataAccess>());
             });
             
             new BrowserRenderer(serviceProvider).AddComponent<App>("app");

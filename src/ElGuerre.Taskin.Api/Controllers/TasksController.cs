@@ -1,4 +1,9 @@
-﻿using ElGuerre.Taskin.Api.Services;
+﻿// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+//     Copyright (c) elGuerre.com. All rights reserved.
+// </copyright>
+// -------------------------------------------------------------------
+using ElGuerre.Taskin.Api.Services;
 using ElGuerre.Taskin.Models;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -23,7 +28,7 @@ namespace Taskin.Api.Controllers
         }
 
         [HttpGet]
-        [SwaggerOperation("GetAll" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        // [SwaggerOperation("GetAll" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         //[ProducesResponseType(typeof(IEnumerable<TaskModel>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<TaskModel>>> Get()
@@ -33,7 +38,7 @@ namespace Taskin.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        [SwaggerOperation("Get" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        // [SwaggerOperation("Get" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         //[ProducesResponseType(typeof(TaskModel), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<TaskModel>> Get([FromRoute] int id)
@@ -55,7 +60,7 @@ namespace Taskin.Api.Controllers
         // POST: api/Tasks
         [HttpPost]
         // [ValidateAntiForgeryToken]
-        [SwaggerOperation("Post" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        //[SwaggerOperation("Post" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<ActionResult<TaskModel>> Post([FromBody] TaskModel taskModel)
         {
@@ -71,7 +76,7 @@ namespace Taskin.Api.Controllers
         // PUT: api/Tasks/5
         [HttpPut("{id}")]
         // [ValidateAntiForgeryToken]
-        [SwaggerOperation("Put" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        // [SwaggerOperation("Put" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]

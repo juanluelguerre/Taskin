@@ -1,8 +1,9 @@
-﻿// ---------------------------------------------------------------------------------
-// <copyright file="Startup.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+﻿// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
-// ---------------------------------------------------------------------------------
+// -------------------------------------------------------------------
+using AutoMapper;
 using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Core.Mvc.Filters;
 using ElGuerre.Taskin.Api.Core.Mvc.Middlewares;
@@ -45,13 +46,15 @@ namespace ElGuerre.Taskin.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc();
+            
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
                 .AddJsonOptions(options =>
                 {
                     options.SerializerSettings.ContractResolver = new DefaultContractResolver();
                 });
+
+            services.AddAutoMapper(typeof(Startup));
 
             // Add bellow statement to use HTTPS o a better option, set environment varibble ASPNETCORE_HTTPS_PORT 
             //  services.AddHttpsRedirection(options => options.HttpsPort = 5003);
@@ -131,7 +134,7 @@ namespace ElGuerre.Taskin.Api
             // loggerFactory.AddNLog();
             // app.AddNLogWeb();
 
-            app.UseHttpsRedirection();
+            app.UseHttpsRedirection();           
             app.UseMvc();
             //app.UseMvc(routes =>
             //{
@@ -152,7 +155,7 @@ namespace ElGuerre.Taskin.Api
                 context.Seed();
             }
 
-            MappingConfig.RegisterMaps();
+            // MappingConfig.RegisterMaps();
             
             app.UseBlazor<Blazor.Program>();
         }

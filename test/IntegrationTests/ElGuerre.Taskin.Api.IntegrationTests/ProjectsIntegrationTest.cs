@@ -8,7 +8,6 @@
 // for Environement variables en "Debug" tabs for project properties.
 //
 // ---------------------------------------------------------------------------------
-using ElGuerre.Taskin.Api.Models;
 using ElGuerre.Taskin.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
@@ -25,7 +24,19 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
     {
         public ProjectsIntegrationTest(CompositionRootFixture fixture) : base(fixture)
         {
-            AutoMapper.Mapper.AssertConfigurationIsValid();
+            // AutoMapper.Mapper.AssertConfigurationIsValid();
+            // AutoMapper.Mapper.Reset();
+            // MappingConfig.RegisterMaps();
+
+            
+            // https://stackoverflow.com/questions/40275195/how-to-setup-automapper-in-asp-net-core
+            //var profile = new ProjectProfile();
+
+            //var config = new MapperConfiguration(ex => ex.AddProfile(profile));
+            //var mapper = new Mapper(config);
+
+            //(mapper as IMapper).ConfigurationProvider.AssertConfigurationIsValid();
+
         }
 
         [Fact]
@@ -111,7 +122,6 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
             var response = await Fixture.Client.DeleteAsync($"api/projects/{projId}");
             Assert.Throws<HttpRequestException>(() => response.EnsureSuccessStatusCode());
         }
-
 
         private static StringContent GetSampleProject(int projId)
         {

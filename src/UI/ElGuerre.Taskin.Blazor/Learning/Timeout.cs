@@ -7,7 +7,7 @@ using System;
 
 namespace ElGuerre.Taskin.Blazor.Learning
 {
-    public class Timeout
+    public static class Timeout
     {
         // https://github.com/aspnet/Blazor.Docs/issues/59
         // Must be static, non-generic, must not be overloaded and 

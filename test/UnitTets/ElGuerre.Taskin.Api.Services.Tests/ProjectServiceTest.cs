@@ -5,6 +5,7 @@
 // ---------------------------------------------------------------------------------
 // Currently code coverage need Full pdb for .NETCore
 // ---------------------------------------------------------------------------------
+using AutoMapper;
 using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Data;
 using ElGuerre.Taskin.Api.Data.Entity;
@@ -20,10 +21,17 @@ namespace ElGuerre.Taskin.Api.Services.Tests
 {
     public class ProjectServiceTest
     {
+        private readonly IMapper _mapper;
+
         public ProjectServiceTest()
         {
-            MappingConfig.RegisterMaps();
-            AutoMapper.Mapper.AssertConfigurationIsValid();
+            // https://stackoverflow.com/questions/40275195/how-to-setup-automapper-in-asp-net-core
+            var profile = new ProjectProfile();
+
+            var config = new MapperConfiguration(ex => ex.AddProfile(profile));
+            _mapper = new Mapper(config);
+
+            (_mapper as IMapper).ConfigurationProvider.AssertConfigurationIsValid();
         }
 
         [Fact]
@@ -37,7 +45,7 @@ namespace ElGuerre.Taskin.Api.Services.Tests
             var logProvider = new Mock<ILogProvider>();
 
 
-            var service = new ProjectService(repository.Object, unitOfWork.Object, logProvider.Object);
+            var service = new ProjectService(_mapper, repository.Object, unitOfWork.Object, logProvider.Object);
 
             var projs = await service.GetAsync();
             Assert.NotNull(projs);
