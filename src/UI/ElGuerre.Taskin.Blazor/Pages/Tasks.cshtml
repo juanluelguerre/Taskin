@@ -1,5 +1,6 @@
 ﻿@using ElGuerre.Taskin.Models
 @using System.Threading.Tasks
+@using ElGuerre.Taskin.Blazor.Utils
 
 @page "/tasks/{ProjectId}"
 @inject HttpClient Http
@@ -42,13 +43,14 @@ else
 }
 
 @functions {
-[Parameter]
-string ProjectId { get; set; }
+    [Parameter]
+    string ProjectId { get; set; }
 
-TaskModel[] tasks;
+    TaskModel[] tasks;
 
-protected override async Task OnInitAsync()
-{
-    tasks = await Http.GetJsonAsync<TaskModel[]>($"/api/projects/{ProjectId}/tasks");
-}
+    protected override async Task OnInitAsync()
+    {
+        string baseUrl = ServiceHelper.GetServiceUrl();
+        tasks = await Http.GetJsonAsync<TaskModel[]>($"{baseUrl}/projects/{ProjectId}/tasks");
+    }
 }

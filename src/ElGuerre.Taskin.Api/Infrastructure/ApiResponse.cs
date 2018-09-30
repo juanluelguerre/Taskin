@@ -13,7 +13,7 @@ namespace ElGuerre.Taskin.Api
         {
             ErrorCode = "0000";
             ErrorMessage = string.Empty;
-            Data = default(T);
+            Data = default;
         }
 
         public ApiResponse(T data) => Data = data;

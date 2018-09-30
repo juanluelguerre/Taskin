@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>ElGuerre.Taskin.Api</RootNamespace>
     <AssemblyName>ElGuerre.Taskin.Api</AssemblyName>
     <UserSecretsId>49ebb1a6-71b8-4aab-a7d2-3d3a91d754d9</UserSecretsId>
@@ -11,6 +11,7 @@
     <LangVersion>latest</LangVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,15 +25,14 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="7.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="0.5.1" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.2" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.1.1" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0-preview2-35157" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0-preview2-35157" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.0-preview2-35157" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.2.0-preview2-35157" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0-preview2-35157" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
-    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00777" />
-    <PackageReference Include="Serilog.AspNetCore" Version="2.1.2-dev-00026" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00779" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.2-dev-00028" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,7 +42,6 @@
   <ItemGroup>
     <ProjectReference Include="..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
     <ProjectReference Include="..\ApplicationBlocks\ElGuerre.ApplicationBlocks.Logging\ElGuerre.ApplicationBlocks.Logging.csproj" />
-    <ProjectReference Include="..\UI\ElGuerre.Taskin.Blazor\ElGuerre.Taskin.Blazor.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +51,10 @@
     <Content Update="nlog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Infrastructure\Mvc\" />
   </ItemGroup>
 
 </Project>

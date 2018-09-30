@@ -3,16 +3,15 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // -------------------------------------------------------------------
-using System.Net.Http;
-using System.Text;
 
 namespace ElGuerre.Taskin.Blazor.Utils
 {
-    public class JsonContent : StringContent
+    public static class ServiceHelper
     {
-        public JsonContent(object obj) :
-            base(Microsoft.JSInterop.Json.Serialize(obj), Encoding.UTF8, "application/json")
+        public static string GetServiceUrl()
         {
+            return "https://localhost:5003/api";
+            //return "http://localhost:5002/api";
         }
     }
 }

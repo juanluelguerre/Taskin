@@ -61,6 +61,7 @@ else
     [Parameter]
     string TaskId { get; set; }
 
+    string _baseUrl { get; set; }
     TaskModel CurrentTask { get; set; }
 
     private IList<KeyValuePair<int, string>> GetAllTaskTypes()
@@ -71,7 +72,8 @@ else
 
     protected override async Task OnInitAsync()
     {
-        CurrentTask = await Http.GetJsonAsync<TaskModel>($"/api/tasks/{TaskId}");
+        _baseUrl = ServiceHelper.GetServiceUrl();
+        CurrentTask = await Http.GetJsonAsync<TaskModel>($"{_baseUrl}/tasks/{TaskId}");
     }
 
     private async Task Update()
@@ -90,7 +92,7 @@ else
 
         //await Task.CompletedTask;
 
-        await Http.PutAsync($"api/tasks/{TaskId}", content);
+        await Http.PutAsync($"{_baseUrl}/tasks/{TaskId}", content);
     }
 
 }

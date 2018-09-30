@@ -1,5 +1,6 @@
 ﻿@using ElGuerre.Taskin.Models
 @using ElGuerre.Taskin.Blazor.Shared
+@using ElGuerre.Taskin.Blazor.Utils
 
 @page "/projects"
 
@@ -15,7 +16,7 @@
     <p><em>Loading...</em></p>
 }
 else
-{    
+{
     <table class='table table-hover'>
         <thead>
             <tr>
@@ -49,8 +50,17 @@ else
     protected override async Task OnInitAsync()
     {
 
+        string baseUrl = ServiceHelper.GetServiceUrl();
         // Inclcuide this statement in Startup to get JSon correctly:
         //      options.SerializerSettings.ContractResolver = new DefaultContractResolver();
-        projects = await Http.GetJsonAsync<ProjectModel[]>("/api/projects");
+
+        //Http.DefaultRequestHeaders.Add("Access-Control-Allow-Origin", "*");
+        //Http.DefaultRequestHeaders.Add("Access-Control-Request-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        //Http.DefaultRequestHeaders.Add("Access-Control-Request-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+        //Http.DefaultRequestHeaders.Add("Access-Control-Request-Credentials", "true");
+
+        //Http.DefaultRequestHeaders.Add("mode", "no-cors");
+
+        projects = await Http.GetJsonAsync<ProjectModel[]>($"{baseUrl}/projects");
     }
 }

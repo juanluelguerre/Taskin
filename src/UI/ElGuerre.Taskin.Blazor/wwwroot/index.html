@@ -11,27 +11,35 @@
 <body>
     <app>Loading...</app>
 
-    <script type="blazor-boot">
-    </script>
+    <script src="_framework/blazor.webassembly.js"></script>
 
     <script>
-        Blazor.registerFunction('printProjects', (data) => {
-            alert('Hi Blazor for JavaScript !');
-            console.dir(data);
-            return true;
-        });
-
-        function callTimeOut(){
-            Blazor.invokeDotNetMethod({
-                type: {
-                    assembly: 'ElGuerre.Taskin.Blazor',
-                    name: 'ElGuerre.Taskin.Blazor.Learning.Timeout'
-                },
-                method: {
-                    name: 'TimeoutCallback'
-                }
-            });
+        // Just a JavaScript function to be called from DotNet
+        window.printProjects = {
+            showPrompt: function (data) {
+                // console.log('Hi Blazor for JavaScript');
+                console.log(data);
+            }
         };
+
+        window.callTimeOut = {
+            sayHello: function (dotnetHelper) {
+                return dotnetHelper.invokeMethodAsync('PrintTimeOut')
+                    .then(r => console.log(r));
+            }
+        };
+
+                //function callTimeOut(){
+                //    Blazor.invokeDotNetMethod({
+                //        type: {
+                //            assembly: 'ElGuerre.Taskin.Blazor',
+                //            name: 'ElGuerre.Taskin.Blazor.Learning.Timeout'
+                //        },
+                //        method: {
+                //            name: 'TimeoutCallback'
+                //        }
+                //    });
+                //};
     </script>
 
 </body>

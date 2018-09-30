@@ -14,7 +14,6 @@ using System.Threading.Tasks;
 namespace Taskin.Api.Controllers
 {
     [Produces("application/json")]
-    //[Route("api/Tasks")]
     [Route("api/[controller]")]
     [ApiController]
     public class TasksController : ControllerBase

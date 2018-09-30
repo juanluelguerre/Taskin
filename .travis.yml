@@ -2,15 +2,14 @@ language: csharp
 mono: none
 dotnet: 2.1
 
-addons:
- sonarcloud:
-   organization: "juanluelguerre-github" # the key of the org you chose at step #3
-   token:
-     secure: 6d289283f4d88a7d4267a47caa9e919c14348f6e # encrypted value of your token
+#addons:
+# sonarcloud:
+#   organization: "juanluelguerre-github" # the key of the org you chose at step #3
+#   token:
+#     secure: 6d289283f4d88a7d4267a47caa9e919c14348f6e # encrypted value of your token
 
 install:
  # - choco install "msbuild-sonarqube-runner" -y
-
 
 script:
   dotnet tool install --global dotnet-sonarscanner

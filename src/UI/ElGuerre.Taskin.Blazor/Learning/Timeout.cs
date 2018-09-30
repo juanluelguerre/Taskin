@@ -1,20 +1,28 @@
-﻿// ---------------------------------------------------------------------------------
-// <copyright file="Timeout.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+﻿// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
-// ---------------------------------------------------------------------------------
+// -------------------------------------------------------------------
+using Microsoft.JSInterop;
 using System;
 
 namespace ElGuerre.Taskin.Blazor.Learning
 {
-    public static class Timeout
+    public class TimeoutHelper
     {
-        // https://github.com/aspnet/Blazor.Docs/issues/59
-        // Must be static, non-generic, must not be overloaded and 
-        // all the method parameters must be concrete types and deserializable using JSON
-        public static void TimeoutCallback()
+        public TimeoutHelper(int timeout)
         {
-            Console.WriteLine("Timeout triggered from JavaScript!");
+            TimeOut = timeout;
+        }
+
+        public int TimeOut { get; set; }
+
+        [JSInvokable]
+        public string PrintTimeOut()
+        {
+            string msg = $"Timeout in {TimeOut}";
+            // Console.WriteLine(msg);
+            return msg;
         }
     }
 }
