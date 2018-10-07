@@ -4,7 +4,7 @@ CLS
 setlocal
 
 set /p token=<sonar.txt
-IF [%1]==[] SET SLN="./ElGuerre.Taskin.sln"
+IF [%1]==[] SET SLN="./ElGuerre.Taskin.Full.sln"
 IF NOT [%1]==[] SET SLN=%1
 
 :: dotnet sonarscanner begin /k:"company:project" /n:"Project" /v:"#.#.#" /o:"companyname" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%token%" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.coverage.exclusions="Project.Tests/**,**/*Tests.cs" /d:sonar.cs.opencover.reportsPaths="%cd%\lcov.opencover.xml"

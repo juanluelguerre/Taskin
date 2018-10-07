@@ -15,8 +15,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.ApplicationBlocks.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.Tests", "test\UnitTets\ElGuerre.Taskin.Api.Tests\ElGuerre.Taskin.Api.Tests.csproj", "{7FE50AAB-F170-475E-8E50-D002BE069393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{C1708F2F-41FD-4B77-8138-0A0A5AC79CC1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{7FE50AAB-F170-475E-8E50-D002BE069393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FE50AAB-F170-475E-8E50-D002BE069393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FE50AAB-F170-475E-8E50-D002BE069393}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1708F2F-41FD-4B77-8138-0A0A5AC79CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1708F2F-41FD-4B77-8138-0A0A5AC79CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1708F2F-41FD-4B77-8138-0A0A5AC79CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1708F2F-41FD-4B77-8138-0A0A5AC79CC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

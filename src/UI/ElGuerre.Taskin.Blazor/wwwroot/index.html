@@ -16,30 +16,24 @@
     <script>
         // Just a JavaScript function to be called from DotNet
         window.printProjects = {
-            showPrompt: function (data) {
+            showMessage: function (data) {
                 // console.log('Hi Blazor for JavaScript');
                 console.log(data);
+                return alert(data);
             }
         };
 
-        window.callTimeOut = {
-            sayHello: function (dotnetHelper) {
+        window.simpleTimeOut = {
+            run: function (dotnetHelper) {
                 return dotnetHelper.invokeMethodAsync('PrintTimeOut')
                     .then(r => console.log(r));
+            },
+            runStatic: function () {
+                DotNet.invokeMethodAsync('ElGuerre.Taskin.Blazor', 'StaticPrintTimeOut')
+                    .then(data => console.log(data));
             }
         };
 
-                //function callTimeOut(){
-                //    Blazor.invokeDotNetMethod({
-                //        type: {
-                //            assembly: 'ElGuerre.Taskin.Blazor',
-                //            name: 'ElGuerre.Taskin.Blazor.Learning.Timeout'
-                //        },
-                //        method: {
-                //            name: 'TimeoutCallback'
-                //        }
-                //    });
-                //};
     </script>
 
 </body>

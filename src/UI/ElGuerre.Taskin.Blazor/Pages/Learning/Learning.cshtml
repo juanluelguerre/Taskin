@@ -1,12 +1,13 @@
 ﻿@using ElGuerre.Taskin.Models
 @using System.Threading.Tasks
 @using ElGuerre.Taskin.Blazor.Extensions
+@using ElGuerre.Taskin.Blazor.Learning
 
 @page "/learning"
 @inject HttpClient Http
 
 <div class="page-header">
-    <h1>DEMOS</h1>
+    <h1>Demos &amp; Learning</h1>
 </div>
 
 <div class="container">
@@ -26,9 +27,14 @@
             <div class="card">
                 <img class="card-img-top" src="/assets/CSharp.jpg" style="max-width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Call Blazor from JS</h5>
-                    <p class="card-text">This demo show how Java Scripts call Blazor methods</p>
-                    <button class="btn btn-primary" onclick="callTimeOut()">Time Out</button>
+                    <h5 class="card-title">Call C# from JS</h5>
+                    <p class="card-text">This demo show how Java Scripts call C# methods</p>
+
+                    <!-- No parameters to C# -->
+                    <button class="btn btn-primary" onclick="simpleTimeOut.runStatic()">Call static C# method</button>
+
+                    <!-- Passing values as parameters -->
+                    <button class="btn btn-primary" onclick="@(() => PrintTimeOut(10))">Call C# method</button>
                 </div>
             </div>
         </div>
@@ -49,5 +55,12 @@
 </div>
 
 @functions {
+
+    private Task PrintTimeOut(int timeOut)
+    {
+        return JSRuntime.Current.InvokeAsync<object>(
+            "simpleTimeOut.run",
+            new DotNetObjectRef(new TimeoutHelper(timeOut)));
+    }
 
 }

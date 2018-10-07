@@ -18,7 +18,7 @@
         // Get some demo data from a web service and pass it to our function.
         // Again, it will be turned to JSON and back during the function call.
         var projects = await Http.GetJsonAsync<List<ProjectModel>>($"{baseUrl}/projects");
-        if (await JSRuntime.Current.InvokeAsync<bool>("printProjects", projects))
+        if (await JSRuntime.Current.InvokeAsync<bool>("printProjects.showMessage", projects))
         {
             // This line will be reached as our `say` function returns true,
             // We can find this message inside the Browser Console !!!
