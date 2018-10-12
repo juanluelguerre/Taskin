@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Taskin</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <app>Loading...</app>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+
+    <script>
+        // Just a JavaScript function to be called from DotNet
+        window.printProjects = {
+            showMessage: function (data) {
+                // console.log('Hi Blazor for JavaScript');
+                console.log(data);
+                return alert(data);
+            }
+        };
+
+        window.simpleTimeOut = {
+            run: function (dotnetHelper) {
+                return dotnetHelper.invokeMethodAsync('PrintTimeOut')
+                    .then(r => console.log(r));
+            },
+            runStatic: function () {
+                DotNet.invokeMethodAsync('ElGuerre.Taskin.Blazor', 'StaticPrintTimeOut')
+                    .then(data => console.log(data));
+            }
+        };
+
+    </script>
+
+</body>
+</html>

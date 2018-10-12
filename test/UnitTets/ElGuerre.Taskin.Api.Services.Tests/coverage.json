@@ -1,0 +1,4466 @@
+{
+  "C:\\dev\\Taskin\\test\\UnitTets\\ElGuerre.Taskin.Api.Services.Tests\\bin\\Debug\\netcoreapp2.1\\ElGuerre.ApplicationBlocks.Logging.dll": {
+    "C:\\dev\\Taskin\\src\\ApplicationBlocks\\ElGuerre.ApplicationBlocks.Logging\\Logger.cs": {
+      "ElGuerre.ApplicationBlocks.Logging.Logger": {
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Logger::Debug(System.String)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Logger::Error(System.String)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Logger::Info(System.String)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Logger::Warning(System.String)": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Logger::Trace(System.String)": {
+          "Lines": {
+            "35": 1,
+            "36": 1,
+            "37": 1
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Logger::.ctor(ElGuerre.ApplicationBlocks.Logging.Providers.ILogProvider)": {
+          "Lines": {
+            "9": 1,
+            "10": 1,
+            "11": 1,
+            "12": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ApplicationBlocks\\ElGuerre.ApplicationBlocks.Logging\\Providers\\BaseProvider.cs": {
+      "ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider": {
+        "Serilog.LoggerConfiguration ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider::get_Config()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "Serilog.ILogger ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider::get_Logger()": {
+          "Lines": {
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 12,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider::Debug(System.String)": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 15,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider::Error(System.String)": {
+          "Lines": {
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": [
+            {
+              "Line": 44,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 15,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider::Info(System.String)": {
+          "Lines": {
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": [
+            {
+              "Line": 50,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 15,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider::Warning(System.String)": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0
+          },
+          "Branches": [
+            {
+              "Line": 56,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 56,
+              "Offset": 15,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider::Trace(System.String)": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0
+          },
+          "Branches": [
+            {
+              "Line": 62,
+              "Offset": 15,
+              "EndOffset": 17,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 62,
+              "Offset": 15,
+              "EndOffset": 30,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Providers.BaseProvider::.ctor()": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ApplicationBlocks\\ElGuerre.ApplicationBlocks.Logging\\Providers\\FileProvider.cs": {
+      "ElGuerre.ApplicationBlocks.Logging.Providers.FileProvider": {
+        "Serilog.LoggerConfiguration ElGuerre.ApplicationBlocks.Logging.Providers.FileProvider::get_Config()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Providers.FileProvider::.ctor(System.String)": {
+          "Lines": {
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 16,
+              "EndOffset": 18,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 13,
+              "Offset": 16,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 39,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ApplicationBlocks\\ElGuerre.ApplicationBlocks.Logging\\Providers\\LogProvider.cs": {
+      "ElGuerre.ApplicationBlocks.Logging.Providers.LogProvider": {
+        "Serilog.LoggerConfiguration ElGuerre.ApplicationBlocks.Logging.Providers.LogProvider::get_Config()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.ApplicationBlocks.Logging.Providers.LogProvider::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "C:\\dev\\Taskin\\test\\UnitTets\\ElGuerre.Taskin.Api.Services.Tests\\bin\\Debug\\netcoreapp2.1\\ElGuerre.Taskin.Api.dll": {
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Controllers\\ProjectsController.cs": {
+      "Taskin.Api.Controllers.ProjectsController": {
+        "System.Void Taskin.Api.Controllers.ProjectsController::.ctor(ElGuerre.Taskin.Api.Services.IProjectService)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      },
+      "Taskin.Api.Controllers.ProjectsController/<GetAll>d__3": {
+        "System.Void Taskin.Api.Controllers.ProjectsController/<GetAll>d__3::MoveNext()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 44,
+              "EndOffset": 113,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Taskin.Api.Controllers.ProjectsController/<Get>d__4": {
+        "System.Void Taskin.Api.Controllers.ProjectsController/<Get>d__4::MoveNext()": {
+          "Lines": {
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": [
+            {
+              "Line": 44,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 44,
+              "Offset": 39,
+              "EndOffset": 75,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 110,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 218,
+              "EndOffset": 220,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 50,
+              "Offset": 218,
+              "EndOffset": 244,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Taskin.Api.Controllers.ProjectsController/<GetTasksByProjectId>d__5": {
+        "System.Void Taskin.Api.Controllers.ProjectsController/<GetTasksByProjectId>d__5::MoveNext()": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": [
+            {
+              "Line": 61,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 61,
+              "Offset": 39,
+              "EndOffset": 75,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 110,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 225,
+              "EndOffset": 227,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 225,
+              "EndOffset": 247,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Taskin.Api.Controllers.ProjectsController/<Put>d__6": {
+        "System.Void Taskin.Api.Controllers.ProjectsController/<Put>d__6::MoveNext()": {
+          "Lines": {
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0
+          },
+          "Branches": [
+            {
+              "Line": 83,
+              "Offset": 14,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 84,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 84,
+              "Offset": 50,
+              "EndOffset": 86,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 89,
+              "Offset": 110,
+              "EndOffset": 135,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 94,
+              "Offset": 171,
+              "EndOffset": 173,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 94,
+              "Offset": 171,
+              "EndOffset": 243,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 95,
+              "Offset": 288,
+              "EndOffset": 290,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 95,
+              "Offset": 288,
+              "EndOffset": 312,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 98,
+              "Offset": 348,
+              "EndOffset": 350,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 83,
+              "Offset": 14,
+              "EndOffset": 391,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 98,
+              "Offset": 348,
+              "EndOffset": 420,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Taskin.Api.Controllers.ProjectsController/<Post>d__7": {
+        "System.Void Taskin.Api.Controllers.ProjectsController/<Post>d__7::MoveNext()": {
+          "Lines": {
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0
+          },
+          "Branches": [
+            {
+              "Line": 109,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 109,
+              "Offset": 39,
+              "EndOffset": 75,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 114,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 114,
+              "Offset": 110,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Taskin.Api.Controllers.ProjectsController/<DeleteProjectEntity>d__8": {
+        "System.Void Taskin.Api.Controllers.ProjectsController/<DeleteProjectEntity>d__8::MoveNext()": {
+          "Lines": {
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "130": 0,
+            "133": 0,
+            "134": 0,
+            "135": 0,
+            "136": 0,
+            "139": 0,
+            "140": 0,
+            "141": 0
+          },
+          "Branches": [
+            {
+              "Line": 127,
+              "Offset": 14,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 128,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 128,
+              "Offset": 50,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 133,
+              "Offset": 116,
+              "EndOffset": 118,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 133,
+              "Offset": 116,
+              "EndOffset": 186,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 134,
+              "Offset": 231,
+              "EndOffset": 233,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 134,
+              "Offset": 231,
+              "EndOffset": 251,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 139,
+              "Offset": 287,
+              "EndOffset": 289,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 127,
+              "Offset": 14,
+              "EndOffset": 327,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 139,
+              "Offset": 287,
+              "EndOffset": 356,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Controllers\\TasksController.cs": {
+      "Taskin.Api.Controllers.TasksController": {
+        "System.Void Taskin.Api.Controllers.TasksController::Delete(System.Int32)": {
+          "Lines": {
+            "103": 0,
+            "104": 0
+          },
+          "Branches": []
+        },
+        "System.Void Taskin.Api.Controllers.TasksController::.ctor(ElGuerre.Taskin.Api.Services.ITaskService)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "Taskin.Api.Controllers.TasksController/<Get>d__3": {
+        "System.Void Taskin.Api.Controllers.TasksController/<Get>d__3::MoveNext()": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": [
+            {
+              "Line": 31,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 44,
+              "EndOffset": 113,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Taskin.Api.Controllers.TasksController/<Get>d__4": {
+        "System.Void Taskin.Api.Controllers.TasksController/<Get>d__4::MoveNext()": {
+          "Lines": {
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 39,
+              "EndOffset": 75,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 110,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 225,
+              "EndOffset": 227,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 225,
+              "EndOffset": 247,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Taskin.Api.Controllers.TasksController/<Post>d__5": {
+        "System.Void Taskin.Api.Controllers.TasksController/<Post>d__5::MoveNext()": {
+          "Lines": {
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0
+          },
+          "Branches": [
+            {
+              "Line": 62,
+              "Offset": 39,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 62,
+              "Offset": 39,
+              "EndOffset": 75,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 67,
+              "Offset": 110,
+              "EndOffset": 180,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "Taskin.Api.Controllers.TasksController/<Put>d__6": {
+        "System.Void Taskin.Api.Controllers.TasksController/<Put>d__6::MoveNext()": {
+          "Lines": {
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0
+          },
+          "Branches": [
+            {
+              "Line": 80,
+              "Offset": 14,
+              "EndOffset": 28,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 81,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 81,
+              "Offset": 50,
+              "EndOffset": 86,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 110,
+              "EndOffset": 112,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 86,
+              "Offset": 110,
+              "EndOffset": 135,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 91,
+              "Offset": 171,
+              "EndOffset": 173,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 91,
+              "Offset": 171,
+              "EndOffset": 243,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 92,
+              "Offset": 288,
+              "EndOffset": 290,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 92,
+              "Offset": 288,
+              "EndOffset": 312,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 95,
+              "Offset": 348,
+              "EndOffset": 350,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 80,
+              "Offset": 14,
+              "EndOffset": 391,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 95,
+              "Offset": 348,
+              "EndOffset": 420,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Auth\\Server\\AuthorizationHeaderParameterOperationFilter.cs": {
+      "IDB.Business.Disbursement.Api.Auth.Server.AuthorizationHeaderParameterOperationFilter": {
+        "System.Void IDB.Business.Disbursement.Api.Auth.Server.AuthorizationHeaderParameterOperationFilter::Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 27,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 25,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 61,
+              "EndOffset": 63,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 19,
+              "Offset": 61,
+              "EndOffset": 86,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 99,
+              "EndOffset": 124,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 135,
+              "EndOffset": 137,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 135,
+              "EndOffset": 160,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 167,
+              "EndOffset": 169,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 167,
+              "EndOffset": 175,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 178,
+              "EndOffset": 180,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 194,
+              "EndOffset": 196,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 24,
+              "Offset": 194,
+              "EndOffset": 208,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 178,
+              "EndOffset": 282,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Auth\\Server\\IdentitySecurityScheme.cs": {
+      "IDB.Business.Disbursement.Api.Auth.Server.IdentitySecurityScheme": {
+        "System.Void IDB.Business.Disbursement.Api.Auth.Server.IdentitySecurityScheme::.ctor()": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\AppSettings.cs": {
+      "ElGuerre.Taskin.Api.AppSettings": {
+        "System.String ElGuerre.Taskin.Api.AppSettings::get_ServiceUrl()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.AppSettings::get_ConnectionStrings()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "ElGuerre.Taskin.Api.Logging ElGuerre.Taskin.Api.AppSettings::get_Logging()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Api.Logging": {
+        "System.Boolean ElGuerre.Taskin.Api.Logging::get_IncludeScopes()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "ElGuerre.Taskin.Api.Loglevel ElGuerre.Taskin.Api.Logging::get_LogLevel()": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Api.Loglevel": {
+        "System.String ElGuerre.Taskin.Api.Loglevel::get_Default()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.Loglevel::get_System()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.Loglevel::get_Microsoft()": {
+          "Lines": {
+            "26": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\ApiResponse.cs": {
+      "ElGuerre.Taskin.Api.ApiResponse`1": {
+        "System.Boolean ElGuerre.Taskin.Api.ApiResponse`1::get_IsValid()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.ApiResponse`1::get_ErrorCode()": {
+          "Lines": {
+            "22": 0
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.ApiResponse`1::get_ErrorMessage()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "T ElGuerre.Taskin.Api.ApiResponse`1::get_Data()": {
+          "Lines": {
+            "24": 0
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.ApiResponse`1::ToJson()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.ApiResponse`1::.ctor()": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.ApiResponse`1::.ctor(T)": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\Exceptions\\BaseException.cs": {
+      "ElGuerre.Taskin.Api.BaseException": {
+        "System.String ElGuerre.Taskin.Api.BaseException::get_AppName()": {
+          "Lines": {
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.BaseException::.ctor(System.String,System.Exception)": {
+          "Lines": {
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.BaseException::.ctor(System.Exception)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 2,
+              "EndOffset": 7,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.BaseException::.ctor(System.String)": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.BaseException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\Exceptions\\DataException.cs": {
+      "ElGuerre.Taskin.Api.DataException": {
+        "System.Void ElGuerre.Taskin.Api.DataException::.ctor(System.String,System.Exception)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.DataException::.ctor(System.Exception)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": [
+            {
+              "Line": 20,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 2,
+              "EndOffset": 7,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.DataException::.ctor(System.String)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.DataException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)": {
+          "Lines": {
+            "30": 0,
+            "31": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\Exceptions\\ServiceException.cs": {
+      "ElGuerre.Taskin.Api.ServiceException": {
+        "System.Void ElGuerre.Taskin.Api.ServiceException::.ctor(System.String,System.Exception)": {
+          "Lines": {
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.ServiceException::.ctor(System.Exception)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": [
+            {
+              "Line": 20,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 20,
+              "Offset": 2,
+              "EndOffset": 7,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.ServiceException::.ctor(System.String)": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "27": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.ServiceException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Program.cs": {
+      "ElGuerre.Taskin.Api.Program": {
+        "System.Void ElGuerre.Taskin.Api.Program::Main(System.String[])": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 37,
+              "EndOffset": 39,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 37,
+              "EndOffset": 62,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Startup.cs": {
+      "ElGuerre.Taskin.Api.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration ElGuerre.Taskin.Api.Startup::get_Configuration()": {
+          "Lines": {
+            "42": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "47": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "87": 0,
+            "91": 0,
+            "92": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0
+          },
+          "Branches": [
+            {
+              "Line": 49,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 49,
+              "Offset": 19,
+              "EndOffset": 44,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 59,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 59,
+              "Offset": 57,
+              "EndOffset": 82,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 139,
+              "EndOffset": 141,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 149,
+              "EndOffset": 151,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 76,
+              "Offset": 149,
+              "EndOffset": 174,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 139,
+              "EndOffset": 183,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 272,
+              "EndOffset": 274,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 272,
+              "EndOffset": 297,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)": {
+          "Lines": {
+            "119": 0,
+            "120": 0,
+            "121": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "126": 0,
+            "127": 0,
+            "129": 0,
+            "134": 0,
+            "135": 0,
+            "141": 0,
+            "143": 0,
+            "144": 0,
+            "145": 0,
+            "146": 0,
+            "147": 0,
+            "149": 0,
+            "150": 0,
+            "151": 0,
+            "152": 0,
+            "153": 0,
+            "155": 0,
+            "157": 0,
+            "158": 0
+          },
+          "Branches": [
+            {
+              "Line": 120,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 120,
+              "Offset": 9,
+              "EndOffset": 29,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 141,
+              "Offset": 59,
+              "EndOffset": 61,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 141,
+              "Offset": 59,
+              "EndOffset": 84,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 103,
+              "EndOffset": 105,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 143,
+              "Offset": 103,
+              "EndOffset": 128,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 149,
+              "Offset": 152,
+              "EndOffset": 154,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 149,
+              "Offset": 152,
+              "EndOffset": 175,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Startup::.ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)": {
+          "Lines": {
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Api.Startup/<>c": {
+        "System.Void ElGuerre.Taskin.Api.Startup/<>c::<ConfigureServices>b__4_2(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 77,
+              "Offset": 18,
+              "EndOffset": 20,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 77,
+              "Offset": 18,
+              "EndOffset": 43,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Services\\BaseService.cs": {
+      "ElGuerre.Taskin.Api.Services.BaseService`3": {
+        "ElGuerre.Taskin.Api.Data.IUnitOfWork ElGuerre.Taskin.Api.Services.BaseService`3::get_UnityOfWork()": {
+          "Lines": {
+            "31": 0
+          },
+          "Branches": []
+        },
+        "ElGuerre.Taskin.Api.Data.Repository.IEntityRepository`2<TEntity,Tkey> ElGuerre.Taskin.Api.Services.BaseService`3::get_Repository()": {
+          "Lines": {
+            "32": 1
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3::Log(System.String,System.Object[])": {
+          "Lines": {
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0
+          },
+          "Branches": [
+            {
+              "Line": 117,
+              "Offset": 2,
+              "EndOffset": 4,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 117,
+              "Offset": 2,
+              "EndOffset": 17,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3::Log(System.String,TModel)": {
+          "Lines": {
+            "122": 1,
+            "123": 1,
+            "124": 1,
+            "125": 1
+          },
+          "Branches": [
+            {
+              "Line": 123,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 123,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 123,
+              "Offset": 7,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            },
+            {
+              "Line": 123,
+              "Offset": 21,
+              "EndOffset": 36,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3::Log(System.String,System.String)": {
+          "Lines": {
+            "128": 1,
+            "129": 1,
+            "130": 1
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3::.ctor(ElGuerre.Taskin.Api.Data.Repository.IEntityRepository`2<TEntity,Tkey>,ElGuerre.Taskin.Api.Data.IUnitOfWork,ElGuerre.ApplicationBlocks.Logging.Providers.ILogProvider)": {
+          "Lines": {
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "39": 1
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.BaseService`3/<GetAsync>d__8": {
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3/<GetAsync>d__8::MoveNext()": {
+          "Lines": {
+            "42": 0,
+            "43": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0
+          },
+          "Branches": [
+            {
+              "Line": 45,
+              "Offset": 77,
+              "EndOffset": 79,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 45,
+              "Offset": 77,
+              "EndOffset": 147,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.BaseService`3/<GetAsync>d__9": {
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3/<GetAsync>d__9::MoveNext()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": [
+            {
+              "Line": 54,
+              "Offset": 87,
+              "EndOffset": 89,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 87,
+              "EndOffset": 156,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.BaseService`3/<AddAsync>d__10": {
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3/<AddAsync>d__10::MoveNext()": {
+          "Lines": {
+            "60": 0,
+            "61": 0,
+            "63": 0,
+            "64": 0,
+            "66": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0
+          },
+          "Branches": [
+            {
+              "Line": 66,
+              "Offset": 121,
+              "EndOffset": 123,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 121,
+              "EndOffset": 187,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.BaseService`3/<UpdateAsync>d__11": {
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3/<UpdateAsync>d__11::MoveNext()": {
+          "Lines": {
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "78": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0
+          },
+          "Branches": [
+            {
+              "Line": 77,
+              "Offset": 83,
+              "EndOffset": 85,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 77,
+              "Offset": 83,
+              "EndOffset": 152,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 207,
+              "EndOffset": 209,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 207,
+              "EndOffset": 219,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.BaseService`3/<DeleteAsync>d__12": {
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3/<DeleteAsync>d__12::MoveNext()": {
+          "Lines": {
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "93": 0,
+            "94": 0,
+            "95": 0
+          },
+          "Branches": [
+            {
+              "Line": 93,
+              "Offset": 90,
+              "EndOffset": 92,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 93,
+              "Offset": 90,
+              "EndOffset": 156,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.BaseService`3/<ExistsAsync>d__13": {
+        "System.Void ElGuerre.Taskin.Api.Services.BaseService`3/<ExistsAsync>d__13::MoveNext()": {
+          "Lines": {
+            "98": 0,
+            "99": 0,
+            "101": 0,
+            "102": 0
+          },
+          "Branches": [
+            {
+              "Line": 101,
+              "Offset": 87,
+              "EndOffset": 89,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 101,
+              "Offset": 87,
+              "EndOffset": 153,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Services\\ProjectService.cs": {
+      "ElGuerre.Taskin.Api.Services.ProjectService": {
+        "System.Void ElGuerre.Taskin.Api.Services.ProjectService::.ctor(ElGuerre.Taskin.Api.Data.Repository.IProjectRepository,ElGuerre.Taskin.Api.Data.IUnitOfWork,ElGuerre.ApplicationBlocks.Logging.Providers.ILogProvider)": {
+          "Lines": {
+            "20": 1,
+            "21": 1,
+            "22": 1
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.ProjectService/<GetAsync>d__1": {
+        "System.Void ElGuerre.Taskin.Api.Services.ProjectService/<GetAsync>d__1::MoveNext()": {
+          "Lines": {
+            "25": 1,
+            "26": 1,
+            "28": 1,
+            "29": 1,
+            "30": 1,
+            "31": 1
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 69,
+              "EndOffset": 71,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 69,
+              "EndOffset": 138,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.ProjectService/<GetAsync>d__2": {
+        "System.Void ElGuerre.Taskin.Api.Services.ProjectService/<GetAsync>d__2::MoveNext()": {
+          "Lines": {
+            "34": 0,
+            "35": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0
+          },
+          "Branches": [
+            {
+              "Line": 37,
+              "Offset": 226,
+              "EndOffset": 228,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 226,
+              "EndOffset": 296,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 341,
+              "EndOffset": 343,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 341,
+              "EndOffset": 375,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Services\\TaskService.cs": {
+      "ElGuerre.Taskin.Api.Services.TaskService": {
+        "System.Void ElGuerre.Taskin.Api.Services.TaskService::.ctor(ElGuerre.Taskin.Api.Data.Repository.ITaskRepository,ElGuerre.Taskin.Api.Data.IUnitOfWork,ElGuerre.ApplicationBlocks.Logging.Providers.ILogProvider)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Api.Services.TaskService/<GetAsync>d__1": {
+        "System.Void ElGuerre.Taskin.Api.Services.TaskService/<GetAsync>d__1::MoveNext()": {
+          "Lines": {
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 69,
+              "EndOffset": 71,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 69,
+              "EndOffset": 138,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Models\\MappingConfig.cs": {
+      "ElGuerre.Taskin.Api.Models.MappingConfig": {
+        "System.Void ElGuerre.Taskin.Api.Models.MappingConfig::RegisterMaps()": {
+          "Lines": {
+            "14": 1,
+            "15": 1,
+            "16": 2,
+            "17": 1,
+            "18": 1,
+            "19": 2,
+            "20": 2,
+            "21": 1,
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "25": 1
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 15,
+              "Offset": 7,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Extensions\\AutoMapperExtensions.cs": {
+      "ElGuerre.Taskin.Api.Extensions.AutoMapperExtensions": {
+        "AutoMapper.IMappingExpression`2<TSource,TDestination> ElGuerre.Taskin.Api.Extensions.AutoMapperExtensions::Ignore(AutoMapper.IMappingExpression`2<TSource,TDestination>,System.Linq.Expressions.Expression`1<System.Func`2<TDestination,System.Object>>)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": [
+            {
+              "Line": 17,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 9,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\DataContext.cs": {
+      "ElGuerre.Taskin.Api.Data.DataContext": {
+        "System.Void ElGuerre.Taskin.Api.Data.DataContext::OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "47": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.DataContext::Seed()": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "92": 0,
+            "93": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.DataContext::.ctor(Microsoft.EntityFrameworkCore.DbContextOptions`1<ElGuerre.Taskin.Api.Data.DataContext>)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Extensions\\EntityFrameworkExtensions.cs": {
+      "ElGuerre.Taskin.Api.Data.EntityFrameworkExtensions": {
+        "System.Void ElGuerre.Taskin.Api.Data.EntityFrameworkExtensions::AddEntityFramework(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Action`1<Microsoft.EntityFrameworkCore.DbContextOptionsBuilder>)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\UnitOfWork.cs": {
+      "ElGuerre.Taskin.Api.Data.UnitOfWork": {
+        "Microsoft.EntityFrameworkCore.DbContext ElGuerre.Taskin.Api.Data.UnitOfWork::get_Context()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.EntityFrameworkCore.Storage.IDbContextTransaction ElGuerre.Taskin.Api.Data.UnitOfWork::get_Tx()": {
+          "Lines": {
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.UnitOfWork::BeginTransaction()": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 12,
+              "EndOffset": 33,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.UnitOfWork::Commit()": {
+          "Lines": {
+            "34": 0,
+            "36": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0
+          },
+          "Branches": [
+            {
+              "Line": 39,
+              "Offset": 24,
+              "EndOffset": 26,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 24,
+              "EndOffset": 40,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.UnitOfWork::Rollback()": {
+          "Lines": {
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 12,
+              "EndOffset": 14,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 12,
+              "EndOffset": 28,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.UnitOfWork::.ctor(System.IServiceProvider)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Repository\\BaseRepository.cs": {
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2": {
+        "TEntity ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Find(Tkey)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        },
+        "TEntity ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Create()": {
+          "Lines": {
+            "71": 0,
+            "72": 0,
+            "73": 0
+          },
+          "Branches": []
+        },
+        "TEntity ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Add(TEntity)": {
+          "Lines": {
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Update(TEntity)": {
+          "Lines": {
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "93": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Delete(Tkey)": {
+          "Lines": {
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Delete(TEntity)": {
+          "Lines": {
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0
+          },
+          "Branches": []
+        },
+        "System.Boolean ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Any(System.Linq.Expressions.Expression`1<System.Func`2<TEntity,System.Boolean>>)": {
+          "Lines": {
+            "128": 0,
+            "129": 0,
+            "130": 0
+          },
+          "Branches": []
+        },
+        "System.Linq.IQueryable`1<TEntity> ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Where(System.Linq.Expressions.Expression`1<System.Func`2<TEntity,System.Boolean>>)": {
+          "Lines": {
+            "138": 0,
+            "139": 0,
+            "140": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Count()": {
+          "Lines": {
+            "143": 0,
+            "144": 0,
+            "145": 0
+          },
+          "Branches": []
+        },
+        "System.Threading.Tasks.Task`1<System.Int32> ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::CountAsync()": {
+          "Lines": {
+            "148": 0,
+            "149": 0,
+            "150": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::InternalUpdate(TEntity)": {
+          "Lines": {
+            "153": 0,
+            "154": 0,
+            "155": 0,
+            "156": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::InternalDelete(TEntity)": {
+          "Lines": {
+            "159": 0,
+            "160": 0,
+            "161": 0,
+            "162": 0,
+            "167": 0,
+            "168": 0,
+            "169": 0
+          },
+          "Branches": [
+            {
+              "Line": 161,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 161,
+              "Offset": 30,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::Save()": {
+          "Lines": {
+            "172": 0,
+            "173": 0,
+            "174": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2::.ctor(ElGuerre.Taskin.Api.Data.DataContext)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<FindAsync>d__4": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<FindAsync>d__4::MoveNext()": {
+          "Lines": {
+            "36": 0,
+            "37": 0,
+            "38": 0
+          },
+          "Branches": [
+            {
+              "Line": 37,
+              "Offset": 64,
+              "EndOffset": 66,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 64,
+              "EndOffset": 130,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<Get>d__5": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<Get>d__5::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "65": 0,
+            "66": 0,
+            "68": 0
+          },
+          "Branches": [
+            {
+              "Line": 47,
+              "Offset": 46,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 46,
+              "EndOffset": 73,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 89,
+              "EndOffset": 94,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 213,
+              "EndOffset": 134,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 213,
+              "EndOffset": 215,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 89,
+              "EndOffset": 223,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 60,
+              "Offset": 236,
+              "EndOffset": 238,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 60,
+              "Offset": 236,
+              "EndOffset": 262,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 298,
+              "EndOffset": 300,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 66,
+              "Offset": 298,
+              "EndOffset": 367,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<AddAsync>d__8": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<AddAsync>d__8::MoveNext()": {
+          "Lines": {
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0
+          },
+          "Branches": [
+            {
+              "Line": 85,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 85,
+              "Offset": 67,
+              "EndOffset": 133,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<UpdateAsync>d__10": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<UpdateAsync>d__10::MoveNext()": {
+          "Lines": {
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0
+          },
+          "Branches": [
+            {
+              "Line": 98,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 98,
+              "Offset": 57,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<DeleteAsync>d__12": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<DeleteAsync>d__12::MoveNext()": {
+          "Lines": {
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0
+          },
+          "Branches": [
+            {
+              "Line": 112,
+              "Offset": 99,
+              "EndOffset": 101,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 112,
+              "Offset": 99,
+              "EndOffset": 165,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<DeleteAsync>d__14": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<DeleteAsync>d__14::MoveNext()": {
+          "Lines": {
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0
+          },
+          "Branches": [
+            {
+              "Line": 124,
+              "Offset": 57,
+              "EndOffset": 59,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 124,
+              "Offset": 57,
+              "EndOffset": 123,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<AnyAsync>d__16": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<AnyAsync>d__16::MoveNext()": {
+          "Lines": {
+            "133": 0,
+            "134": 0,
+            "135": 0
+          },
+          "Branches": [
+            {
+              "Line": 134,
+              "Offset": 59,
+              "EndOffset": 61,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 134,
+              "Offset": 59,
+              "EndOffset": 126,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<SaveAsync>d__23": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.BaseRepository`2/<SaveAsync>d__23::MoveNext()": {
+          "Lines": {
+            "177": 0,
+            "178": 0,
+            "179": 0
+          },
+          "Branches": [
+            {
+              "Line": 178,
+              "Offset": 53,
+              "EndOffset": 55,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 178,
+              "Offset": 53,
+              "EndOffset": 119,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Repository\\ProjectRepository.cs": {
+      "ElGuerre.Taskin.Api.Data.Repository.ProjectRepository": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.ProjectRepository::.ctor(ElGuerre.Taskin.Api.Data.DataContext)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Repository\\TaskRepository.cs": {
+      "ElGuerre.Taskin.Api.Data.Repository.TaskRepository": {
+        "System.Void ElGuerre.Taskin.Api.Data.Repository.TaskRepository::.ctor(ElGuerre.Taskin.Api.Data.DataContext)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Entity\\BaseEntity.cs": {
+      "ElGuerre.Taskin.Api.Data.Entity.BaseEntity`1": {
+        "Tkey ElGuerre.Taskin.Api.Data.Entity.BaseEntity`1::get_Id()": {
+          "Lines": {
+            "13": 18
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Entity\\ProjectEntity.cs": {
+      "ElGuerre.Taskin.Api.Data.Entity.ProjectEntity": {
+        "System.String ElGuerre.Taskin.Api.Data.Entity.ProjectEntity::get_Title()": {
+          "Lines": {
+            "14": 6
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.Data.Entity.ProjectEntity::get_Detail()": {
+          "Lines": {
+            "15": 6
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.Data.Entity.ProjectEntity::get_ImageUrl()": {
+          "Lines": {
+            "16": 6
+          },
+          "Branches": []
+        },
+        "ElGuerre.Taskin.Api.Data.Entity.ProjectTypeEntity ElGuerre.Taskin.Api.Data.Entity.ProjectEntity::get_ProjectType()": {
+          "Lines": {
+            "17": 6
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<ElGuerre.Taskin.Api.Data.Entity.TaskEntity> ElGuerre.Taskin.Api.Data.Entity.ProjectEntity::get_Tasks()": {
+          "Lines": {
+            "19": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Entity\\ProjectTypeEntity.cs": {
+      "ElGuerre.Taskin.Api.Data.Entity.ProjectTypeEntity": {
+        "ElGuerre.Taskin.Api.Data.Entity.ProjectType ElGuerre.Taskin.Api.Data.Entity.ProjectTypeEntity::get_Value()": {
+          "Lines": {
+            "25": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Entity\\TaskEntity.cs": {
+      "ElGuerre.Taskin.Api.Data.Entity.TaskEntity": {
+        "System.String ElGuerre.Taskin.Api.Data.Entity.TaskEntity::get_Detail()": {
+          "Lines": {
+            "21": 6
+          },
+          "Branches": []
+        },
+        "ElGuerre.Taskin.Api.Data.Entity.TaskPriority ElGuerre.Taskin.Api.Data.Entity.TaskEntity::get_Priority()": {
+          "Lines": {
+            "22": 6
+          },
+          "Branches": []
+        },
+        "System.Int32 ElGuerre.Taskin.Api.Data.Entity.TaskEntity::get_Effort()": {
+          "Lines": {
+            "23": 6
+          },
+          "Branches": []
+        },
+        "ElGuerre.Taskin.Api.Data.Entity.TaskTypeEntity ElGuerre.Taskin.Api.Data.Entity.TaskEntity::get_TaskType()": {
+          "Lines": {
+            "24": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Data\\Entity\\TaskTypeEntity.cs": {
+      "ElGuerre.Taskin.Api.Data.Entity.TaskTypeEntity": {
+        "ElGuerre.Taskin.Api.Data.Entity.TaskType ElGuerre.Taskin.Api.Data.Entity.TaskTypeEntity::get_Value()": {
+          "Lines": {
+            "31": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\Mvc\\ApiResult.cs": {
+      "ElGuerre.Taskin.Api.Core.Mvc.ApiResult`1": {
+        "System.Boolean ElGuerre.Taskin.Api.Core.Mvc.ApiResult`1::get_ResultValid()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Api.Core.Mvc.ApiResult`1::get_ResultCode()": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": []
+        },
+        "T ElGuerre.Taskin.Api.Core.Mvc.ApiResult`1::get_Data()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\Mvc\\Middlewares\\ByPassAuthMiddleware.cs": {
+      "ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ByPassAuthMiddleware": {
+        "System.Void ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ByPassAuthMiddleware::.ctor(Microsoft.AspNetCore.Http.RequestDelegate)": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ByPassAuthMiddleware/<Invoke>d__3": {
+        "System.Void ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ByPassAuthMiddleware/<Invoke>d__3::MoveNext()": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "50": 0,
+            "51": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "78": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0
+          },
+          "Branches": [
+            {
+              "Line": 30,
+              "Offset": 88,
+              "EndOffset": 93,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 147,
+              "EndOffset": 149,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 147,
+              "EndOffset": 173,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 277,
+              "EndOffset": 279,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 277,
+              "EndOffset": 347,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 88,
+              "EndOffset": 373,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 398,
+              "EndOffset": 403,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 505,
+              "EndOffset": 507,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 47,
+              "Offset": 505,
+              "EndOffset": 577,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 42,
+              "Offset": 398,
+              "EndOffset": 591,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 661,
+              "EndOffset": 663,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 697,
+              "EndOffset": 699,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 715,
+              "EndOffset": 717,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 697,
+              "EndOffset": 742,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 715,
+              "EndOffset": 742,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 747,
+              "EndOffset": 749,
+              "Path": 0,
+              "Ordinal": 16,
+              "Hits": 0
+            },
+            {
+              "Line": 57,
+              "Offset": 747,
+              "EndOffset": 778,
+              "Path": 1,
+              "Ordinal": 17,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 661,
+              "EndOffset": 786,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 804,
+              "EndOffset": 809,
+              "Path": 0,
+              "Ordinal": 18,
+              "Hits": 0
+            },
+            {
+              "Line": 64,
+              "Offset": 804,
+              "EndOffset": 1038,
+              "Path": 1,
+              "Ordinal": 19,
+              "Hits": 0
+            },
+            {
+              "Line": 80,
+              "Offset": 1074,
+              "EndOffset": 1076,
+              "Path": 0,
+              "Ordinal": 20,
+              "Hits": 0
+            },
+            {
+              "Line": 80,
+              "Offset": 1074,
+              "EndOffset": 1143,
+              "Path": 1,
+              "Ordinal": 21,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\Mvc\\Middlewares\\ExceptionMiddleware.cs": {
+      "ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ExceptionMiddleware": {
+        "System.Threading.Tasks.Task ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ExceptionMiddleware::HandleExceptionAsync(Microsoft.AspNetCore.Http.HttpContext,System.Exception,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILogger)": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "48": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "70": 0,
+            "71": 0,
+            "74": 0,
+            "75": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "85": 0,
+            "86": 0
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 20,
+              "EndOffset": 24,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 33,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 46,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 33,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 46,
+              "EndOffset": 88,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 20,
+              "EndOffset": 151,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 75,
+              "Offset": 229,
+              "EndOffset": 231,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 75,
+              "Offset": 229,
+              "EndOffset": 249,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 281,
+              "EndOffset": 283,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 78,
+              "Offset": 281,
+              "EndOffset": 286,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ExceptionMiddleware::.ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.AspNetCore.Hosting.IHostingEnvironment)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 11,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 32,
+              "EndOffset": 34,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 32,
+              "EndOffset": 37,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 44,
+              "EndOffset": 46,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 44,
+              "EndOffset": 58,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ExceptionMiddleware/<Invoke>d__4": {
+        "System.Void ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ExceptionMiddleware/<Invoke>d__4::MoveNext()": {
+          "Lines": {
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0
+          },
+          "Branches": [
+            {
+              "Line": 32,
+              "Offset": 14,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 35,
+              "EndOffset": 41,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 77,
+              "EndOffset": 79,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 35,
+              "EndOffset": 118,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 77,
+              "EndOffset": 146,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 185,
+              "EndOffset": 192,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 263,
+              "EndOffset": 265,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 32,
+              "Offset": 14,
+              "EndOffset": 302,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 39,
+              "Offset": 263,
+              "EndOffset": 331,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 37,
+              "Offset": 185,
+              "EndOffset": 349,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ExceptionMiddlewareExtensions": {
+        "Microsoft.AspNetCore.Builder.IApplicationBuilder ElGuerre.Taskin.Api.Core.Mvc.Middlewares.ExceptionMiddlewareExtensions::UseExceptionMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)": {
+          "Lines": {
+            "93": 0,
+            "94": 0,
+            "95": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\Mvc\\Filters\\ApplySwaggerDocumentFilter.cs": {
+      "ElGuerre.Taskin.Api.Core.Mvc.Filters.ApplySwaggerDocumentFilter": {
+        "System.Void ElGuerre.Taskin.Api.Core.Mvc.Filters.ApplySwaggerDocumentFilter::Apply(Swashbuckle.AspNetCore.Swagger.SwaggerDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "63": 0
+          },
+          "Branches": [
+            {
+              "Line": 27,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 27,
+              "Offset": 13,
+              "EndOffset": 38,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 253,
+              "EndOffset": 63,
+              "Path": 1,
+              "Ordinal": 13,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 84,
+              "EndOffset": 86,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 31,
+              "Offset": 84,
+              "EndOffset": 106,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 119,
+              "EndOffset": 121,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 119,
+              "EndOffset": 141,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 154,
+              "EndOffset": 156,
+              "Path": 0,
+              "Ordinal": 6,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 154,
+              "EndOffset": 176,
+              "Path": 1,
+              "Ordinal": 7,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 189,
+              "EndOffset": 191,
+              "Path": 0,
+              "Ordinal": 8,
+              "Hits": 0
+            },
+            {
+              "Line": 46,
+              "Offset": 189,
+              "EndOffset": 211,
+              "Path": 1,
+              "Ordinal": 9,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 224,
+              "EndOffset": 226,
+              "Path": 0,
+              "Ordinal": 10,
+              "Hits": 0
+            },
+            {
+              "Line": 51,
+              "Offset": 224,
+              "EndOffset": 246,
+              "Path": 1,
+              "Ordinal": 11,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 253,
+              "EndOffset": 258,
+              "Path": 0,
+              "Ordinal": 12,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 367,
+              "EndOffset": 299,
+              "Path": 1,
+              "Ordinal": 15,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 367,
+              "EndOffset": 369,
+              "Path": 0,
+              "Ordinal": 14,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Api\\Core\\Mvc\\Filters\\AuthorizeCheckOperationFilter.cs": {
+      "ElGuerre.Taskin.Api.Core.Mvc.Filters.AuthorizeCheckOperationFilter": {
+        "System.Void ElGuerre.Taskin.Api.Core.Mvc.Filters.AuthorizeCheckOperationFilter::Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)": {
+          "Lines": {
+            "17": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 23,
+              "EndOffset": 25,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 23,
+              "EndOffset": 49,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 54,
+              "EndOffset": 56,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 54,
+              "EndOffset": 183,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "C:\\dev\\Taskin\\test\\UnitTets\\ElGuerre.Taskin.Api.Services.Tests\\bin\\Debug\\netcoreapp2.1\\ElGuerre.Taskin.Blazor.dll": {
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Program.cs": {
+      "ElGuerre.Taskin.Blazor.Program": {
+        "System.Void ElGuerre.Taskin.Blazor.Program::Main(System.String[])": {
+          "Lines": {
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": [
+            {
+              "Line": 10,
+              "Offset": 7,
+              "EndOffset": 9,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 10,
+              "Offset": 7,
+              "EndOffset": 32,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Shared\\NavMenu.cshtml": {
+      "ElGuerre.Taskin.Blazor.Shared.NavMenu": {
+        "System.Void ElGuerre.Taskin.Blazor.Shared.NavMenu::ToggleNavMenu()": {
+          "Lines": {
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Blazor.Shared.NavMenu::.ctor()": {
+          "Lines": {
+            "35": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Shared\\Learning\\InteropJS.cshtml": {
+      "ElGuerre.Taskin.Blazor.Shared.Learning.InteropJS/<CallJS>d__1": {
+        "System.Void ElGuerre.Taskin.Blazor.Shared.Learning.InteropJS/<CallJS>d__1::MoveNext()": {
+          "Lines": {
+            "13": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": [
+            {
+              "Line": 16,
+              "Offset": 49,
+              "EndOffset": 51,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 16,
+              "Offset": 49,
+              "EndOffset": 118,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 177,
+              "EndOffset": 179,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 17,
+              "Offset": 177,
+              "EndOffset": 192,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Shared\\Learning\\LifeCycle.cshtml": {
+      "ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle": {
+        "System.Void ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle::BuildRenderTree(Microsoft.AspNetCore.Blazor.RenderTree.RenderTreeBuilder)": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "10": 0
+          },
+          "Branches": [
+            {
+              "Line": 7,
+              "Offset": 122,
+              "EndOffset": 50,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 7,
+              "Offset": 122,
+              "EndOffset": 124,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle::get_Name()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle::Log(System.String)": {
+          "Lines": {
+            "19": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle::OnInit()": {
+          "Lines": {
+            "21": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle::OnParametersSet()": {
+          "Lines": {
+            "33": 0
+          },
+          "Branches": []
+        },
+        "System.Void ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle::.ctor()": {
+          "Lines": {
+            "17": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle/<OnInitAsync>d__8": {
+        "System.Void ElGuerre.Taskin.Blazor.Shared.Learning.LifeCycle/<OnInitAsync>d__8::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "28": 0,
+            "30": 0,
+            "31": 0
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 55,
+              "EndOffset": 57,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 55,
+              "EndOffset": 121,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Pages\\Projects.cshtml": {
+      "ElGuerre.Taskin.Blazor.Pages.Projects": {
+        "System.Void ElGuerre.Taskin.Blazor.Pages.Projects::BuildRenderTree(Microsoft.AspNetCore.Blazor.RenderTree.RenderTreeBuilder)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "16": 0,
+            "18": 0,
+            "30": 0,
+            "31": 0,
+            "41": 0,
+            "44": 0
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 130,
+              "EndOffset": 132,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 13,
+              "Offset": 130,
+              "EndOffset": 221,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 1142,
+              "EndOffset": 669,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 1142,
+              "EndOffset": 1147,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Blazor.Pages.Projects/<OnInitAsync>d__2": {
+        "System.Void ElGuerre.Taskin.Blazor.Pages.Projects/<OnInitAsync>d__2::MoveNext()": {
+          "Lines": {
+            "50": 0,
+            "54": 0,
+            "55": 0
+          },
+          "Branches": [
+            {
+              "Line": 54,
+              "Offset": 49,
+              "EndOffset": 51,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 54,
+              "Offset": 49,
+              "EndOffset": 115,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Pages\\TaskDetail.cshtml": {
+      "ElGuerre.Taskin.Blazor.Pages.TaskDetail": {
+        "System.Void ElGuerre.Taskin.Blazor.Pages.TaskDetail::BuildRenderTree(Microsoft.AspNetCore.Blazor.RenderTree.RenderTreeBuilder)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "17": 0,
+            "19": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "56": 0
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 130,
+              "EndOffset": 132,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 14,
+              "Offset": 130,
+              "EndOffset": 221,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 991,
+              "EndOffset": 885,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 30,
+              "Offset": 991,
+              "EndOffset": 993,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String ElGuerre.Taskin.Blazor.Pages.TaskDetail::get_TaskId()": {
+          "Lines": {
+            "62": 0
+          },
+          "Branches": []
+        },
+        "ElGuerre.Taskin.Models.TaskModel ElGuerre.Taskin.Blazor.Pages.TaskDetail::get_CurrentTask()": {
+          "Lines": {
+            "64": 0
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.IList`1<System.Collections.Generic.KeyValuePair`2<System.Int32,System.String>> ElGuerre.Taskin.Blazor.Pages.TaskDetail::GetAllTaskTypes()": {
+          "Lines": {
+            "67": 0,
+            "69": 0,
+            "70": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Blazor.Pages.TaskDetail/<OnInitAsync>d__10": {
+        "System.Void ElGuerre.Taskin.Blazor.Pages.TaskDetail/<OnInitAsync>d__10::MoveNext()": {
+          "Lines": {
+            "73": 0,
+            "74": 0,
+            "75": 0
+          },
+          "Branches": [
+            {
+              "Line": 74,
+              "Offset": 65,
+              "EndOffset": 67,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 74,
+              "Offset": 65,
+              "EndOffset": 131,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "ElGuerre.Taskin.Blazor.Pages.TaskDetail/<Update>d__11": {
+        "System.Void ElGuerre.Taskin.Blazor.Pages.TaskDetail/<Update>d__11::MoveNext()": {
+          "Lines": {
+            "78": 0,
+            "79": 0,
+            "81": 0,
+            "87": 0,
+            "93": 0,
+            "94": 0
+          },
+          "Branches": [
+            {
+              "Line": 81,
+              "Offset": 46,
+              "EndOffset": 48,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 81,
+              "Offset": 46,
+              "EndOffset": 54,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 93,
+              "Offset": 138,
+              "EndOffset": 140,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 93,
+              "Offset": 138,
+              "EndOffset": 204,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Pages\\Tasks.cshtml": {
+      "ElGuerre.Taskin.Blazor.Pages.Tasks": {
+        "System.Void ElGuerre.Taskin.Blazor.Pages.Tasks::BuildRenderTree(Microsoft.AspNetCore.Blazor.RenderTree.RenderTreeBuilder)": {
+          "Lines": {
+            "12": 0,
+            "13": 0,
+            "15": 0,
+            "17": 0,
+            "28": 0,
+            "29": 0,
+            "39": 0,
+            "42": 0
+          },
+          "Branches": [
+            {
+              "Line": 12,
+              "Offset": 92,
+              "EndOffset": 94,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 92,
+              "EndOffset": 101,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 174,
+              "EndOffset": 176,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 12,
+              "Offset": 174,
+              "EndOffset": 266,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 1143,
+              "EndOffset": 665,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 28,
+              "Offset": 1143,
+              "EndOffset": 1148,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.String ElGuerre.Taskin.Blazor.Pages.Tasks::get_ProjectId()": {
+          "Lines": {
+            "46": 0
+          },
+          "Branches": []
+        }
+      },
+      "ElGuerre.Taskin.Blazor.Pages.Tasks/<OnInitAsync>d__6": {
+        "System.Void ElGuerre.Taskin.Blazor.Pages.Tasks/<OnInitAsync>d__6::MoveNext()": {
+          "Lines": {
+            "51": 0,
+            "52": 0,
+            "53": 0
+          },
+          "Branches": [
+            {
+              "Line": 52,
+              "Offset": 70,
+              "EndOffset": 72,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 52,
+              "Offset": 70,
+              "EndOffset": 136,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Utils\\JsonContent.cs": {
+      "ElGuerre.Taskin.Blazor.Utils.JsonContent": {
+        "System.Void ElGuerre.Taskin.Blazor.Utils.JsonContent::.ctor(System.Object)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Learning\\Timeout.cs": {
+      "ElGuerre.Taskin.Blazor.Learning.Timeout": {
+        "System.Void ElGuerre.Taskin.Blazor.Learning.Timeout::TimeoutCallback()": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\UI\\ElGuerre.Taskin.Blazor\\Extensions\\EnumExtensions.cs": {
+      "ElGuerre.Taskin.Blazor.Extensions.EnumExtensions": {
+        "System.Collections.Generic.IList`1<System.Collections.Generic.KeyValuePair`2<TValue,System.String>> ElGuerre.Taskin.Blazor.Extensions.EnumExtensions::ToValueList(System.Type)": {
+          "Lines": {
+            "22": 0,
+            "23": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "C:\\dev\\Taskin\\test\\UnitTets\\ElGuerre.Taskin.Api.Services.Tests\\bin\\Debug\\netcoreapp2.1\\ElGuerre.Taskin.Models.dll": {
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Models\\BaseModel.cs": {
+      "ElGuerre.Taskin.Models.BaseModel`1": {
+        "Tkey ElGuerre.Taskin.Models.BaseModel`1::get_Id()": {
+          "Lines": {
+            "13": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Models\\ProjectModel.cs": {
+      "ElGuerre.Taskin.Models.ProjectModel": {
+        "System.String ElGuerre.Taskin.Models.ProjectModel::get_Title()": {
+          "Lines": {
+            "12": 3
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Models.ProjectModel::get_Detail()": {
+          "Lines": {
+            "13": 3
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Models.ProjectModel::get_ImageUrl()": {
+          "Lines": {
+            "14": 3
+          },
+          "Branches": []
+        },
+        "System.Int32 ElGuerre.Taskin.Models.ProjectModel::get_ProjectType()": {
+          "Lines": {
+            "15": 3
+          },
+          "Branches": []
+        },
+        "System.Collections.Generic.ICollection`1<ElGuerre.Taskin.Models.TaskModel> ElGuerre.Taskin.Models.ProjectModel::get_Tasks()": {
+          "Lines": {
+            "16": 5
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\dev\\Taskin\\src\\ElGuerre.Taskin.Models\\TaskModel.cs": {
+      "ElGuerre.Taskin.Models.TaskModel": {
+        "System.Int32 ElGuerre.Taskin.Models.TaskModel::get_Id()": {
+          "Lines": {
+            "15": 3
+          },
+          "Branches": []
+        },
+        "System.String ElGuerre.Taskin.Models.TaskModel::get_Detail()": {
+          "Lines": {
+            "18": 3
+          },
+          "Branches": []
+        },
+        "System.Int32 ElGuerre.Taskin.Models.TaskModel::get_Priority()": {
+          "Lines": {
+            "20": 3
+          },
+          "Branches": []
+        },
+        "System.Int32 ElGuerre.Taskin.Models.TaskModel::get_Effort()": {
+          "Lines": {
+            "22": 3
+          },
+          "Branches": []
+        },
+        "System.Int32 ElGuerre.Taskin.Models.TaskModel::get_TaskType()": {
+          "Lines": {
+            "24": 3
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

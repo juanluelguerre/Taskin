@@ -1,0 +1,43 @@
+﻿@page
+@model ProjectPageModel
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<div class="page-header">
+    <h2>Projects</h2>
+</div>
+
+@if (Model.Projects == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class='table table-hover'>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Detail</th>
+                <th>Type</th>
+                <th>Tasks</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var proj in Model.Projects)
+            {
+                <tr>
+                    <td>@proj.Id</td>
+                    <td>@proj.Title</td>
+                    <td>@proj.Detail</td>
+                    <td>@proj.ProjectType</td>
+                    <td>
+                        <button class="btn btn-info" >View</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
