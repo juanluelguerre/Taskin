@@ -3,12 +3,13 @@
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
 // ---------------------------------------------------------------------------------
+using ElGuerre.Taskin.Api.Models;
 using Xunit;
 
 namespace ElGuerre.Taskin.Api.IntegrationTests
 {
-    // public class BaseTest : IClassFixture<CompositionRootFixture>
-    public class BaseTest : IClassFixture<WebAppFactory<Startup>>
+    public class BaseTest : IClassFixture<CompositionRootFixture>
+    //public class BaseTest : IClassFixture<WebAppFactory<Startup>>
     {
         protected readonly CompositionRootFixture Fixture;
 

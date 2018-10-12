@@ -1,12 +1,12 @@
-﻿// ---------------------------------------------------------------------------------
-// <copyright file="ProjectController.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+﻿// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
-// ---------------------------------------------------------------------------------
+// -------------------------------------------------------------------
 using ElGuerre.Taskin.Api.Services;
 using ElGuerre.Taskin.Models;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
@@ -20,24 +20,29 @@ namespace Taskin.Api.Controllers
     {
         private const string SERVICE_NAME = "Project";
         private readonly IProjectService _service;
+        private readonly ILogger _logger;
 
-        public ProjectsController(IProjectService service)
+        public ProjectsController(
+            IProjectService service,
+            ILogger<ProjectsController> logger)
         {
-            _service = service;   
+            _service = service;
+            _logger = logger;
         }
 
         [HttpGet]
-        [SwaggerOperation("GetAll" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
-        //[ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<IEnumerable<ProjectModel>>> GetAll()
         {
+            _logger.LogInformation($"Staring {nameof(GetAll)} ...");
+
             var response = await _service.GetAsync();
+
+            _logger.LogInformation($"Ending {nameof(GetAll)} ...");
+
             return Ok(response);
         }
 
-        // GET: api/Project/5
         [HttpGet("{id}")]
-        [SwaggerOperation("Get" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<ProjectModel>> Get([FromRoute] int id)
         {
@@ -54,7 +59,7 @@ namespace Taskin.Api.Controllers
 
 
         [HttpGet("{id}/tasks")]
-        [SwaggerOperation("GetTasksByProjectId", Tags = new[] { SERVICE_NAME })]
+        // [SwaggerOperation("GetTasksByProjectId", Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<ProjectModel>> GetTasksByProjectId([FromRoute] int id)
         {
@@ -63,7 +68,7 @@ namespace Taskin.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var project = await _service.GetAsync(id);            
+            var project = await _service.GetAsync(id);
             if (project == null)
             {
                 return NotFound();
@@ -74,8 +79,8 @@ namespace Taskin.Api.Controllers
 
         // PUT: api/Project/5
         [HttpPut("{id}")]
-        [ValidateAntiForgeryToken]
-        [SwaggerOperation("Put" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        // [ValidateAntiForgeryToken]
+        // [SwaggerOperation("Put" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]
@@ -93,7 +98,9 @@ namespace Taskin.Api.Controllers
 
             var model = await _service.GetAsync(id);
             if (model == null)
+            {
                 return NotFound();
+            }
 
             model = await _service.UpdateAsync(projectModel);
             return Ok(model);
@@ -101,8 +108,8 @@ namespace Taskin.Api.Controllers
 
         // POST: api/Project
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        [SwaggerOperation("Post" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        // [ValidateAntiForgeryToken]
+        // [SwaggerOperation("Post" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<ActionResult<ProjectModel>> Post([FromBody] ProjectModel projectModel)
         {
@@ -117,8 +124,8 @@ namespace Taskin.Api.Controllers
 
         // DELETE: api/Project/5
         [HttpDelete("{id}")]
-        [ValidateAntiForgeryToken]
-        [SwaggerOperation("Delete" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
+        // [ValidateAntiForgeryToken]
+        // [SwaggerOperation("Delete" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType((int)HttpStatusCode.NoContent)]

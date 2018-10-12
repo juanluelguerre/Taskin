@@ -12,7 +12,7 @@ namespace ElGuerre.Taskin.Api.Repository.Tests
 {
     public class BaseRepositoryTest
     {
-        [Fact]
+        [Fact (Skip = "Not implemented yet")]
         public void Test1()
         {
 
