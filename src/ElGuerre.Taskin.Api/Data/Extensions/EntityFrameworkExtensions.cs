@@ -1,8 +1,8 @@
-﻿// ---------------------------------------------------------------------------------
-// <copyright file="EntityFrameworkExtensions.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+﻿// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
-// ---------------------------------------------------------------------------------
+// -------------------------------------------------------------------
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;

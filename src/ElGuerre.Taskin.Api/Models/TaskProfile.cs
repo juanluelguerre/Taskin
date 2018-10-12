@@ -1,8 +1,8 @@
-﻿// ---------------------------------------------------------------------------------
-// <copyright file="MappingConfig.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+﻿// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
-// ---------------------------------------------------------------------------------
+// -------------------------------------------------------------------
 using AutoMapper;
 using ElGuerre.Taskin.Api.Data.Entity;
 using ElGuerre.Taskin.Models;

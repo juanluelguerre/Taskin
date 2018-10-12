@@ -1,15 +1,14 @@
-﻿// ---------------------------------------------------------------------------------
-// <copyright file="BaseService.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+﻿// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
-// ---------------------------------------------------------------------------------
+// -------------------------------------------------------------------
 using AutoMapper;
-using ElGuerre.ApplicationBlocks.Logging;
-using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Data;
 using ElGuerre.Taskin.Api.Data.Entity;
 using ElGuerre.Taskin.Api.Data.Repository;
 using ElGuerre.Taskin.Models;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,17 +27,17 @@ namespace ElGuerre.Taskin.Api.Services
         readonly IEntityRepository<TEntity, Tkey> _repository;
         IUnitOfWork _unitOfWork;
         protected readonly ILogger _logger;
-        private readonly IMapper _mapper;
+        protected readonly IMapper _mapper;
 
         protected IUnitOfWork UnityOfWork { get => _unitOfWork; }
         protected IEntityRepository<TEntity, Tkey> Repository { get => _repository; }
 
-        protected BaseService(IMapper mapper, IEntityRepository<TEntity, Tkey> repository, IUnitOfWork unityOfWork, ILogProvider logProvider)
+        protected BaseService(IMapper mapper, IEntityRepository<TEntity, Tkey> repository, IUnitOfWork unityOfWork, ILogger<BaseService<TModel, TEntity, Tkey>> logger)
         {
             _mapper = mapper;
             _repository = repository;
             _unitOfWork = unityOfWork;
-            _logger = new Logger(logProvider);
+            _logger = logger;
         }
 
         public virtual async Task<IEnumerable<TModel>> GetAsync()
@@ -129,7 +128,7 @@ namespace ElGuerre.Taskin.Api.Services
 
         void Log(string methodName, string parameter)
         {
-            _logger.Trace($"{GetType().Name}.{methodName}({parameter})");
+            _logger.LogWarning($"{GetType().Name}.{methodName}({parameter})");
         }
     }
 }

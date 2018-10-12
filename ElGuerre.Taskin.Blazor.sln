@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28124.53
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "..\ElGuerre.Taskin.Api\ElGuerre.Taskin.Api.csproj", "{492B9E89-455A-428F-9D81-4D4DBCE16CDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "src\ElGuerre.Taskin.Api\ElGuerre.Taskin.Api.csproj", "{492B9E89-455A-428F-9D81-4D4DBCE16CDA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Blazor", "..\UI\ElGuerre.Taskin.Blazor\ElGuerre.Taskin.Blazor.csproj", "{720B84AD-4392-4910-80FD-AC4C04DE80E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Blazor", "src\UI\ElGuerre.Taskin.Blazor\ElGuerre.Taskin.Blazor.csproj", "{720B84AD-4392-4910-80FD-AC4C04DE80E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Models", "..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{2CB8395D-6A1C-4F06-91F5-0627D992CBA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Models", "src\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{2CB8395D-6A1C-4F06-91F5-0627D992CBA3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationBlocks", "ApplicationBlocks", "{189415D4-083D-43F0-AABE-BF6E1A9B29A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.ApplicationBlocks.Core", "..\ApplicationBlocks\ElGuerre.ApplicationBlocks.Core\ElGuerre.ApplicationBlocks.Core.csproj", "{34EFFBFA-95F4-425F-B164-C3B8380B572F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.ApplicationBlocks.Core", "src\ApplicationBlocks\ElGuerre.ApplicationBlocks.Core\ElGuerre.ApplicationBlocks.Core.csproj", "{34EFFBFA-95F4-425F-B164-C3B8380B572F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.ApplicationBlocks.Logging", "..\ApplicationBlocks\ElGuerre.ApplicationBlocks.Logging\ElGuerre.ApplicationBlocks.Logging.csproj", "{9E732A77-7848-4A67-8656-CC54268AE488}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.ApplicationBlocks.Logging", "src\ApplicationBlocks\ElGuerre.ApplicationBlocks.Logging\ElGuerre.ApplicationBlocks.Logging.csproj", "{9E732A77-7848-4A67-8656-CC54268AE488}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{10FAC814-0BEC-4B2D-A255-CFCF0DF00368}"
 EndProject
@@ -57,5 +57,8 @@ Global
 		{2CB8395D-6A1C-4F06-91F5-0627D992CBA3} = {4D588CCF-7454-4C6A-89ED-CB1E07386C13}
 		{34EFFBFA-95F4-425F-B164-C3B8380B572F} = {189415D4-083D-43F0-AABE-BF6E1A9B29A4}
 		{9E732A77-7848-4A67-8656-CC54268AE488} = {189415D4-083D-43F0-AABE-BF6E1A9B29A4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DF0C509-FB1D-4C2A-8EE0-837E8B78CE6B}
 	EndGlobalSection
 EndGlobal

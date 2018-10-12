@@ -6,7 +6,7 @@
 using ElGuerre.Taskin.Api.Services;
 using ElGuerre.Taskin.Models;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.SwaggerGen;
+using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
@@ -20,10 +20,12 @@ namespace Taskin.Api.Controllers
     {
         private const string SERVICE_NAME = "Project";
         private readonly IProjectService _service;
+        private readonly ILogger _logger;
 
-        public ProjectsController(IProjectService service)
+        public ProjectsController(IProjectService service, ILogger<ProjectsController> logger)
         {
-            _service = service;   
+            _service = service;
+            _logger = logger;
         }
 
         [HttpGet]

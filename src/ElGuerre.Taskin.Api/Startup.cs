@@ -4,7 +4,6 @@
 // </copyright>
 // -------------------------------------------------------------------
 using AutoMapper;
-using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Core.Mvc.Filters;
 using ElGuerre.Taskin.Api.Core.Mvc.Middlewares;
 using ElGuerre.Taskin.Api.Data;
@@ -25,14 +24,16 @@ namespace ElGuerre.Taskin.Api
 {
     public class Startup
     {
-        public Startup(IHostingEnvironment env)
+        public Startup(IHostingEnvironment env, IConfiguration configuration)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables();
-            Configuration = builder.Build();
+            //var builder = new ConfigurationBuilder()
+            //    .SetBasePath(env.ContentRootPath)
+            //    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            //    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+            //    .AddEnvironmentVariables();
+
+            //Configuration = builder.Build();
+            Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -41,25 +42,19 @@ namespace ElGuerre.Taskin.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy("CorsPolicy",
-            //        builder => builder.WithOrigins("http://localhost:42036")
-            //        .AllowAnyMethod()
-            //        .AllowAnyHeader()
-            //        .AllowCredentials());
-            //});
-
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
                     builder => builder.AllowAnyOrigin()
-                    .AllowAnyMethod()
+                    .WithMethods(
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE",
+                        "OPTIONS")
                     .AllowAnyHeader()
                     .AllowCredentials());
             });
-
-
 
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
@@ -85,8 +80,6 @@ namespace ElGuerre.Taskin.Api
             //});
 
             services.AddSingleton(Configuration);
-
-
             services.Configure<AppSettings>(Configuration);
 
             // services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -105,11 +98,11 @@ namespace ElGuerre.Taskin.Api
 
             // services.AddScoped<IDbContextSeed, DataContext>();
             services.AddScoped<DataContext>();
+            
+            //services.AddScoped<ILogProvider>(s => new LogProvider(Configuration));
+            //services.AddScoped<ApplicationBlocks.Logging.ILogger, ApplicationBlocks.Logging.Logger>();
 
-
-            // services.AddScoped<ILogProvider>(s => new FileProvider(Path.Combine(Directory.GetCurrentDirectory(), "trace.log")));
-            services.AddScoped<ILogProvider>(s => new LogProvider(Configuration));
-            services.AddScoped<ApplicationBlocks.Logging.ILogger, ApplicationBlocks.Logging.Logger>();
+            // services.AddSingleton<ILogger, >
 
             // Add custom Services, repositories and so on
             services.AddScoped<IProjectRepository, ProjectRepository>();
