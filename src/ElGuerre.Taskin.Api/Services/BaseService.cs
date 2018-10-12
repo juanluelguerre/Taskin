@@ -32,7 +32,11 @@ namespace ElGuerre.Taskin.Api.Services
         protected IUnitOfWork UnityOfWork { get => _unitOfWork; }
         protected IEntityRepository<TEntity, Tkey> Repository { get => _repository; }
 
-        protected BaseService(IMapper mapper, IEntityRepository<TEntity, Tkey> repository, IUnitOfWork unityOfWork, ILogger<BaseService<TModel, TEntity, Tkey>> logger)
+        protected BaseService(
+            IMapper mapper,
+            IEntityRepository<TEntity, Tkey> repository,
+            IUnitOfWork unityOfWork,
+            ILogger<BaseService<TModel, TEntity, Tkey>> logger)
         {
             _mapper = mapper;
             _repository = repository;

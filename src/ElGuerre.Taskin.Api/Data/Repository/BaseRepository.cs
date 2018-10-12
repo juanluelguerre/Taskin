@@ -7,6 +7,7 @@
 //
 using ElGuerre.Taskin.Api.Data.Entity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,12 @@ namespace ElGuerre.Taskin.Api.Data.Repository
     {
         private readonly DataContext _context;
         private readonly DbSet<TEntity> _dbSet;
+        private readonly ILogger _logger;
 
-        protected BaseRepository(DataContext context)
+        protected BaseRepository(DataContext context, ILogger<BaseRepository<TEntity, Tkey>> logger)
         {
             _context = context;
+            _logger = logger;
             _dbSet = context.Set<TEntity>();
         }
 

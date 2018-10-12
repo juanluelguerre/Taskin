@@ -22,24 +22,27 @@ namespace Taskin.Api.Controllers
         private readonly IProjectService _service;
         private readonly ILogger _logger;
 
-        public ProjectsController(IProjectService service, ILogger<ProjectsController> logger)
+        public ProjectsController(
+            IProjectService service,
+            ILogger<ProjectsController> logger)
         {
             _service = service;
             _logger = logger;
         }
 
         [HttpGet]
-        // [SwaggerOperation("GetAll" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
-        //[ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<IEnumerable<ProjectModel>>> GetAll()
         {
+            _logger.LogInformation($"Staring {nameof(GetAll)} ...");
+
             var response = await _service.GetAsync();
+
+            _logger.LogInformation($"Ending {nameof(GetAll)} ...");
+
             return Ok(response);
         }
 
-        // GET: api/Project/5
         [HttpGet("{id}")]
-        // [SwaggerOperation("Get" + SERVICE_NAME, Tags = new[] { SERVICE_NAME })]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         public async Task<ActionResult<ProjectModel>> Get([FromRoute] int id)
         {
@@ -65,7 +68,7 @@ namespace Taskin.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var project = await _service.GetAsync(id);            
+            var project = await _service.GetAsync(id);
             if (project == null)
             {
                 return NotFound();
@@ -95,7 +98,9 @@ namespace Taskin.Api.Controllers
 
             var model = await _service.GetAsync(id);
             if (model == null)
+            {
                 return NotFound();
+            }
 
             model = await _service.UpdateAsync(projectModel);
             return Ok(model);

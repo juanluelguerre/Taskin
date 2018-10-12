@@ -26,13 +26,6 @@ namespace ElGuerre.Taskin.Api
     {
         public Startup(IHostingEnvironment env, IConfiguration configuration)
         {
-            //var builder = new ConfigurationBuilder()
-            //    .SetBasePath(env.ContentRootPath)
-            //    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            //    .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-            //    .AddEnvironmentVariables();
-
-            //Configuration = builder.Build();
             Configuration = configuration;
         }
 
@@ -141,21 +134,10 @@ namespace ElGuerre.Taskin.Api
                 // app.UseExceptionHandler();
             }
 
-            // loggerFactory.AddNLog();
-            // app.AddNLogWeb();
-
             app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
             app.UseMvc();
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute(name: "default", template: "{controller}/{action}/{id?}");
-            //});
-
-
-            //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
-
 
             app.UseSwagger()
                .UseSwaggerUI(c =>
@@ -168,10 +150,6 @@ namespace ElGuerre.Taskin.Api
                 var context = app.ApplicationServices.GetService<DataContext>();
                 context.Seed();
             }
-
-            // MappingConfig.RegisterMaps();
-
-            // app.UseBlazor<Blazor.Program>();
         }
     }
 }

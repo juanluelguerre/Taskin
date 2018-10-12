@@ -17,7 +17,11 @@ namespace ElGuerre.Taskin.Api.Services
 {
     public class ProjectService : BaseService<ProjectModel, ProjectEntity, int>, IProjectService
     {
-        public ProjectService(IMapper mapper, IProjectRepository repository, IUnitOfWork unitOfWork, ILogger<ProjectService> logger) 
+        public ProjectService(
+            IMapper mapper, 
+            IProjectRepository repository, 
+            IUnitOfWork unitOfWork, 
+            ILogger<ProjectService> logger) 
             : base(mapper, repository, unitOfWork, logger)
         {
         }

@@ -28,32 +28,13 @@ namespace ElGuerre.Taskin.Api
                         .AddEnvironmentVariables();
 
                     Log.Logger = new LoggerConfiguration()
-                       .ReadFrom.Configuration(configBuilder.Build())
-                       .CreateLogger();
+                        .ReadFrom.Configuration(configBuilder.Build())
+                        .CreateLogger();
                 })
                 .ConfigureLogging((context, loggingBuilder) =>
                 {
-                    //loggingBuilder.ClearProviders();
-                    //loggingBuilder.AddDebug();
-                    //loggingBuilder.AddConsole();
-                   
                     loggingBuilder.AddSerilog(dispose: true);
-
-                    //loggingBuilder.AddSerilog
-                    //(
-                    //    new LoggerConfiguration()
-                    //        .MinimumLevel.Warning()
-                    //        .WriteTo.Console()
-                    //        .CreateLogger()
-
-                    //);
                 })
-                //.UseSerilog((context, config) =>
-                //{
-                //    var section = context.Configuration.GetSection("Serilog");
-                //    config.ReadFrom.ConfigurationSection(section);
-                //})
-                // .UseApplicationInsights()
                 .Build();
 
             host.Run();
