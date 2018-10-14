@@ -5,6 +5,7 @@
 // -------------------------------------------------------------------
 using ElGuerre.Taskin.Api.Data.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace ElGuerre.Taskin.Api.Data
 {
@@ -85,9 +86,13 @@ namespace ElGuerre.Taskin.Api.Data
                 new TaskEntity() { Id = 5, Detail = "Task 5", Priority = TaskPriority.Low,    TaskType = defaultTaskType, Effort = 1 },
                 new TaskEntity() { Id = 6, Detail = "Task 6", Priority = TaskPriority.Hight,  TaskType = defaultTaskType, Effort = 3 }
             };
-            var p2 = new ProjectEntity() { Id = 2, Title = "Project 2", Detail = "Detail for Project 1", ProjectType = defaultProjectType };
+            var p2 = new ProjectEntity() { Id = 2, Title = "Project 2", Detail = "Detail for Project 2", ProjectType = defaultProjectType };
             p2.Tasks = tasks2;
             Add(p2);
+
+            var p3 = new ProjectEntity() { Id = 3, Title = "Project 3", Detail = "Detail for Project 3", ProjectType = defaultProjectType };
+            p3.Tasks = new List<TaskEntity>();
+            Add(p3);
 
             SaveChanges();
         }

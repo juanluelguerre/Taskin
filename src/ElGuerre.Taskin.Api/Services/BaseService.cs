@@ -67,7 +67,7 @@ namespace ElGuerre.Taskin.Api.Services
             Log(model: model);
 
             var entity = _repository.Create();
-            var entityDest = _mapper.Map(model, entity);
+            var entityDest = _mapper.Map<TEntity>(model);
 
             await _repository.AddAsync(entityDest);
             _unitOfWork.Commit();

@@ -5,7 +5,6 @@
 // ---------------------------------------------------------------------------------
 // Currently code coverage need Full pdb for .NETCore
 // ---------------------------------------------------------------------------------
-using System;
 using Xunit;
 
 namespace ElGuerre.Taskin.Api.Tests.Repository

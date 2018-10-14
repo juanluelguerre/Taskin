@@ -4,9 +4,9 @@
 // </copyright>
 // ---------------------------------------------------------------------------------
 using AutoMapper;
-using ElGuerre.Taskin.Api.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
+using Microsoft.Extensions.Configuration;
 using System.Net.Http;
 
 namespace ElGuerre.Taskin.Api.IntegrationTests
@@ -19,19 +19,17 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
 
         public CompositionRootFixture()
         {
-            //ServiceCollectionExtensions.UseStaticRegistration = false;
-
-            //// Initialize mapper
-            //_mapper = new Mapper(
-            //    new MapperConfiguration(
-            //        configure => {
-            //            configure.AddProfile<ProjectProfile>();
-            //            configure.AddProfile<TaskProfile>();
-            //        }
-            //    ));
-
-
-            _server = new TestServer(new WebHostBuilder().UseStartup<Startup>());
+            _server = new TestServer(new WebHostBuilder()
+                .UseEnvironment("Test")
+                .ConfigureAppConfiguration((context, configBuilder) =>
+                {
+                    configBuilder
+                        .SetBasePath(context.HostingEnvironment.ContentRootPath)
+                        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                        .AddEnvironmentVariables();
+                })
+                .UseStartup<Startup>()); 
+            
             Client = _server.CreateClient();
         }
 
