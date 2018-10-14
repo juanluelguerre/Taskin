@@ -32,7 +32,7 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
         public async Task GetAllTest()
         {
             int projId = 1;
-            var response = await Fixture.Client.GetAsync($"/api/project/{projId}/tasks");
+            var response = await Fixture.Client.GetAsync($"/api/projects/{projId}/tasks");
             response.EnsureSuccessStatusCode();
 
             var content = await response.Content.ReadAsStringAsync();

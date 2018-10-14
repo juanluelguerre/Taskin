@@ -12,6 +12,7 @@ using ElGuerre.Taskin.Api.Data.Entity;
 using ElGuerre.Taskin.Api.Data.Repository;
 using ElGuerre.Taskin.Api.Models;
 using ElGuerre.Taskin.Api.Services;
+using Microsoft.Extensions.Logging;
 using Moq;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace ElGuerre.Taskin.Api.Tests.Services
             repository.Setup(x => x.FindAsync(projId)).ReturnsAsync(GetProjectEntityMock(1, 1));
             repository.Setup(x => x.Get(null, null, "Tasks")).ReturnsAsync(new[] { GetProjectEntityMock(2, 1), GetProjectEntityMock(2, 2) });
             var unitOfWork = new Mock<IUnitOfWork>();
-            var logProvider = new Mock<ILogProvider>();
+            var logProvider = new Mock<ILogger<ProjectService>>();
 
 
             var service = new ProjectService(_mapper, repository.Object, unitOfWork.Object, logProvider.Object);

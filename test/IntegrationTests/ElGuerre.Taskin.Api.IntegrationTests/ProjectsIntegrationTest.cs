@@ -22,13 +22,16 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
 {
     public class ProjectsIntegrationTest : BaseTest
     {
+        private string _baseUrl;
+
         public ProjectsIntegrationTest(CompositionRootFixture fixture) : base(fixture)
         {
+            _baseUrl = "api/projects";
             // AutoMapper.Mapper.AssertConfigurationIsValid();
             // AutoMapper.Mapper.Reset();
             // MappingConfig.RegisterMaps();
 
-            
+
             // https://stackoverflow.com/questions/40275195/how-to-setup-automapper-in-asp-net-core
             //var profile = new ProjectProfile();
 
@@ -42,7 +45,7 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
         [Fact]
         public async Task GetAllTest()
         {
-            var response = await Fixture.Client.GetAsync($"api/projects");
+            var response = await Fixture.Client.GetAsync(_baseUrl);
             response.EnsureSuccessStatusCode();
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
@@ -55,11 +58,11 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
         }
 
         [Theory]
-        [InlineData(1)]
-        [InlineData(2)]
+        [InlineData(1)]               
+        //[InlineData(2)]       
         public async Task GetTest(int projId)
         {
-            var response = await Fixture.Client.GetAsync($"api/projects/{projId}");
+            var response = await Fixture.Client.GetAsync($"{_baseUrl}/{projId}");
             response.EnsureSuccessStatusCode();
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
@@ -75,7 +78,7 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
         [InlineData(33)]
         public async Task GetNotFoundTest(int projId)
         {
-            var response = await Fixture.Client.GetAsync($"api/projects/{projId}");
+            var response = await Fixture.Client.GetAsync($"{_baseUrl}/{projId}");
             Assert.Throws<HttpRequestException>(() => response.EnsureSuccessStatusCode());
 
             Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
@@ -85,7 +88,7 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
         [InlineData(1)]
         public async Task GetTasksByProjectIdTest(int projId)
         {
-            var response = await Fixture.Client.GetAsync($"api/projects/{projId}/Tasks");
+            var response = await Fixture.Client.GetAsync($"{_baseUrl}/{projId}/Tasks");
             response.EnsureSuccessStatusCode();
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
@@ -101,25 +104,33 @@ namespace ElGuerre.Taskin.Api.IntegrationTests
         {
             var content = GetSampleProject(15);
 
-            var response = await Fixture.Client.PostAsync($"api/projects", content);
+            var response = await Fixture.Client.PostAsync(_baseUrl, content);
             response.EnsureSuccessStatusCode();
         }
 
         [Theory]
-        [InlineData(15)]
+        [InlineData(2)]
         public async Task PutTest(int projId)
         {
             var content = GetSampleProject(projId);
 
-            var response = await Fixture.Client.PostAsync($"api/projects/{projId}", content);
+            var response = await Fixture.Client.PutAsync($"{_baseUrl}/{projId}", content);
             response.EnsureSuccessStatusCode();
         }
 
         [Theory]
-        [InlineData(15)]
+        [InlineData(3)]
         public async Task DeleteTest(int projId)
         {
-            var response = await Fixture.Client.DeleteAsync($"api/projects/{projId}");
+            var response = await Fixture.Client.DeleteAsync($"{_baseUrl}/{projId}");
+            response.EnsureSuccessStatusCode();
+        }
+
+        [Theory]
+        [InlineData(33)]
+        public async Task DeleteNotFoundTest(int projId)
+        {
+            var response = await Fixture.Client.DeleteAsync($"{_baseUrl}/{projId}");
             Assert.Throws<HttpRequestException>(() => response.EnsureSuccessStatusCode());
         }
 
