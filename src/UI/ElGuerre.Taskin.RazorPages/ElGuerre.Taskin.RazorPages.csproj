@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
@@ -13,3 +14,20 @@
     <ProjectReference Include="..\..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
   </ItemGroup>
 </Project>
+=======
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ApplicationBlocks\ElGuerre.ApplicationBlocks.Core\ElGuerre.ApplicationBlocks.Core.csproj" />
+    <ProjectReference Include="..\..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
+  </ItemGroup>
+</Project>
+>>>>>>> develop
