@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -74,24 +75,23 @@ namespace ElGuerre.Taskin.Api
 
             services.AddSingleton(Configuration);
             services.Configure<AppSettings>(Configuration);
-
-            // services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
 
             if (Configuration.GetValue<bool>("UseTest"))
             {
-                services.AddEntityFramework<DataContext>(
+                services.AddDbContext<DataContext>(                
                   opt => opt.UseInMemoryDatabase("Taskin")
                             .ConfigureWarnings(cw => cw.Ignore(InMemoryEventId.TransactionIgnoredWarning)));
             }
             else
             {
-                services.AddEntityFramework<DataContext>(
+                services.AddDbContext<DataContext>(
                     opt => opt.UseSqlServer(Configuration.GetConnectionString("Taskin")));
             }
 
             // services.AddScoped<IDbContextSeed, DataContext>();
             services.AddScoped<DataContext>();
-            
+
             //services.AddScoped<ILogProvider>(s => new LogProvider(Configuration));
             //services.AddScoped<ApplicationBlocks.Logging.ILogger, ApplicationBlocks.Logging.Logger>();
 
@@ -145,11 +145,11 @@ namespace ElGuerre.Taskin.Api
                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Taskin V1");
                });
 
-            if (Configuration.GetValue<bool>("UseTest"))
-            {
-                var context = app.ApplicationServices.GetService<DataContext>();
-                context.Seed();
-            }
+            //if (Configuration.GetValue<bool>("UseTest"))
+            //{
+            //    var context = app.ApplicationServices.GetService<DataContext>();
+            //    context.Seed();
+            //}
         }
     }
 }

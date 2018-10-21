@@ -1,5 +1,4 @@
-Taskin
-========
+# Taskin
 
 Develop | Master
 ------- | ------
@@ -24,19 +23,25 @@ Targets:
 
 Blogs [Wordpress] | [Geeks]
 
- Github pages: http://juanluelguerre.github.io/Taskin/ 
-
-Version
-----
-1.0.0.0
+Github pages: http://juanluelguerre.github.io/Taskin/ 
 
 
-License
-----
-MIT
+License: MIT
 
+# Running the Project
+
+## Create Database from Code First
+
+```
+dotnet ef migrations add InitialMigration
+
+dotnet ef database update 
+```
+
+# References
 
 [Wordpress]:https://elguerre.com/
 [Geeks]:http://geeks.ms/blogs/jlguerrero/
 [WindowsTemplateStudio]:https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio
 [Template10]:https://github.com/Windows-XAML/Template10/wiki
+

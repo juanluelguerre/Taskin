@@ -4,6 +4,7 @@
 // </copyright>
 // -------------------------------------------------------------------
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ElGuerre.Taskin.Api.Data.Entity
 {
@@ -14,12 +15,19 @@ namespace ElGuerre.Taskin.Api.Data.Entity
         Hight = 1
     }
 
+    [Table("Tasks")]
     public class TaskEntity : BaseEntity<int>
     {
-        [Required]
+        //[Required]
+        //public int ProjectId { get; set; }
+
+        [ForeignKey("BlogForeignKey")]
+        public ProjectEntity Project {get; set; }
+
         public string Detail { get; set; }
         public TaskPriority Priority { get; set; }
         public int Effort { get; set; }
+        [Column("TaskType")]
         public TaskTypeEntity TaskType { get; set; }
         // public ProjectEntity Project { get; set;}
     }

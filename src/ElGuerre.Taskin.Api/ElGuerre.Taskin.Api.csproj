@@ -20,12 +20,13 @@
     <EmbeddedResource Remove="wwwroot\**" />
     <None Remove="wwwroot\**" />
     <Content Remove="Serilog.config" />
+    <None Remove="Data\DesignTimeDbContextFactory.cs" />
+    <Compile Remove="Data\DesignTimeDbContextFactory.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="7.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.2.0-preview2-35157" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.0-preview2-35157" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.0-preview2-35157" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.2.0-preview2-35157" />
@@ -39,15 +40,17 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="3.0.0" />
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00779" />
     <PackageReference Include="Serilog.AspNetCore" Version="2.1.2-dev-00028" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.0-preview2-35157" />
   </ItemGroup>
-
+  
+  <!-- Optional tool. Use: "dotnet tool install -g dotnet-aspnet-codegenerator" instead -->
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
-    <ProjectReference Include="..\ApplicationBlocks\ElGuerre.ApplicationBlocks.Logging\ElGuerre.ApplicationBlocks.Logging.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -69,4 +72,7 @@
     <Folder Include="Infrastructure\Mvc\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="Data\DesignTimeDbContextFactory.cs" />
+  </ItemGroup>
 </Project>

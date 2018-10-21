@@ -9,7 +9,7 @@ namespace ElGuerre.Taskin.Api
     public class AppSettings
     {
         public string ServiceUrl { get; set; }
-        public string ConnectionStrings { get; set; }
+        public string[] ConnectionStrings { get; set; }
         public Logging Logging { get; set; }
     }
 
