@@ -7,8 +7,7 @@ install:
   dotnet tool install --global dotnet-sonarscanner
 
 script:
-  dotnet sonarScanner begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%SONAR_TOKEN%" /d:sonar.language="cs" /d:sonar.cs.opencover.reportsPaths=./test/ElGuerre.Taskin.Api.Services.Tests/coverage.opencover.xm /d:sonar.exclusions=**wwwroot/lib/**,**/test/**,**/*Mock.cs"
-  # dotnet restore %sln%
+  dotnet sonarScanner begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%SONAR_TOKEN%" /d:sonar.language="cs" /d:sonar.cs.opencover.reportsPaths=./test/ElGuerre.Taskin.Api.Services.Tests/coverage.opencover.xm /d:sonar.exclusions=**wwwroot/lib/**,**/test/**,**/*Mock.cs
   dotnet build ElGuerre.Taskin.Full.sln /t:Rebuild
   dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover\" ./test/ElGuerre.Taskin.Api.Services.Tests/ElGuerre.Taskin.Api.Services.Tests.csproj
   dotnet sonarscanner end /d:sonar.login="%SONAR_TOKEN%"
