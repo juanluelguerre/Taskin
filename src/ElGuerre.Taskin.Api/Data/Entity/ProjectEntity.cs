@@ -12,6 +12,9 @@ namespace ElGuerre.Taskin.Api.Data.Entity
     [Table("Projects")]
     public class ProjectEntity : BaseEntity<int>
     {
+        //[Key]
+        //public int ProjectId { get; set; }
+
         [Required]
         public string Title { get; set; }
         public string Detail { get; set; }

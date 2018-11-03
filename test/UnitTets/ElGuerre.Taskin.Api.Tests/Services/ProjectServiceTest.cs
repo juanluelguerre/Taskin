@@ -6,7 +6,6 @@
 // Currently code coverage need Full pdb for .NETCore
 // ---------------------------------------------------------------------------------
 using AutoMapper;
-using ElGuerre.ApplicationBlocks.Logging.Providers;
 using ElGuerre.Taskin.Api.Data;
 using ElGuerre.Taskin.Api.Data.Entity;
 using ElGuerre.Taskin.Api.Data.Repository;

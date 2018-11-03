@@ -18,10 +18,10 @@ namespace ElGuerre.Taskin.Api.Data.Entity
     [Table("Tasks")]
     public class TaskEntity : BaseEntity<int>
     {
-        //[Required]
-        //public int ProjectId { get; set; }
+        //[Key]
+        //public int TaskId { get; set; }
 
-        [ForeignKey("BlogForeignKey")]
+        [ForeignKey("ProjectId")]
         public ProjectEntity Project {get; set; }
 
         public string Detail { get; set; }

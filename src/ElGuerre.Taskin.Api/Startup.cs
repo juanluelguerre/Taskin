@@ -98,6 +98,7 @@ namespace ElGuerre.Taskin.Api
             // services.AddSingleton<ILogger, >
 
             // Add custom Services, repositories and so on
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProjectRepository, ProjectRepository>();
             services.AddScoped<IProjectService, ProjectService>();
             services.AddScoped<ITaskRepository, TaskRepository>();
