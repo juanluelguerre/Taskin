@@ -1,4 +1,4 @@
-﻿// -------------------------------------------------------------------
+// -------------------------------------------------------------------
 // <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
@@ -29,12 +29,6 @@ namespace ElGuerre.Taskin.Api.Data
 
             modelBuilder.Entity<ProjectEntity>().HasMany(p => p.Tasks);
 
-            //modelBuilder.Entity<TaskEntity>()
-            //    .HasOne(t => t.Project)
-            //    .WithMany(p => p.Tasks)
-            //    .HasForeignKey(t => t.Id)
-            //    .HasConstraintName("FK_Project_Task");
-
 
             //modelBuilder.Entity<ProjectEntity>()
             //    .OwnsOne(p => p.ProjectType)
@@ -45,56 +39,58 @@ namespace ElGuerre.Taskin.Api.Data
             //    .OwnsOne(t => t.TaskType)
             //    .HasForeignKey(t => t.Id)
             //    .HasConstraintName("FK_Task_TaskType");
+
+
+            Seed(modelBuilder);
+
         }
 
-        public void Seed()
+        void Seed(ModelBuilder modelBuilder)
         {
-            var defaultProjectType = new ProjectTypeEntity() { Value = ProjectType.Default };
-            Add(defaultProjectType); // Default
-            Add(new ProjectTypeEntity() { Value = ProjectType.Private });
-            Add(new ProjectTypeEntity() { Value = ProjectType.Work });
-            Add(new ProjectTypeEntity() { Value = ProjectType.Sport });
-            Add(new ProjectTypeEntity() { Value = ProjectType.Travel });
-            Add(new ProjectTypeEntity() { Value = ProjectType.Others });
+            modelBuilder.Entity<ProjectTypeEntity>().HasData(
+                new ProjectTypeEntity() { Id = 1, Value = ProjectType.Default },
+                new ProjectTypeEntity() { Id = 2,  Value = ProjectType.Private },
+                new ProjectTypeEntity() { Id = 3, Value = ProjectType.Work },
+                new ProjectTypeEntity() { Id = 4, Value = ProjectType.Sport },
+                new ProjectTypeEntity() { Id = 5, Value = ProjectType.Travel },
+                new ProjectTypeEntity() { Id = 6, Value = ProjectType.Others }
+            );
 
-            var defaultTaskType = new TaskTypeEntity() { Value = TaskType.ToDo };
-            Add(defaultTaskType);
-            Add(new TaskTypeEntity() { Value = TaskType.CallTo });
-            Add(new TaskTypeEntity() { Value = TaskType.EmailTo });
-            Add(new TaskTypeEntity() { Value = TaskType.Holidays });
-            Add(new TaskTypeEntity() { Value = TaskType.LinkTo });
-            Add(new TaskTypeEntity() { Value = TaskType.LunchWith });
-            Add(new TaskTypeEntity() { Value = TaskType.Read });
-            Add(new TaskTypeEntity() { Value = TaskType.Sport });
-            Add(new TaskTypeEntity() { Value = TaskType.TalkTo });
-            Add(new TaskTypeEntity() { Value = TaskType.Travel });
-            Add(new TaskTypeEntity() { Value = TaskType.Others });
+            modelBuilder.Entity<TaskTypeEntity>().HasData( 
+                new TaskTypeEntity() { Id = 1, Value = TaskType.ToDo },
+                new TaskTypeEntity() { Id = 2, Value = TaskType.CallTo },
+                new TaskTypeEntity() { Id = 3, Value = TaskType.EmailTo },
+                new TaskTypeEntity() { Id = 4, Value = TaskType.Holidays },
+                new TaskTypeEntity() { Id = 5, Value = TaskType.LinkTo },
+                new TaskTypeEntity() { Id = 6, Value = TaskType.LunchWith },
+                new TaskTypeEntity() { Id = 7, Value = TaskType.Read },
+                new TaskTypeEntity() { Id = 8, Value = TaskType.Sport },
+                new TaskTypeEntity() { Id = 9, Value = TaskType.TalkTo },
+                new TaskTypeEntity() { Id = 10, Value = TaskType.Travel },
+                new TaskTypeEntity() { Id = 11, Value = TaskType.Others }
+            );
 
-            var tasks1 = new TaskEntity[]
-            {
-                new TaskEntity() { Id = 1, Detail = "Task 1", Priority = TaskPriority.Normal, TaskType = defaultTaskType, Effort = 0 },
-                new TaskEntity() { Id = 2, Detail = "Task 2", Priority = TaskPriority.Low,    TaskType = defaultTaskType, Effort = 1 },
-                new TaskEntity() { Id = 3, Detail = "Task 3", Priority = TaskPriority.Hight,  TaskType = defaultTaskType, Effort = 3 }
-            };
-            var p1 = new ProjectEntity() { Id = 1, Title = "Project 1", Detail = "Detail for Project 1", ProjectType = defaultProjectType };
-            p1.Tasks = tasks1;
-            Add(p1);
+            var defaultProjectType = new ProjectTypeEntity() { Id = 1, Value = ProjectType.Default };
+            // Use Anonymous type to relate with ProjectId.
+            modelBuilder.Entity<ProjectEntity>().HasData(
+                new { Id = 1, Title = "Project 1", Detail = "Detail for Project 1", ProjectTypeId = 1 },
+                new { Id = 2, Title = "Project 2", Detail = "Detail for Project 2", ProjectTypeId = 1 },
+                new { Id = 3, Title = "Project 3", Detail = "Detail for Project 3", ProjectTypeId = 1 }
+            );
+                
+            var defaultTaskType = new TaskTypeEntity() { Id = 1, Value = TaskType.ToDo };
 
-            var tasks2 = new TaskEntity[]
-            {
-                new TaskEntity() { Id = 4, Detail = "Task 4", Priority = TaskPriority.Normal, TaskType = defaultTaskType, Effort = 0 },
-                new TaskEntity() { Id = 5, Detail = "Task 5", Priority = TaskPriority.Low,    TaskType = defaultTaskType, Effort = 1 },
-                new TaskEntity() { Id = 6, Detail = "Task 6", Priority = TaskPriority.Hight,  TaskType = defaultTaskType, Effort = 3 }
-            };
-            var p2 = new ProjectEntity() { Id = 2, Title = "Project 2", Detail = "Detail for Project 2", ProjectType = defaultProjectType };
-            p2.Tasks = tasks2;
-            Add(p2);
+            // Use Anonymous type to relate with ProjectId.
+            modelBuilder.Entity<TaskEntity>().HasData(
+                new { Id = 1, ProjectId = 1, Detail = "Task 1", Priority = TaskPriority.Normal, TaskTypeId = 1, Effort = 0 },
+                new { Id = 2, ProjectId = 1, Detail = "Task 2", Priority = TaskPriority.Low,    TaskTypeId = 1, Effort = 1 },
+                new { Id = 3, ProjectId = 1, Detail = "Task 3", Priority = TaskPriority.Hight,  TaskTypeId = 1, Effort = 3 },
+                new { Id = 4, ProjectId = 2, Detail = "Task 4", Priority = TaskPriority.Normal, TaskTypeId = 1, Effort = 0 },
+                new { Id = 5, ProjectId = 2, Detail = "Task 5", Priority = TaskPriority.Low,    TaskTypeId = 1, Effort = 1 },
+                new { Id = 6, ProjectId = 2, Detail = "Task 6", Priority = TaskPriority.Hight,  TaskTypeId = 1, Effort = 3 }
+               );
 
-            var p3 = new ProjectEntity() { Id = 3, Title = "Project 3", Detail = "Detail for Project 3", ProjectType = defaultProjectType };
-            p3.Tasks = new List<TaskEntity>();
-            Add(p3);
-
-            SaveChanges();
+            // SaveChanges();
         }
     }
 }

@@ -4,6 +4,7 @@
 // </copyright>
 // -------------------------------------------------------------------
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ElGuerre.Taskin.Api.Data.Entity
 {
@@ -19,9 +20,10 @@ namespace ElGuerre.Taskin.Api.Data.Entity
         Others = 9
     }
 
+    [Table("ProjectTypes")]
     public class ProjectTypeEntity : BaseEntity<int>
     {
-         [Required]
+        [Required]
         public ProjectType Value { get; set; }
     }
 }
