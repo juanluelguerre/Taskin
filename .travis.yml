@@ -1,30 +1,14 @@
 language: csharp
 mono: none
-dotnet: 2.1
-
-#addons:
-# sonarcloud:
-#   organization: "juanluelguerre-github" # the key of the org you chose at step #3
-#   token:
-#     secure: 6d289283f4d88a7d4267a47caa9e919c14348f6e # encrypted value of your token
+dotnet: 2.2
 
 install:
- # - choco install "msbuild-sonarqube-runner" -y
+  # - choco install "msbuild-sonarqube-runner" -y
+  dotnet tool install --global dotnet-sonarscanner
 
 script:
-  dotnet tool install --global dotnet-sonarscanner
-  dotnet sonarScanner begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%token%" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.coverage.exclusions="test/**" /d:sonar.cs.opencover.reportsPaths="%cd%\lcov.opencover.xml"
-  dotnet restore %sln%
-  dotnet build %sln%
-  dotnet test test/UnitTets/ElGuerre.Taskin.Api.Services.Tests/ElGuerre.Taskin.Api.Services.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover,lcov\" /p:CoverletOutput=../../lcov
+  dotnet sonarScanner begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%token%" /d:sonar.language="cs" /d:sonar.cs.opencover.reportsPaths=./test/ElGuerre.Taskin.Api.Services.Tests/coverage.opencover.xm /d:sonar.exclusions=**wwwroot/lib/**,**/test/**,**/*Mock.cs"
+  # dotnet restore %sln%
+  dotnet build ElGuerre.Taskin.All.sln /t:Rebuild
+  dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover\" ./test/ElGuerre.Taskin.Api.Services.Tests/ElGuerre.Taskin.Api.Services.Tests.csproj
   dotnet sonarscanner end /d:sonar.login="%token%"
-
-
- # - dotnet restore ElGuerre.Taskin.sln
- # - SonarQube.Scanner.MSBuild.exe begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
- - dotnet build ElGuerre.Taskin.sln
- # - MsBuild ElGuerre.Taskin.sln /t:Rebuild
- # - SonarQube.Scanner.MSBuild.exe end /d:sonar.login="83a3e3b0945ffc9274669d7b21d2218ecf7e64b1"
-
- - nuget install xunit.runners -Version 2.3.1 -OutputDirectory testrunner
-
