@@ -4,11 +4,11 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>ElGuerre.Taskin.Api</RootNamespace>
     <AssemblyName>ElGuerre.Taskin.Api</AssemblyName>
+    <LangVersion>latest</LangVersion>
     <UserSecretsId>49ebb1a6-71b8-4aab-a7d2-3d3a91d754d9</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <LangVersion>default</LangVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>TRACE</DefineConstants>
