@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28302.56
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "src\ElGuerre.Taskin.Api\ElGuerre.Taskin.Api.csproj", "{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C329A9BE-8425-4E3F-A4ED-3962394842FD}
+	EndGlobalSection
+EndGlobal

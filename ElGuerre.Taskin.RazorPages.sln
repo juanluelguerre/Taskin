@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28302.56
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.RazorPages", "src\UI\ElGuerre.Taskin.RazorPages\ElGuerre.Taskin.RazorPages.csproj", "{ECB8DAB3-7321-49DD-83B8-24CB0FAA618C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "src\ElGuerre.Taskin.Api\ElGuerre.Taskin.Api.csproj", "{8CF56486-A65D-46A9-BC2F-E30AEF705000}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{41107BF7-EF2A-41C2-884C-CC81F4A295BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api.Tests", "test\ElGuerre.Taskin.Api.Tests\ElGuerre.Taskin.Api.Tests.csproj", "{F47A97AC-A297-4466-8CEE-8A33EBBB6C25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Models", "src\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{C0C9363F-4A3F-4A89-B2B9-FE9D85E49128}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.ApplicationBlocks.Core", "src\ApplicationBlocks\ElGuerre.ApplicationBlocks.Core\ElGuerre.ApplicationBlocks.Core.csproj", "{B4247AAB-25AA-45C4-8F92-394E57ABF2EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationBlocks", "ApplicationBlocks", "{DB0C5213-AD39-407F-97C0-55BBD52A59C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiRest", "ApiRest", "{A3140075-DD9B-4BEF-9217-FDD10F2CA9C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECB8DAB3-7321-49DD-83B8-24CB0FAA618C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB8DAB3-7321-49DD-83B8-24CB0FAA618C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB8DAB3-7321-49DD-83B8-24CB0FAA618C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB8DAB3-7321-49DD-83B8-24CB0FAA618C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF56486-A65D-46A9-BC2F-E30AEF705000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF56486-A65D-46A9-BC2F-E30AEF705000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF56486-A65D-46A9-BC2F-E30AEF705000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF56486-A65D-46A9-BC2F-E30AEF705000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47A97AC-A297-4466-8CEE-8A33EBBB6C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47A97AC-A297-4466-8CEE-8A33EBBB6C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47A97AC-A297-4466-8CEE-8A33EBBB6C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47A97AC-A297-4466-8CEE-8A33EBBB6C25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C9363F-4A3F-4A89-B2B9-FE9D85E49128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C9363F-4A3F-4A89-B2B9-FE9D85E49128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C9363F-4A3F-4A89-B2B9-FE9D85E49128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C9363F-4A3F-4A89-B2B9-FE9D85E49128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4247AAB-25AA-45C4-8F92-394E57ABF2EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4247AAB-25AA-45C4-8F92-394E57ABF2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4247AAB-25AA-45C4-8F92-394E57ABF2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4247AAB-25AA-45C4-8F92-394E57ABF2EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8CF56486-A65D-46A9-BC2F-E30AEF705000} = {A3140075-DD9B-4BEF-9217-FDD10F2CA9C3}
+		{F47A97AC-A297-4466-8CEE-8A33EBBB6C25} = {41107BF7-EF2A-41C2-884C-CC81F4A295BE}
+		{B4247AAB-25AA-45C4-8F92-394E57ABF2EE} = {DB0C5213-AD39-407F-97C0-55BBD52A59C9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8787FE88-E12C-40B8-95DF-EC69E382E64B}
+	EndGlobalSection
+EndGlobal
