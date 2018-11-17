@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ElGuerre.Taskin.RazorPages.Pages
 {
-    public class AboutPageModel : PageModel
+    public class ProjectDetailPageModel : PageModel
     {
         public string Message { get; set; }
 

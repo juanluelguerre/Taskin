@@ -1,0 +1,37 @@
+﻿@page
+
+@model ProjectDetailPageModel
+
+@{
+    ViewData["Title"] = "Project Detail";
+}
+
+<form action="#">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="txtTitle">
+        <label class="mdl-textfield__label" for="sample3">Title</label>
+    </div>
+    
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="txtDetail">
+        <label class="mdl-textfield__label" for="sample3">Detail</label>
+    </div>
+
+
+
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+        Save
+    </button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+        Cancel
+    </button>
+</form>
+
+<!-- Numeric Textfield with Floating Label -->
+@*<form action="#">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+        <label class="mdl-textfield__label" for="sample4">Number...</label>
+        <span class="mdl-textfield__error">Input is not a number!</span>
+    </div>
+</form>*@

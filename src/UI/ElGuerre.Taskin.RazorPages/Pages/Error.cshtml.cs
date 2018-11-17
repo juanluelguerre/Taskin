@@ -1,10 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+//     Copyright (c) elGuerre.com. All rights reserved.
+// </copyright>
+// -------------------------------------------------------------------
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
 
 namespace ElGuerre.Taskin.RazorPages.Pages
 {

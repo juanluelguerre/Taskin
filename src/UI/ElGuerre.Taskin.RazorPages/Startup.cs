@@ -1,16 +1,12 @@
-// ---------------------------------------------------------------------------------
-// <copyright file="Startup.cs" Author="Juan Luis Guerrero Minero" www="elGuerre.com">
+// -------------------------------------------------------------------
+// <copyright Author="Juan Luis Guerrero Minero" www="elGuerre.com">
 //     Copyright (c) elGuerre.com. All rights reserved.
 // </copyright>
-// ---------------------------------------------------------------------------------using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+// -------------------------------------------------------------------
 using ElGuerre.ApplicationBlocks.Core.Http;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

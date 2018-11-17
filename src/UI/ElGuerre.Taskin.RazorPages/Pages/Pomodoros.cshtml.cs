@@ -11,12 +11,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ElGuerre.Taskin.RazorPages.Pages
 {
-    public class AboutPageModel : PageModel
+    public class PomodorosPageModel : PageModel
     {
         public string Message { get; set; }
 
         public void OnGet()
         {
+            Message = "Pomodoros list";
         }
     }
 }

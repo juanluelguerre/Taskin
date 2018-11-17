@@ -1,0 +1,30 @@
+﻿@page
+
+@{
+    ViewData["Title"] = "Tasks";
+}
+
+@*<style>
+    .demo-list-three {
+        width: 650px;
+    }
+</style>*@
+
+<ul class="demo-list-three mdl-list">
+    @for (int i = 1; i < 11; i++)
+    {
+        <li class="mdl-list__item mdl-list__item--three-line">
+            <span class="mdl-list__item-primary-content">
+                <i class="material-icons mdl-list__item-avatar">inbox</i>
+                @*<a asp-action="/projects/@i">Project @i</a>*@
+                <span>Task @i</span>
+                <span class="mdl-list__item-text-body">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                </span>
+            </span>
+            @*<span class="mdl-list__item-secondary-content">
+                <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+            </span>*@
+        </li>
+    }
+</ul>
