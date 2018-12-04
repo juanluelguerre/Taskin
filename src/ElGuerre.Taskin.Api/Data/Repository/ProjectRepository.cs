@@ -13,6 +13,6 @@ namespace ElGuerre.Taskin.Api.Data.Repository
         public ProjectRepository(DataContext dataContext, ILogger<ProjectRepository> logger) 
             : base (dataContext, logger)
         {
-        }
+        }   
     }
 }

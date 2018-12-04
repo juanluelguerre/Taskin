@@ -3,13 +3,13 @@
   "defaultProvider": "cdnjs",
   "defaultDestination": "wwwroot/lib",
   "libraries": [
-    {
-      "library": "jquery@3.3.1",
-      "destination": "wwwroot/lib/jquery",
-      "files": [
-        "jquery.slim.min.js"
-      ]
-    },
+    //{
+    //  "library": "materialize@1.0.0",
+    //  "destination": "wwwroot/lib/material/",
+    //  "files": [
+    //    "jquery.slim.min.js"
+    //  ]
+    //},
     {
       "library": "twitter-bootstrap@4.1.1",
       "destination": "wwwroot/lib/bootstrap",

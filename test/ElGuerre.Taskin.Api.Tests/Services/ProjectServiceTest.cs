@@ -13,15 +13,21 @@ using ElGuerre.Taskin.Api.Models;
 using ElGuerre.Taskin.Api.Services;
 using Microsoft.Extensions.Logging;
 using Moq;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace ElGuerre.Taskin.Api.Tests.Services
 {
+    // [ExcludeFromCodeCoverage]
     public class ProjectServiceTest
     {
+        private readonly ProjectService _service;
+        private readonly Mock<IProjectRepository> _repository;
         private readonly IMapper _mapper;
 
         public ProjectServiceTest()
@@ -33,22 +39,22 @@ namespace ElGuerre.Taskin.Api.Tests.Services
             _mapper = new Mapper(config);
 
             (_mapper as IMapper).ConfigurationProvider.AssertConfigurationIsValid();
+
+            _repository = new Mock<IProjectRepository>();
+            _repository.Setup(x => x.FindAsync(1)).ReturnsAsync(GetProjectEntityMock(1, 1));
+            _repository.Setup(x => x.Get(null, null, "Tasks"))
+                .ReturnsAsync(new[] { GetProjectEntityMock(1, 1), GetProjectEntityMock(2, 1) });
+            var unitOfWork = new Mock<IUnitOfWork>();
+            var logProvider = new Mock<ILogger<ProjectService>>();
+
+
+            _service = new ProjectService(_mapper, _repository.Object, unitOfWork.Object, logProvider.Object);
         }
 
         [Fact]
         public async Task GetAllAsyncTest()
         {
-            var projId = 1;
-            var repository = new Mock<IProjectRepository>();
-            repository.Setup(x => x.FindAsync(projId)).ReturnsAsync(GetProjectEntityMock(1, 1));
-            repository.Setup(x => x.Get(null, null, "Tasks")).ReturnsAsync(new[] { GetProjectEntityMock(2, 1), GetProjectEntityMock(2, 2) });
-            var unitOfWork = new Mock<IUnitOfWork>();
-            var logProvider = new Mock<ILogger<ProjectService>>();
-
-
-            var service = new ProjectService(_mapper, repository.Object, unitOfWork.Object, logProvider.Object);
-
-            var projs = await service.GetAsync();
+            var projs = await _service.GetAsync();
             Assert.NotNull(projs);
             Assert.True(projs.Any(), "No projects found!");
             Assert.All(projs, item => Assert.True(item.Tasks.Any(), "Not tasks founds!"));
@@ -76,9 +82,55 @@ namespace ElGuerre.Taskin.Api.Tests.Services
             };
         }
 
-        [Fact(Skip = "Not implemented yet")]
-        public async Task GetAsyncTest()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        public async Task GetAsyncTest(int id)
         {
+            _repository.Setup(x => x.Get(It.IsAny<Expression<Func<ProjectEntity, bool>>>(), null, "Tasks"))
+                .ReturnsAsync(new[] { GetProjectEntityMock(1, 1), GetProjectEntityMock(2, 1) });
+
+            var proj = await _service.GetAsync(id);
+            Assert.NotNull(proj);
+            var expected = _mapper.Map<ProjectEntity, Taskin.Models.ProjectModel>(GetProjectEntityMock(id, 1));
+            Assert.NotEqual(expected, proj);
+        }
+
+        [Theory]
+        [InlineData(1)]
+        public async Task DeleteAsyncTest(int id)
+        {
+            _repository.Setup(x => x.Delete(It.IsAny<ProjectEntity>()));
+            await _service.DeleteAsync(new Taskin.Models.ProjectModel() { Id = id });
+        }
+
+        [Theory]
+        [InlineData(1)]
+        public async Task ExistsAsyncTest(int id)
+        {
+            var exists = await _service.ExistsAsync(id);
+            Assert.True(exists, $"Project with id '{id}' not found.");
+        }
+
+        [Theory]
+        [InlineData(1)]
+        public async Task UpdateAsyncTest(int id)
+        {
+            var newProj = _mapper.Map<ProjectEntity, Taskin.Models.ProjectModel>(GetProjectEntityMock(id, 1));
+
+            var proj = await _service.UpdateAsync(newProj);
+            Assert.NotNull(proj);
+            Assert.NotEqual(newProj, proj);
+        }
+
+        [Fact]
+        public async Task AddAsyncTest()
+        {
+            var newProj = _mapper.Map<ProjectEntity, Taskin.Models.ProjectModel>(GetProjectEntityMock(1, 1));
+
+            var proj = await _service.AddAsync(newProj);
+            Assert.NotNull(proj);
+            Assert.NotEqual(newProj, proj);
         }
     }
 }
