@@ -39,7 +39,7 @@ namespace ElGuerre.Taskin.Api.Services
         {
             Log(args: id);
 
-            var query = await Repository.Get(t => t.Id == id, null, "Tasks");
+            var query = await Repository.Get(p => p.Id == id, null, "Tasks");
             if (query != null)
             {
                 var model = _mapper.Map<ProjectEntity, ProjectModel>(query.FirstOrDefault());                               

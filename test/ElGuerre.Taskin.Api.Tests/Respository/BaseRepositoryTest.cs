@@ -5,16 +5,17 @@
 // ---------------------------------------------------------------------------------
 // Currently code coverage need Full pdb for .NETCore
 // ---------------------------------------------------------------------------------
+using System.Diagnostics.CodeAnalysis;
 using Xunit;
 
 namespace ElGuerre.Taskin.Api.Tests.Repository
 {
+    // [ExcludeFromCodeCoverage]
     public class BaseRepositoryTest
     {
         [Fact (Skip = "Not implemented yet")]
-        public void Test1()
+        public void GetAsyncBaseTest()
         {
-
         }
     }
 }
