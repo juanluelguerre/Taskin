@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28302.56
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElGuerre.Taskin.Api", "src\ElGuerre.Taskin.Api\ElGuerre.Taskin.Api.csproj", "{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElGuerre.Taskin.Models", "src\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj", "{59B7D75A-DFED-4841-A89F-133E853DACD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67E4C6C4-5C34-4859-8BF5-47B89BC5F0A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B7D75A-DFED-4841-A89F-133E853DACD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B7D75A-DFED-4841-A89F-133E853DACD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B7D75A-DFED-4841-A89F-133E853DACD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B7D75A-DFED-4841-A89F-133E853DACD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

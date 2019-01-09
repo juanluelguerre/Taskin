@@ -6,6 +6,7 @@
     <AssemblyName>ElGuerre.Taskin.Api</AssemblyName>
     <LangVersion>latest</LangVersion>
     <UserSecretsId>49ebb1a6-71b8-4aab-a7d2-3d3a91d754d9</UserSecretsId>
+    <!-- SonarQube needs this -->
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -41,16 +42,13 @@
     <PackageReference Include="Serilog.Sinks.Console" Version="3.1.2-dev-00779" />
     <PackageReference Include="Serilog.AspNetCore" Version="2.1.2-dev-00028" />
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.0-preview3-35497" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="7.9.1.7622" />
   </ItemGroup>
   
   <!-- Optional tool. Use: "dotnet tool install -g dotnet-aspnet-codegenerator" instead -->
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0-preview3-35497" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -74,5 +72,8 @@
 
   <ItemGroup>
     <Compile Include="Data\DesignTimeDbContextFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElGuerre.Taskin.Models\ElGuerre.Taskin.Models.csproj" />
   </ItemGroup>
 </Project>

@@ -5,6 +5,7 @@
     <AssemblyName>ElGuerre.Taskin.Models</AssemblyName>
     <LangVersion>latest</LangVersion>
     <UserSecretsId>49ebb1a6-71b8-4aab-a7d2-3d3a91d754d9</UserSecretsId>
+    <ProjectGuid>{ec4ae5f0-2b8d-40e2-a38b-1b0fb5b749fd}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
