@@ -16,6 +16,8 @@ dotnet sonarScanner begin /k:'Taskin' /d:sonar.organization='juanluelguerre-gith
 # dotnet build $SLN # It doesn't woks on MAC for msbuild 16. Issue: https://github.com/SonarSource/sonar-scanner-msbuild/issues/649
 # Neither force for: dotnet msbuild /toolsversion:15 ElGuerre.Taskin.Api.sln
 msbuild $SLN # It works 
-dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=OpenCover /p:CoverletOutput=./TestResults/ ./test/ElGuerre.Taskin.Api.Tests/ElGuerre.Taskin.Api.Tests.csproj
-reportgenerator -reports:$(pwd)/TestResults/coverage.opencover.xml -targetdir ./TestResults/Reports/ -reportTypes:"HTMLInline;Cobertura"
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=OpenCover /p:CoverletOutput=$(pwd)/TestResults/ ./test/ElGuerre.Taskin.Api.Tests/ElGuerre.Taskin.Api.Tests.csproj
+reportgenerator -reports:$(pwd)/TestResults/coverage.opencover.xml -targetdir:$(pwd)/TestResults/Reports/ -reportTypes:"HTMLInline;Cobertura"
 dotnet sonarScanner end /d:sonar.login="$TOKEN"
+
+open ./TestResults/Reports/index.htm

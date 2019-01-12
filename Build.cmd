@@ -15,5 +15,8 @@ REM dotnet tool install --global dotnet-reportgenerator-globaltool
 dotnet sonarScanner begin /k:"Taskin" /d:sonar.organization="juanluelguerre-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="%TOKEN%" /d:sonar.language="cs" /d:sonar.exclusions="**/bin/**/*,**/obj/**/*" /d:sonar.coverage.exclusions="test/**" /d:sonar.cs.opencover.reportsPaths="%cd%\lcov.opencover.xml"
 dotnet restore %SLN%
 dotnet build %SLN%
-dotnet test test/ElGuerre.Taskin.Api.Tests/ElGuerre.Taskin.Api.Tests.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=\"opencover,lcov\" /p:CoverletOutput=../lcov
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=OpenCover /p:CoverletOutput=./TestResults/ ./test/ElGuerre.Taskin.Api.Tests/ElGuerre.Taskin.Api.Tests.csproj
+reportgenerator -reports:%CD%/TestResults/coverage.opencover.xml -targetdir:./TestResults/Reports/ -reportTypes:"HTMLInline;Cobertura"
 dotnet sonarscanner end /d:sonar.login="%TOKEN%"
+
+.\TestResults\reports\index.htm
